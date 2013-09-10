@@ -1,0 +1,3 @@
+The following will be printed to the console:
+
+"The first expression is true."
