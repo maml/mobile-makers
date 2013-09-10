@@ -1,0 +1,23 @@
+1. Imagine asking a friend to meet you at a restaurant. What instructions would a computer program need that your friend would not in order to understand how to get there?
+
+The program would need specific step-by-step instructions on how to get to the destination given a specific starting point. Where you could say to a friend, "Oh it's in River North just off of Chicago and Larabee," and given that they are familiar with the neighborhood, they would be able to find it. For a computer program the specific starting location would need to be known along with detailed instructions such as, "go one mile, take a right, proceed for two blocks, turn left, proceed three blocks," ect.
+
+2. What is the difference between source code and machine code? What does the CPU do? Where are instructions and data stored?
+
+Source code is a high level abstraction that is compiled or interpreted down to machine code. Machine code is what's used by the CPU to execute the discrete instructions contained within a program.
+
+A CPU processes machine code.
+
+Instructions are stored in a program and data is stored on disk.
+
+3. What is an IDE and why is it useful?
+
+IDE stands for Integrated Development Environment. Because it is a dedicated environment for a given language it can provide tools that make debugging easier, helpful auto-complete and snippets when writing lengthy, complex, and / or tricky functions and segments of code, help with compiling (if it's a compiled language), line numbers, formatting, and syntax highlighting.
+
+4. What kind of language is Objective-C? Why do you think we use it for making device specific applications? Why wouldn't we want to use an interpreted language for making iPhone and iPad apps?
+
+Objective-C is an interpreted language.
+
+We use it for making device specific applications because, since it's a lower level language (closer to machine code), it's more fast and performant on the given devices which run the applications.
+
+We wouldn't necessarily want to use an interpreted language for making iPhone and iPad apps because they would be less performant on the device and possibly not equipped to make use of certain features of the hardware that a more lower level, compiled language, is able to do.
