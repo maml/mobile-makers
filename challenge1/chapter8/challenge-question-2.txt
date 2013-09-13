@@ -1,0 +1,8 @@
+Since a byte is eight bits and one bit is used for the sign of the
+integer that leaves seven bits on one byte and eight bits on the other,
+for a total of 15 bits. The maximum then would be
+2^0 + 2^1 + 2^2 . . . 2^13 = 16,383
+and then the samllest would be -16,383.
+
+An unsigned short (which only holds non-negative numbers) would be
+2^0 + 2^1 + 2^2 . . . 2^14 = 32,767
