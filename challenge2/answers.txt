@@ -29,3 +29,62 @@ What is an iteration and how do we to use them to build software?
 
 An iteration may be described as a short, most likely one to two week period, where a
 team analyizes, designs, builds, tests, and delivers a small set of features.
+
+Section 1 - Core Concepts
+
+1.1 What are the various types of programming languages and in which domain is each used?
+
+Procedural C, C++, BASIC
+Logic      Prolog
+Functional Haskell
+OO         Java, Ruby, Objective-C
+
+OO languauges are the languages of choice in the modern web/app development landscape.
+Functional and Logic langauges are most likely to be found in university, academic, or
+other specialized environments.
+
+1.2 Describe in your own words the three properties of a computing object.
+
+The three properties are: identity, attributes, and behaviors. An object's identity is that
+which gives it its 'is'-ness. An object's attributes are that which describe a given state.
+An object's behaviors are those actions of which it may partake.
+
+1.3 Explain how classes are analogous to blueprints. Include the relationship between a
+class and an object. Can you think of how the analogy breaks down?
+
+Classes are like blueprints in that they contain all the necessary information to
+instantiate an object, just like a blueprint contains all the necessary information to
+build a house. The analogy breaks down in that blueprints describe physical objects
+intended to exist in the real world where classes will often be describing non-physical
+concepts or ideas.
+
+1.4 When a developer uses the term "abstraction" what are they describing?
+
+They are describing an idea or concept that's compeletely separate from any instance.
+
+1.5 What does encapsulation prevent? What does it enable?
+
+Encapsulation prevents dependencies across the different parts of an application. In the
+future if changes need to be made, they will be much easier if you only have to make
+the change in one place.
+
+1.6 Describe the inheritance relationship between classes. When would this relationship
+be advantageous to establish?
+
+A class may be based upon another already existing class, that is, it has bestowed upon
+it all the properties of its parent class: its identity, its attributes, and its behaviors.
+
+If you notice you're about to create a class that's almost exactly like an already existing
+class, you may want to consider having it inherit from the already existing class.
+
+1.7 What is the basic idea behind polymorphism? How can it make the classes
+we create more flexible?
+
+Polymorphism allows us to be confident that engaging in a certain behavior results in
+the desired outcome, even if that behavior is happening in different contexts.
+
+It can make classes more flexible by allowing them to do the right thing at the
+right time. For example a subclass may override a particular method of its superclass;
+other sublcasses don't have to do that, they can if they want to, but it's not a
+requirement.
+
