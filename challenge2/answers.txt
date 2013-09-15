@@ -233,3 +233,29 @@ of data that would be the same for all instances of a class.
 - revolutions per minute
 - population per square mile
 
+Section 6 - Inheritance and Composition
+
+6.1 Describe in your own words what inheritance is and how it is useful when
+constructing classes.
+
+Inheritance is when one class is based off of an existing class. It automatically
+receives a base identity, the attributes, and the behaviors of the class from which it
+inherits.
+
+Sometimes you'll need a class that's almost exactly like an existing class except
+for one or two differences. Having the needed class inherit from the already
+exsiting class reduces duplication, which means in the future if something common
+to both classes needs to be changed, it only needs to be changed in one place. So,
+you write less code and make your app more maintainable.
+
+(The video suggested checking to see if the "Is A" relationship is satisfied.)
+
+6.2 Referring to the apps on your phone, come up with three examples where you
+believe methods are being inherited from superclasses and called by subclasses.
+
+Rdio allows one to Share, Sync, Play Later, Add to Collection, or Add to Playlist
+for entire albums or individual tracks.
+
+Dropbox allows one to upload files or pictures
+
+Contacts allows one to delete groups or individual contacts.
