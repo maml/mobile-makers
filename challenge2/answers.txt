@@ -88,3 +88,29 @@ right time. For example a subclass may override a particular method of its super
 other sublcasses don't have to do that, they can if they want to, but it's not a
 requirement.
 
+Section 2 - Object-Oriented Analysis and Design
+
+2.1 What are the steps of analysis that come before writing code for an application?
+Why do you think these steps make writing the code easier?
+
+There are five steps:
+1 Gather requirements
+2 Describe the app
+3 Identify the main objects
+4 Describe the interactions
+5 Create a class diagram
+
+Following the five steps results in a class diagram which tells you what you should
+be coding and, having gone through the analysis process, understand why you're
+coding it.
+
+2.2 What should you have after you've completed the first phase of defining
+your requirements?
+
+Some sort of document that lists out the things the app MUST do.
+
+2.3 What is UML? Why Is it useful to visualize your application before coding it?
+
+UML stands for Unified Modeling Language. It can help clarify the relationships
+between the objects of the app and provide details of what those objects are
+intended to be.
