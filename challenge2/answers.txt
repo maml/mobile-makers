@@ -114,3 +114,65 @@ Some sort of document that lists out the things the app MUST do.
 UML stands for Unified Modeling Language. It can help clarify the relationships
 between the objects of the app and provide details of what those objects are
 intended to be.
+
+Section 3 - Utilizing Use Cases
+
+Write a use case for creating an event on your phone's calendar.
+
+Title: Create event
+Actor: User
+
+Scenario:
+1. User enters event information
+2. User saves event
+3. Event appears on calendar
+
+3.2 Can you think of a use case for a mobile application in which the actor
+is not the user of the mobile device?
+
+Title: Broadcasts current location
+Actor: Network Server
+
+Scenario:
+1. Server requests current location of all devices on the network
+2. Server receives current location from application
+
+3.3 Write another use case for a mobile device user interacting with a calendar
+application. This time include a couple extensions when crafting your scenario.
+
+Title: Add invitees
+Actor: User
+
+Scenario:
+1. User is editing the event
+2. User adds invitees to the event
+3. User saves the event
+Precondition: User has added an event to the calendar
+
+3.4 Do a google image search for "use case diagram." Notice how many variations
+there are. What do they all generally have in common?
+
+They all typically contain stick figures of humans, ellipses, and lines connecting the
+stick figures and ellipses.
+
+3.5 Write 5 user stories to describe a mobile user interacting with his or her maps application.
+
+As a User
+I want to search for a restaurant
+So that I can go get some food
+
+As a User
+I want to get directions to the dry cleaners
+So I can drop off my clothes
+
+As a User
+I want to save a location on the map
+So that, later on, I can see where I was
+
+As a User
+I want to see where I'm at on the map
+So I can know if I'm close to something
+
+As a User
+I want to see the traffic
+So I know if I should take the interstate or not
