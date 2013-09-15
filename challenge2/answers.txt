@@ -1,0 +1,31 @@
+Section 0 - Introduction
+
+0.1 What is the intended purpose and potential advantage of learning object oriented design?
+
+It is about how to build better and more complex applications. It's also about how to
+understand what you need to do and how to get your code written faster with less pain,
+less bugs, and more flexibility.
+
+0.2 Why might it be advantageous to analyze and design before beginning programming?
+
+If one attempts to write a program without understanding what problem it is that the 
+program is trying to solve (analysis) and not have a plan for how to go about solving
+it (design), there's little chance of success and a greater chance of producing rigid,
+error-prone, and incoherent code.
+
+0.3 What is the difference between a "waterfall" and an "agile" approach to development?
+
+"Waterfall" development steps through each phase of the cycle: analysis, design,
+implementation, installation, maintenance, and doesn't look back. Once you and/or your
+team complete one phase it's on to the next. It takes months to deliver working software.
+
+"Agile" development supports a notion of continual development. This continual development
+is accomplished through iterations. Instead of moving sequentially through each phase of
+the cycle and not looking back, the team completes the cycle several times. The software is improved
+incrementally, one or two features at a time, upon completion of each iteration. Working
+software can be delivered within days.
+
+What is an iteration and how do we to use them to build software?
+
+An iteration may be described as a short, most likely one to two week period, where a
+team analyizes, designs, builds, tests, and delivers a small set of features.
