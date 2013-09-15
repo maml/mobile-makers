@@ -197,3 +197,39 @@ See conceptual-model.png in this folder
 4.4 Identify the responsibilities of the classes you found above. List them here.
 
 See responsibilities.png in this folder
+
+Section 5 - Creating Classes
+
+5.1 Construct Class Diagrams for the classes you imagine exist in a twitter app,
+a maps app, a calendar app, or any other app you would like to make. Do you find
+that it is easier to come up with the attributes or with the behaviors? Why do
+you think that is?
+
+See twitter-class-diagram.jpg
+
+I'm undecided on the second and third questions.
+
+5.2 How might the separation of interface and implementation in Objective-C
+be an advantage when working with class diagrams?
+
+Class diagrams seem more focused on the interface level, describing what they
+do, whereas the implementation details how it's done. Separating the two and
+initially focusing on an interface provides a nice bridge from the conceptual
+steps of analysis and design, before dropping down into the fine tuned details
+of how it's exactly done.
+
+5.3 What are the constructors and destructors in Objective-C? Why do we use them?
+
+A constructor is the method that's called when we're creating a new object. If
+desired they may handle setting appropriate values upon initialization. A destructor
+is the method that's used to destroy, remove, or deallocate an object once its
+no longer needed. This becomes especially important if an object has had a
+document open or if it has been connected to a database, for example.
+
+5.4 Like the interest rate example in the video, give three additional examples
+of data that would be the same for all instances of a class.
+
+- miles per gallon
+- revolutions per minute
+- population per square mile
+
