@@ -1,0 +1,16 @@
+2.1 How did Objective-C become the language to learn if you want to make
+apps for the iPhone and iPad?
+
+Objective-C was adopted as the main language of NeXT - the company Steve
+Jobs founded after he left Apple in 1985. Everything they built was with
+Objective-C. Then Apple bought NeXt in 1996 and rolled everything into what
+would become Mac OS X in 2001. And so when the iPhone first came out in 2007,
+its operating system was built on OS X (10.5) as was the iPhone SDK which
+came out in 2008, the iPad in 2010 and so on.
+
+2.2 - See app called Structure
+
+2.3 Why might you build in one version of iOS but deploy in an older version?
+
+You may wish to target users running older versions of OS X / iOS whereas your
+app was developed on a platform using the latest version of OS X.
