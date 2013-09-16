@@ -1,0 +1,8 @@
+1.3 - Why do you think it's important to be aware of the idiosyncracies with older versions of
+Objective-C and to keep up with new features as they are added?
+
+You may find code examples from an era of earlier versions and auto-generated code may have
+appeared differently than in later versions so it's good to know what you're looking at.
+
+As new versions are released things are often simplified so you'll want to take advantage of
+time saving features.
