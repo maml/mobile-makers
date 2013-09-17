@@ -40,8 +40,17 @@ Copies may be passed between functions.
 Globals may be declared and changed by anything in the program, at any time, and are
 considered an anti-pattern.
 
-4.5
+4.5 What does "enum" allow you to do?
 
 Enum -> Enumerated Data type - a data type with a restricted range of values. They default
 to integer values and start with 0 and increment by 1. Optionally the integer values may
 be set when they are declared.
+
+4.6 When would you define your own data type versus using an enum?
+
+you can assign a new name to an existing data type, if that data type is a custom type (like
+if it was an enum) it can make it easier to create and reference variables of that type.
+
+4.7
+
+
