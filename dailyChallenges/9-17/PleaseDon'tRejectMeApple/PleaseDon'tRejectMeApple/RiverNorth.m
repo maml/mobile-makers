@@ -11,7 +11,7 @@
 @implementation RiverNorth
 
 - (void)myMethod {
-    NSLog(@"Oh, hai there . . .");
+    NSLog(@"Oh, hai there . . . Welcome to River North - the home of Mobile Makers!");
 }
 
 @end
