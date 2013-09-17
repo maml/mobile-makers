@@ -10,6 +10,6 @@
 
 @interface RiverNorth : NSObject
 
-- (void)myMethod;
+- (void)myMethod: (NSString *)name lastName:(NSString *)lastName;
 
 @end

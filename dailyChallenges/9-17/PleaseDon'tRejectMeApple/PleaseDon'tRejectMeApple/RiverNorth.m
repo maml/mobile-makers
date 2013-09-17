@@ -10,8 +10,8 @@
 
 @implementation RiverNorth
 
-- (void)myMethod {
-    NSLog(@"Oh, hai there . . . Welcome to River North - the home of Mobile Makers!");
+- (void)myMethod: (NSString *)name lastName:(NSString *)lastName {
+    NSLog(@"Oh, hai there %@ %@. . . Welcome to River North - the home of Mobile Makers!", name, lastName);
 }
 
 @end

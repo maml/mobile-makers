@@ -22,7 +22,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     RiverNorth *rn = [[RiverNorth alloc] init];
-    [rn myMethod];
+    [rn myMethod:@"Matt" lastName:@"Loseke"];
     
     FreshWater *fw = [[FreshWater alloc] init];
     [fw fromTheMountain];
