@@ -87,18 +87,58 @@
 {
     const char* arrayOfCharacters = [self getCharacterArray];
     
-    // parse out the commas, sum up the integers and assign the answer to the variable result
-    // i.e.
-    // result =
+    int numberOfCharacters = strlen(arrayOfCharacters);
+
+    // clear out result so it doesn't hold previous value
+    result = 0;
+
+    for (int i = 0; i < numberOfCharacters; i++) {
+        
+        switch (arrayOfCharacters[i]) {
+            case '0':
+                result += 0;
+                break;
+            case '1':
+                result += 1;
+                break;
+            case '2':
+                result += 2;
+                break;
+            case '3':
+                result += 3;
+                break;
+            case '4':
+                result += 4;
+                break;
+            case '5':
+                result += 5;
+                break;
+            case '6':
+                result += 6;
+                break;
+            case '7':
+                result += 7;
+                break;
+            case '8':
+                result += 8;
+                break;
+            case '9':
+                result += 9;
+                break;
+            default:
+                break;
+        }
+        
+    }
     
     [self showResult];
 }
 
 - (IBAction)check:(id)sender
 {
-    [self checkForPalindrome];
+    //[self checkForPalindrome];
     
     // Uncomment the following line of code and comment out the previous line of code to run summation
-    //[self sumIntegers];
+    [self sumIntegers];
 }
 @end
