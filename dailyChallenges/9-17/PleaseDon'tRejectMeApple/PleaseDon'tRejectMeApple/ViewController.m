@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "RiverNorth.h"
+#import "FreshWater.h"
 
 @interface ViewController ()
 
@@ -20,8 +21,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    RiverNorth* rn = [[RiverNorth alloc] init];
+    RiverNorth *rn = [[RiverNorth alloc] init];
     [rn myMethod];
+    
+    FreshWater *fw = [[FreshWater alloc] init];
+    [fw fromTheMountain];
 }
 
 - (void)didReceiveMemoryWarning
