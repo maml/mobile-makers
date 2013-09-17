@@ -151,3 +151,29 @@ if (a == b) {
 	// do somethings else
 }
 
+3.6 CHALLENGE: Think of a scenario while using a mobile app that might require you
+to use a "continue" statement in the middle of a loop.
+
+You have a collection of all Users of your app and you want to loop through them and send an email
+if the current day is the same as their birthday
+
+// psuedo code
+const char* collectionOfUsers = QueryDBForUsers();
+
+for (i = 0; i < strlen(collectionOfUsers); i++) {
+	if (collectionOfUsers[i].get('birthDate') == currentDay) {
+		sendHappyBirthdayEmail(collectionOfUsers[i]);
+	}
+}
+
+3.7 What is a function? What is a function prototype? What are the purposes of each?
+What are the rules for when and how you can call a function?
+
+"A function is a chunck of related code, wrapped up and given a name."
+
+A prototype is a description of the function, letting the compiler know that it 
+exists, and details what it returns and what it accepts.
+
+Prototypes are useful for when you want to reference a function before it's been formally
+defined in your code. Just define the prototype before the first reference and the compiler
+should be happy. The function proper is for defining what it actually does.
