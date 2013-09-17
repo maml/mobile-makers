@@ -41,3 +41,7 @@ Globals may be declared and changed by anything in the program, at any time, and
 considered an anti-pattern.
 
 4.5
+
+Enum -> Enumerated Data type - a data type with a restricted range of values. They default
+to integer values and start with 0 and increment by 1. Optionally the integer values may
+be set when they are declared.
