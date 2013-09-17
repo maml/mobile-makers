@@ -1,0 +1,43 @@
+Section 4 - Variables
+
+4.1 What are the primitive data types in Objective-C? Why did Apple add a set of classes
+to handle other data types?
+
+int
+float
+double
+char
+BOOL
+
+They added a set of classes to handle the other types (like for dates and strings) because
+they're not primitive to Objective-C and because they can be represented by combining or
+working with the primitive types.
+
+4.2 Make a table of Objective-C primitive data types. Add numeric data types and
+their properties to this table.
+
+int               4 bytes
+long int          4 bytes (32-bit)     8 bytes (64-bit)
+long long int     8 bytes (32-bit)     8 bytes (64-bit)
+short int         2 bytes
+float             4 bytes
+double            8 bytes
+char              1 byte
+BOOL              1 byte
+
+4.3 Add char and BOOL (the character data types) to your table created above.
+
+4.4 Describe in your own words what the scope of a variable is in Objective-C
+
+Basically the scope is local to the section of code in which it's declared (function,
+loop, etc.) as well as any nested sections, however many levels deep.
+
+Variables of the same name can be declared at different levels of code sections and
+in that case whatever's closest, wins.
+
+Copies may be passed between functions.
+
+Globals may be declared and changed by anything in the program, at any time, and are
+considered an anti-pattern.
+
+4.5
