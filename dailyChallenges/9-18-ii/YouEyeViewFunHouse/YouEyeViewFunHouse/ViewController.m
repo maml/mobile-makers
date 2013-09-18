@@ -19,7 +19,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    UIImage *z = [[UIImage alloc] initWithContentsOfFile: @"/Users/code/Desktop/git/YouEyeViewFunHouse/MobileMakersLogo_black_and_white.png"];
+    UIImage *z = [[UIImage alloc] initWithContentsOfFile: @"/Users/matt/Projects/mobile-makers/dailyChallenges/9-18-ii/YouEyeViewFunHouse/YouEyeViewFunHouse/MobileMakersLogo_black_and_white.png"];
     [_myImage setImage:z];
 }
 
@@ -31,7 +31,7 @@
 }
 
 - (IBAction)colorize:(id)sender {
-    UIImage *z = [[UIImage alloc] initWithContentsOfFile: @"/Users/code/Desktop/git/YouEyeViewFunHouse/MobileMakersLogo_color.png"];
+    UIImage *z = [[UIImage alloc] initWithContentsOfFile: @"/Users/matt/Projects/mobile-makers/dailyChallenges/9-18-ii/YouEyeViewFunHouse/YouEyeViewFunHouse/MobileMakersLogo_color.png"];
     [_myImage setImage:z];
 
     
@@ -40,30 +40,18 @@
 
 - (IBAction)moveAndChange:(id)sender {
     
- //   option 1:
- //   float x = _moveAndChangeButton.center.x;
- //   float y = _moveAndChangeButton.center.y;    
+    float currentX = _moveAndChangeButton.frame.origin.x;
+    float currentY = _moveAndChangeButton.frame.origin.y;
     
- //   _moveAndChangeButton.center = CGPointMake(x,y);  
+    float currentH = _moveAndChangeButton.frame.size.height;
+    float currentW = _moveAndChangeButton.frame.size.width;
     
+    currentY += 10.0;
+    currentW += 20.0;
     
+    _moveAndChangeButton.center = CGPointMake(currentX, currentY);
     
-
-    
-    // best approach is to just redraw it USE FRAME
-    
-    //origin = x, y left corner
-    float x = _moveAndChangeButton.frame.origin.x; 
-    float y = _moveAndChangeButton.frame.origin.y + 100;    
-
-    float wd = _moveAndChangeButton.frame.size.width;
-    float ht = _moveAndChangeButton.frame.size.height +100;
-
-    
-   
-    
-    [_moveAndChangeButton setFrame: CGRectMake(x,y,wd,ht)];
-
+    [_moveAndChangeButton setFrame: CGRectMake(currentX, currentY, currentW, currentH)];
     
 }
 

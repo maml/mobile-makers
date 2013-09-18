@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *textbox2;
 @property (weak, nonatomic) IBOutlet UILabel *textboxAnswer;
 @property (weak, nonatomic) IBOutlet UIImageView *myImage;
-
+@property (weak, nonatomic) IBOutlet UIImageView *logoView;
 
 - (IBAction)changeMyColor:(id)sender;
 - (IBAction)colorize:(id)sender;
