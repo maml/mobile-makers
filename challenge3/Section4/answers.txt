@@ -51,6 +51,35 @@ be set when they are declared.
 you can assign a new name to an existing data type, if that data type is a custom type (like
 if it was an enum) it can make it easier to create and reference variables of that type.
 
-4.7
+4.7 Describe the three common preprocessor directives, #import, #define, and #if DEBUG. Come up 
+with one example where you would use each.
 
+#import - go and find the contents of the referenced file and include them in the file. An
+example would be when you wanted to include Foundation framework.
 
+#define - to create a value and give it a name, similar to a find and replace. Before the code
+is built or run it will go through and replace any instance of the name and replace it with
+the value. An example would be to name Pi and declare its value. Depending on the choosen
+accuracy, this would save you a lot of typing in your cod. An example would be to name Pi
+and declare its value. Depending on the choosen accuracy, this would save you a lot of typing
+in your code.
+
+#if DEBUG tells the preprocessor to run the code between the #if and #endif if the program's
+being compiled in debug mode. An example would be that maybe you would wnat to print out the
+size of a particular object for a piece of code in an area where you're unsure about, to
+check its memory footprint.
+
+4.8 Define the same string using both NSString and C-style string syntax. Describe the
+purpose behind each part of your definition.
+
+- there's no built in string type in obj-c
+
+C-style
+char *message = "Hello Mobile Makers!"
+Here message is a pointer that points to an address holding an array of characters
+
+NSString-style
+NSString *message = @"Hello Mobile Makers!";
+- Here message is a pointer that points to an address that holds an NSString object
+- the @ sign let's the compiler know that, "hey this is an NSString." If left out, the compiler
+would consider it a C-style character array.
