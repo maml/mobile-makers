@@ -1,0 +1,56 @@
+Section 6 - Memory Management
+
+6.2 - What is the relationship between a pointer to an object, a block of memory, and the owning
+and releasing process. Can you come up with an analogy for this relationship?
+
+A pointer points to an object. It does this by storing an address, which is the memory address, of
+where the object resides. When the code that made use of the pointer is finished doing its
+thing, it is that codes responsibility to release that object. Also, watch out for dangling pointers
+
+6.3 What does the new method do when used to create an object instance of a class? Why do we
+avoid using this method? How long is an object's lifetime?
+
+The new method allocates and then initializes an object.
+
+We avoid using it because there is often more than one initialization method, when using new you only get the vanilla
+default initialization method, you may want to use one of the other ones.
+
+An object is around hanging out in memory until it's released.
+
+6.4 How does the autorelease pool work? How and when can you use it deliberately?
+
+The pool is a collection of objects that have been designated to go into the pool. They hang out
+there until the runtime feels like draining it, and empties the pool (releasing the objects).
+
+If you have a method that returns an object, you can't put the release call after the return - it will never
+get called, and you can't put the release call before the return - the object will be gone when return
+is called. What you can do is put a call to [myObj autorelease] just before the return. This way
+the object will still be returned and we know that the object will be released at some point in the
+future.
+
+6.5 What does NARC stand for? Why is it important to remember this?
+
+New Alloc Retain Copy
+
+Because it tells you which objects you must be sure to release from your code. If you don't own
+the object you must not call release on it. If you see any of those words in your code then you
+own it, and are responsible for its release.
+
+6.6 What does ARC save us from having to do? How does it keep us from having to make this extra effort?
+
+It saves us from having to keep track of which objects to release and retain and having to worry about
+their lifecycle. 
+
+The compiler is able to synthesize the release and retain calls on your behalf. You won't see these calls
+in your code, but that is what it's doing.
+
+6.7 What are the differences between ARC and garbage collection? What makes these differences advantageous?
+
+ARC happens at compile-time whereas GC happens at run-time. ARC is predictable and GC is not.
+
+Since GC happens at run-time you never really know when it will kick in, when it does it often has
+a noticeable slow down on your application.
+
+6.8 Why can you not release or dealloc memory when working with ARC?
+
+Because the methods that allow this are not even available for use.
