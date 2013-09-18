@@ -1,0 +1,70 @@
+Section 5 - Classes
+
+5.1 Create an encapsulated (including generalized attributes and behavior) description
+of a "mobileMakersParticipant" class. Instantiate a single object representing yourself
+as a member of this class.
+
+-----------------------------------------------------
+@interface MobileMakersParticipant : NSObject
+
+ @property (readonly) NSString *firstrName;
+ @property (readonly) NSString *lastName;
+ @property (readonly) NSString *email;
+ @property (readonly) BOOL *hasPaidTuitionDeposit;
+ @property (readonly) BOOL *hasPaidRemainingTuition;
+ @property (readonly) BOOL *completedPreCourseWork;
+ @property (readonly) BOOL *graduated;
+
+ - (NSString *)getFullName;
+ - (NSString *)getEmail;
+ - (BOOL *)hasPaidTuitionInFull;
+ - (BOOL *)hasCompletedPreCourseWork;
+ - (BOOL *)hasGraduated;
+
+@end
+-----------------------------------------------------
+
+-----------------------------------------------------
+MobileMakersParticipant *mmp = [[MobileMakersParticipant alloc] init];
+
+[mmp setFirstName:@"Matt"];
+[mmp setLastName:@"Loseke"];
+[mmp setEmail:@"donny@wholovesbowling.com"];
+[mmp setHasPaidTuitionDeposit:YES];
+[mmp setHasPaidRemainingTuition:YES];
+[mmp setHasCompletedPreCourseWork:NO];
+[mmp setGraduated:NO];
+-----------------------------------------------------
+
+5.2 What is the pointer's role in instantiating an object from a class? How is a pointer
+different than a primitive?
+
+When instantiating a class the first thing that happens is that space in memory is allocated
+for the object - this instantiation returns a pointer to the newly created object. Then,
+immediately after that we initialize that same object, via init, which also returns a pointer
+to the now initialized newly instantiated object. Finally, that is assigned, via the assignment
+operator to another pointer that's been declared to point to an address where that type of
+object is known to live - the one we just instantiated and initialized. In code this looks
+something like:
+
+MyClassFoo *mcf = [[MyClassFoo alloc] init];
+
+A pointer is different than a primitive in that primitives, being known types, have a set
+space allocated for them and hold the actual value of the data they represent whereas
+pointers simply hold an address to the object they've been assigned to point to; the object
+is stored somewhere else, and that somewhere else is what the pointer will tell us.
+
+5.3 What is the main difference between Objective-C's messages and method calls in other
+languages? How can this difference be seen as an advantage while programming?
+
+other languages use dot syntax
+obj-c uses square brackets
+
+it becomes more readable, method names with multi params are called by breaking apart
+the method names and passing the corresponding parameter in conjunction with it's chunk
+of the method name
+
+5.4 What's the difference between a class method and an instance method
+
+A class method may only be called on the class whereas an instance method may only be called
+on instances of that class.
