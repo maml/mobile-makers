@@ -47,6 +47,7 @@
     float currentW = _moveAndChangeButton.frame.size.width;
     
     currentY += 10.0;
+    currentX -= 10.0;
     currentW += 20.0;
     
     _moveAndChangeButton.center = CGPointMake(currentX, currentY);
