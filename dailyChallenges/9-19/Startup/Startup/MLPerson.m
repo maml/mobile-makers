@@ -10,7 +10,12 @@
 
 @implementation MLPerson
 
-@synthesize name, email;
+@synthesize name, email, age;
+
++(MLPerson *) initWithPerson:(MLPerson *)person
+{
+    return [self copy:person];
+}
 
 +(MLPerson *) copy:(MLPerson *)person
 {
@@ -18,6 +23,11 @@
     [copy setName:[person name]];
     [copy setEmail:[person email]];
     return copy;
+}
+
+-(int) age
+{
+    return (age > 50) ? 21 : age;
 }
 
 @end

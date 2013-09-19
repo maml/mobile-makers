@@ -12,7 +12,9 @@
 
 @property (weak, nonatomic) NSString *name;
 @property (weak, nonatomic) NSString *email;
+@property (nonatomic) int age;
 
 +(MLPerson *) copy:(MLPerson *)person;
++(MLPerson *) initWithPerson:(MLPerson *)person;
 
 @end
