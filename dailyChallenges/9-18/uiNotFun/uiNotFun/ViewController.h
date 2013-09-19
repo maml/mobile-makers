@@ -24,6 +24,9 @@
 
 // Slider
 @property (strong, nonatomic) UISlider *mySlider;
-@property (strong, nonatomic) IBOutlet UILabel *sliderLabel;
+@property (strong, nonatomic) UILabel *sliderLabel;
 -(IBAction)slide:(id)sender;
+
+// Additon - Math!
+//@property (weak, nonatomic) UILabel
 @end
