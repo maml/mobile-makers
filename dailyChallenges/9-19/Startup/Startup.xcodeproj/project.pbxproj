@@ -18,6 +18,10 @@
 		C9842E8817EB7C5900E3474A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9842E8717EB7C5900E3474A /* Default-568h@2x.png */; };
 		C9842E8B17EB7C5900E3474A /* MLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9842E8A17EB7C5900E3474A /* MLViewController.m */; };
 		C9842E8E17EB7C5900E3474A /* MLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9842E8C17EB7C5900E3474A /* MLViewController.xib */; };
+		C9842E9617EB7CB000E3474A /* MLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C9842E9517EB7CB000E3474A /* MLPerson.m */; };
+		C9842E9C17EB7DED00E3474A /* MLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9842E9B17EB7DED00E3474A /* MLManager.m */; };
+		C9842E9F17EB7E2800E3474A /* MLEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = C9842E9E17EB7E2800E3474A /* MLEmployee.m */; };
+		C9842EA217EB7EDD00E3474A /* MLStartup.m in Sources */ = {isa = PBXBuildFile; fileRef = C9842EA117EB7EDD00E3474A /* MLStartup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,14 @@
 		C9842E8917EB7C5900E3474A /* MLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLViewController.h; sourceTree = "<group>"; };
 		C9842E8A17EB7C5900E3474A /* MLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLViewController.m; sourceTree = "<group>"; };
 		C9842E8D17EB7C5900E3474A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MLViewController.xib; sourceTree = "<group>"; };
+		C9842E9417EB7CB000E3474A /* MLPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPerson.h; sourceTree = "<group>"; };
+		C9842E9517EB7CB000E3474A /* MLPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPerson.m; sourceTree = "<group>"; };
+		C9842E9A17EB7DED00E3474A /* MLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLManager.h; sourceTree = "<group>"; };
+		C9842E9B17EB7DED00E3474A /* MLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLManager.m; sourceTree = "<group>"; };
+		C9842E9D17EB7E2800E3474A /* MLEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLEmployee.h; path = ../MLEmployee.h; sourceTree = "<group>"; };
+		C9842E9E17EB7E2800E3474A /* MLEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLEmployee.m; path = ../MLEmployee.m; sourceTree = "<group>"; };
+		C9842EA017EB7EDD00E3474A /* MLStartup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLStartup.h; sourceTree = "<group>"; };
+		C9842EA117EB7EDD00E3474A /* MLStartup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLStartup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +97,16 @@
 			children = (
 				C9842E8017EB7C5900E3474A /* MLAppDelegate.h */,
 				C9842E8117EB7C5900E3474A /* MLAppDelegate.m */,
+				C9842E9D17EB7E2800E3474A /* MLEmployee.h */,
+				C9842E9E17EB7E2800E3474A /* MLEmployee.m */,
 				C9842E8917EB7C5900E3474A /* MLViewController.h */,
 				C9842E8A17EB7C5900E3474A /* MLViewController.m */,
+				C9842E9A17EB7DED00E3474A /* MLManager.h */,
+				C9842E9B17EB7DED00E3474A /* MLManager.m */,
+				C9842EA017EB7EDD00E3474A /* MLStartup.h */,
+				C9842EA117EB7EDD00E3474A /* MLStartup.m */,
+				C9842E9417EB7CB000E3474A /* MLPerson.h */,
+				C9842E9517EB7CB000E3474A /* MLPerson.m */,
 				C9842E8C17EB7C5900E3474A /* MLViewController.xib */,
 				C9842E7817EB7C5900E3474A /* Supporting Files */,
 			);
@@ -177,6 +197,10 @@
 				C9842E7E17EB7C5900E3474A /* main.m in Sources */,
 				C9842E8217EB7C5900E3474A /* MLAppDelegate.m in Sources */,
 				C9842E8B17EB7C5900E3474A /* MLViewController.m in Sources */,
+				C9842E9617EB7CB000E3474A /* MLPerson.m in Sources */,
+				C9842E9C17EB7DED00E3474A /* MLManager.m in Sources */,
+				C9842E9F17EB7E2800E3474A /* MLEmployee.m in Sources */,
+				C9842EA217EB7EDD00E3474A /* MLStartup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
