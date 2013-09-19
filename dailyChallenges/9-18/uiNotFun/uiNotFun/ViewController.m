@@ -49,6 +49,22 @@
     // wire up toggling of 'on' and 'off'
     [_buttonOnAndOff addTarget:self action:@selector(toggleOnAndOff:) forControlEvents:UIControlEventTouchUpInside];
     
+    // Button for slider
+    _mySlider = [[UISlider alloc] initWithFrame:CGRectMake(40.0, 225.0, 200, 40)];
+    [self.view addSubview:_mySlider];
+    
+    // label for slider
+    _sliderLabel = [[UILabel alloc] initWithFrame:CGRectMake(45.0, 260.0, 40, 30)];
+    [_sliderLabel setText:@"0.0"];
+    [_sliderLabel setBackgroundColor:[UIColor clearColor]];
+    [_sliderLabel setTextColor:[UIColor whiteColor]];
+    [self.view addSubview:_sliderLabel];
+    
+    // wire up slide action
+    [_mySlider addTarget:self action:@selector(slide:) forControlEvents:UIControlEventValueChanged];
+    
+    
+    
 }
 
 -(IBAction)changeColor:(id)sender
@@ -76,8 +92,6 @@
 {
     NSString *t = [NSString stringWithFormat:@"%@", _buttonOnAndOff.titleLabel.text];
     
-    NSLog(@"%@", t);
-    
     if ([t isEqualToString:@"on"]) {
         [_buttonOnAndOff setTitle:@"off" forState:UIControlStateNormal];
     } else {
@@ -85,6 +99,13 @@
     }
 }
 
+-(IBAction)slide:(id)sender
+{
+    float z = [_mySlider value];
+    
+    _sliderLabel.text = [NSString stringWithFormat:@"%.2f", z];
+
+}
 @end
 
 

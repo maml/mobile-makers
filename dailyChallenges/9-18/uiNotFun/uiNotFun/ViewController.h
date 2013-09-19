@@ -22,4 +22,8 @@
 @property (weak, nonatomic) UIButton *buttonOnAndOff;
 -(IBAction)toggleOnAndOff:(id)sender;
 
+// Slider
+@property (strong, nonatomic) UISlider *mySlider;
+@property (strong, nonatomic) IBOutlet UILabel *sliderLabel;
+-(IBAction)slide:(id)sender;
 @end
