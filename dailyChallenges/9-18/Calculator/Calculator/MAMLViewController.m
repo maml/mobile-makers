@@ -7,6 +7,7 @@
 //
 
 #import "MAMLViewController.h"
+#import "MAMLCalc.h"
 
 @interface MAMLViewController ()
 
@@ -31,7 +32,9 @@
     NSString *a = [NSString stringWithFormat:@"%@", _operandA.text];
     NSString *b = [NSString stringWithFormat:@"%@", _operandB.text];
     
-    int c = [a intValue] + [b intValue];
+    MAMLCalc *mc = [[MAMLCalc alloc] init];
+    
+    int c = [mc add:([a intValue]) to:([b intValue])];
     
     _result.text = [NSString stringWithFormat: @"%i", c];
 }
