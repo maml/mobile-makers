@@ -18,8 +18,6 @@
 {
     [super viewDidLoad];
 
-#pragma mark BUTTON CHANGE COLOR
-    
     // Color change button
     _buttonColorChange = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [_buttonColorChange setTitle:@"Change My Color" forState:UIControlStateNormal];
@@ -110,7 +108,17 @@
     
     // -- wire up 'Math!'
     [_math addTarget:self action:@selector(compute:) forControlEvents:UIControlEventTouchUpInside];
+
     
+    // Not Working ------
+    // Image / Logo
+    UIImage *z = [[UIImage alloc] initWithContentsOfFile: @"/Users/matt/Projects/mobile-makers/dailyChallenges/9-18-ii/YouEyeViewFunHouse/YouEyeViewFunHouse/MobileMakersLogo_black_and_white.png"];
+    //[_myImageView setFrame:CGRectMake(50.0, 50.0, 200.0, 200.0)];
+    [_myImageView setCenter:CGPointMake(75.0, 75.0)];
+    [_myImageView setImage:z];
+    //[_myImage sizeToFit];
+    [self.view addSubview:_myImageView];
+
 }
 
 -(IBAction)changeColor:(id)sender

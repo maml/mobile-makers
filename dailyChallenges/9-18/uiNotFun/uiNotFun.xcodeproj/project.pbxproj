@@ -286,6 +286,7 @@
 				CD86376317EA5A23004DC2B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

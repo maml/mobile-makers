@@ -36,4 +36,7 @@
 @property (strong, nonatomic) UIButton *math;
 -(IBAction)compute:(id)sender;
 
+// Image / Logo
+@property (weak, nonatomic) UIImageView *myImageView;
+
 @end
