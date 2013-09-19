@@ -63,7 +63,53 @@
     // wire up slide action
     [_mySlider addTarget:self action:@selector(slide:) forControlEvents:UIControlEventValueChanged];
     
+    // Math!
+    // -- operand1
+    _operand1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 320.0, 20.0, 20.0)];
+    [_operand1 setBackgroundColor:[UIColor lightGrayColor]];
+    [_operand1 setTextColor:[UIColor whiteColor]];
+    [_operand1 setText:@"3"];
+    [_operand1 setTextAlignment:NSTextAlignmentCenter];
+    [self.view addSubview:_operand1];
     
+    // -- the '+' sign
+    _plusSign = [[UILabel alloc] initWithFrame:CGRectMake(35.0, 320.0, 20.0, 20.0)];
+    [_plusSign setBackgroundColor:[UIColor clearColor]];
+    [_plusSign setTextColor:[UIColor whiteColor]];
+    [_plusSign setText:@"+"];
+    [self.view addSubview:_plusSign];
+    
+    // -- operand2
+    _operand2 = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 320.0, 20.0, 20.0)];
+    [_operand2 setBackgroundColor:[UIColor lightGrayColor]];
+    [_operand2 setTextColor:[UIColor whiteColor]];
+    [_operand2 setText:@"9"];
+    [_operand2 setTextAlignment:NSTextAlignmentCenter];
+    [self.view addSubview:_operand2];
+
+    // -- equals sign
+    _equalsSign = [[UILabel alloc] initWithFrame:CGRectMake(80.0, 320.0, 20.0, 20.0)];
+    [_equalsSign setBackgroundColor:[UIColor clearColor]];
+    [_equalsSign setTextColor:[UIColor whiteColor]];
+    [_equalsSign setText:@"="];
+    [self.view addSubview:_equalsSign];
+    
+    // -- the total
+    _total = [[UILabel alloc] initWithFrame:CGRectMake(105.0, 320.0, 35.0, 20.0)];
+    [_total setBackgroundColor:[UIColor lightGrayColor]];
+    [_total setTextColor:[UIColor whiteColor]];
+    [_total setTextAlignment:NSTextAlignmentCenter];
+    [self.view addSubview:_total];
+    
+    // -- button 'Math!'
+    _math = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [_math setTitle:@"Math!" forState:UIControlStateNormal];
+    [_math setCenter:CGPointMake(150.00, 320.0)];
+    [_math sizeToFit];
+    [self.view addSubview:_math];
+    
+    // -- wire up 'Math!'
+    [_math addTarget:self action:@selector(compute:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
@@ -104,6 +150,19 @@
     float z = [_mySlider value];
     
     _sliderLabel.text = [NSString stringWithFormat:@"%.2f", z];
+
+}
+
+-(IBAction)compute:(id)sender
+{
+    NSString *z1 = [NSString stringWithFormat: @"%@",_operand1.text];
+    NSString *z2 = [NSString stringWithFormat: @"%@",_operand2.text];
+    
+    //NSLog(z1);
+    
+    int z3 = [z1 intValue] + [z2 intValue];
+    
+    _total.text = [NSString stringWithFormat: @"%i", z3];
 
 }
 @end

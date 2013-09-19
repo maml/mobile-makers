@@ -28,5 +28,12 @@
 -(IBAction)slide:(id)sender;
 
 // Additon - Math!
-//@property (weak, nonatomic) UILabel
+@property (strong, nonatomic) UILabel *operand1;
+@property (strong, nonatomic) UILabel *plusSign;
+@property (strong, nonatomic) UILabel *operand2;
+@property (strong, nonatomic) UILabel *equalsSign;
+@property (strong, nonatomic) UILabel *total;
+@property (strong, nonatomic) UIButton *math;
+-(IBAction)compute:(id)sender;
+
 @end
