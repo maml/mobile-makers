@@ -11,5 +11,7 @@
 @interface MLPerson : NSObject
 
 @property (strong, nonatomic) NSString *name;
+@property (nonatomic) float salary;
+@property (readonly) float netSalary;
 
 @end

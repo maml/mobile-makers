@@ -13,9 +13,13 @@
 {
     __weak IBOutlet UITextField *textInput;
     __weak IBOutlet UILabel *textInputLabel;
+    __weak IBOutlet UITextField *textInput2;
+    __weak IBOutlet UILabel *textInputLabel2;
+
     MLPerson *p;
+    MLPerson *p2;
 }
-- (IBAction)pressedButton:(id)sender;
+- (IBAction)pressedButton:(UIButton *)sender;
 @end
 
 @implementation MLViewController
@@ -25,7 +29,18 @@
     [super viewDidLoad];
     p = [[MLPerson alloc] init];
     [p setName:@"Maml"];
+    [p setSalary:10000];
     textInputLabel.text = [p name];
+    
+    p2 = [[MLPerson alloc] init];
+    [p2 setName:@"Purrsuits"];
+    [p2 setSalary:15000];
+    textInputLabel2.text = [p2 name];
+    
+    NSLog(@"Person salary is %.f", [p salary]);
+    NSLog(@"Person net salary is %.f", [p netSalary]);
+    NSLog(@"Person2 salary is %.f", [p2 salary]);
+    NSLog(@"Person2 net salary is %.f", [p2 netSalary]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,8 +49,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pressedButton:(id)sender {
-    [p setName:textInput.text];
-    textInputLabel.text = [p name];
+- (IBAction)pressedButton:(UIButton *)sender {
+    
+    if ([sender tag] ==1 ) {
+        [p setName:textInput.text];
+        textInputLabel.text = [p name];
+    } else {
+        [p2 setName:textInput2.text];
+        textInputLabel2.text = [p2 name];
+    }
 }
 @end

@@ -10,6 +10,11 @@
 
 @implementation MLPerson
 
-@synthesize name;
+@synthesize name, salary, netSalary;
+
+-(float) netSalary
+{
+    return salary - (salary * 0.15);
+}
 
 @end
