@@ -50,7 +50,24 @@
     [startup setCoder:employee1];
     [startup setDesigner:employee2];
     
-    NSLog(@"\n--%@\n----%@ - %d\n------%@ - %d\n------%@ - %d\n------%@ - %d\n", [startup name], [[startup boss] type], [[startup boss] age], [[startup projectManager] type], [[startup projectManager] age], [[startup coder] type], [[startup coder] age], [[startup designer] type], [[startup designer] age]);
+    NSLog(@"\n--%@\n----%@ - %@ - %@ - %i\n----%@ - %@ - %@ - %i\n----%@ - %@ - %@ - %i\n----%@ - %@ - %@ - %i\n",
+          [startup name],
+          [[startup boss] type],
+          [[startup boss] name],
+          [[startup boss] email],
+          [[startup boss] age],
+          [[startup projectManager] type],
+          [[startup projectManager] name],
+          [[startup projectManager] email],
+          [[startup projectManager] age],
+          [[startup coder] type],
+          [[startup coder] name],
+          [[startup coder] email],
+          [[startup coder] age],
+          [[startup designer] type],
+          [[startup designer] name],
+          [[startup designer] email],
+          [[startup designer] age]);
 
     // Copying via a class method approach
     NSLog(@"\n\nLet's copy a person . . .\n");
