@@ -1,0 +1,12 @@
+Section 7 - Custom Classes
+
+7.1 What are the two different sections used to create a class? What do they hold and what
+files are they placed in? CHALLENGE: Create a Tweet class for a Twitter style app.
+
+The header and the implementation. The header (.h file) is where the Class declarations are
+made - properties, methods, etc, and the implementation (.m) is where the contents of the header
+file are implemented. Note, a Classes's .h file must be included in the file making use
+of that class.
+
+7.2 CHALLENGE: Define what should get passed in and what should get returned by each of your
+methods in your Tweet class above.
