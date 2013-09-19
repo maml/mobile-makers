@@ -10,9 +10,19 @@
 
 @implementation MAMLCalc
 
--(int) add: (int) a to: (int) b
+-(int) add:(int)a to:(int)b
 {
     return a + b;
+}
+
+-(int) subtract:(int)a from:(int)b
+{
+    return b -a ;
+}
+
+-(int) multiply:(int)a by:(int)b
+{
+    return b - a;
 }
 
 @end

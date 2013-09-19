@@ -10,6 +10,8 @@
 
 @interface MAMLCalc : NSObject
 
--(int) add: (int) a to: (int) b;
+-(int) add:(int)a to:(int)b;
+-(int) subtract:(int)a from:(int)b;
+-(int) multiply:(int)a by:(int)b;
 
 @end
