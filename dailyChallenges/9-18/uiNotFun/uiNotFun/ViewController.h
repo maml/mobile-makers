@@ -10,7 +10,16 @@
 
 @interface ViewController : UIViewController
 
+// Color change button
 @property (weak, nonatomic) UIButton *buttonColorChange;
 -(IBAction)changeColor:(id)sender;
+
+// Resize and move button
+@property (weak, nonatomic) UIButton *buttonMoveAndResize;
+-(IBAction)moveAndResize:(id)sender;
+
+// Button that displays 'on' or 'off'
+@property (weak, nonatomic) UIButton *buttonOnAndOff;
+-(IBAction)toggleOnAndOff:(id)sender;
 
 @end
