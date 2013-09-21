@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401422413.530687"
+         timestampString = "401419791.526237"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
-         landmarkName = "timerFireCount"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
+         landmarkName = "seconds"
          landmarkType = "19">
       </FileBreakpoint>
       <FileBreakpoint
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401422413.530687"
+         timestampString = "401420673.190481"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "115"
-         endingLineNumber = "115"
+         startingLineNumber = "110"
+         endingLineNumber = "110"
          landmarkName = "-timerFired:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401422413.530687"
+         timestampString = "401420673.190481"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "121"
-         endingLineNumber = "121"
+         startingLineNumber = "116"
+         endingLineNumber = "116"
          landmarkName = "-timerFired:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401422413.530687"
+         timestampString = "401420673.190481"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "178"
-         endingLineNumber = "178"
+         startingLineNumber = "173"
+         endingLineNumber = "173"
          landmarkName = "-displaySeconds:"
          landmarkType = "5">
       </FileBreakpoint>

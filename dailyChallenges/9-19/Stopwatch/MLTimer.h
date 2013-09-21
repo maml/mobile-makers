@@ -1,13 +1,13 @@
 //
-//  MLStopwatch.m
+//  MLTimer.h
 //  Stopwatch
 //
 //  Created by Matthew Loseke on 9/20/13.
 //  Copyright (c) 2013 Matthew Loseke. All rights reserved.
 //
 
-#import "MLStopwatch.h"
+#import <Foundation/Foundation.h>
 
-@implementation MLStopwatch
+@interface MLTimer : NSTimer
 
 @end
