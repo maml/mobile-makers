@@ -7,7 +7,6 @@
 //
 
 #import "MLViewController.h"
-#import "MLTimer.h"
 
 @interface MLViewController ()
 
@@ -45,8 +44,8 @@
 - (void)displayHours:(int) h;
 - (void)resetDisplay;
 - (void)resetTimerProperties;
-- (BOOL)disableStartButton;
-- (BOOL)enableStartButton;
+
+@property (strong, nonatomic) MLStopwatch *stopwatch;
 
 @end
 
@@ -57,11 +56,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(handleTick:)
+     name:@"tick"
+     object:_stopwatch];
+	
+    // Do any additional setup after loading the view, typically from a nib.
     _hoursLabel.text = @"00";
     _minutesLabel.text = @"00";
     _secondsLabel.text = @"00";
-    [self enableStartButton];
+
+    _stopwatch = [[MLStopwatch alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,39 +78,27 @@
 }
 
 - (IBAction)start:(id)sender {
-    if (startButtonState == YES) {
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1
-                                                  target:self
-                                                selector:@selector(timerFired:)
-                                                userInfo:nil
-                                                 repeats:YES];
+    if (_stopwatch.isStartable == YES) {
+        [_stopwatch createScheduledTimerWithTimeInterval];
     }
     // we want prevent multiple timers from running
-    [self disableStartButton];
+    [_stopwatch disableStartButton];
 }
 
 - (IBAction)pause:(id)sender {
-    [self.timer invalidate];
-    [self enableStartButton];
+    [[_stopwatch timer] invalidate];
+    [_stopwatch enableStartButton];
 }
 
 - (IBAction)stop:(id)sender {
-    [self.timer invalidate];
-    [self enableStartButton];
+    [[_stopwatch timer] invalidate];
+    [_stopwatch enableStartButton];
     [self resetDisplay];
     [self resetTimerProperties];
 
 }
 
-- (BOOL)enableStartButton {
-    return startButtonState = YES;
-}
-
-- (BOOL)disableStartButton {
-    return startButtonState = NO;
-}
-
-- (void)timerFired:(NSTimer *) timer
+- (void)handleTick:(NSNotification *) notification
 {
     timerFireCount++;
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91F353A17ED437E00132210 /* MLStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C91F353917ED437E00132210 /* MLStopwatch.m */; };
 		C9842EB017EBA2A900E3474A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9842EAF17EBA2A900E3474A /* UIKit.framework */; };
 		C9842EB217EBA2A900E3474A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9842EB117EBA2A900E3474A /* Foundation.framework */; };
 		C9842EB417EBA2A900E3474A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9842EB317EBA2A900E3474A /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C91F353817ED437E00132210 /* MLStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLStopwatch.h; sourceTree = "<group>"; };
+		C91F353917ED437E00132210 /* MLStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLStopwatch.m; sourceTree = "<group>"; };
 		C9842EAC17EBA2A900E3474A /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9842EAF17EBA2A900E3474A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9842EB117EBA2A900E3474A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 				C9842EBF17EBA2A900E3474A /* MLAppDelegate.m */,
 				C9842EC717EBA2A900E3474A /* MLViewController.h */,
 				C9842EC817EBA2A900E3474A /* MLViewController.m */,
+				C91F353817ED437E00132210 /* MLStopwatch.h */,
+				C91F353917ED437E00132210 /* MLStopwatch.m */,
 				C9842ECA17EBA2A900E3474A /* MLViewController.xib */,
 				C9842EB617EBA2A900E3474A /* Supporting Files */,
 			);
@@ -177,6 +182,7 @@
 				C9842EBC17EBA2A900E3474A /* main.m in Sources */,
 				C9842EC017EBA2A900E3474A /* MLAppDelegate.m in Sources */,
 				C9842EC917EBA2A900E3474A /* MLViewController.m in Sources */,
+				C91F353A17ED437E00132210 /* MLStopwatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

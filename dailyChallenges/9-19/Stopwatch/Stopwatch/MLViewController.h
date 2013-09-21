@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLStopwatch.h"
 
 @interface MLViewController : UIViewController
 
