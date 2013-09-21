@@ -26,7 +26,6 @@
 - (IBAction)stop:(id)sender;
 
 // Timer
-@property (weak, nonatomic) NSTimer *timer;
 @property (nonatomic) int timerFireCount;
 @property (nonatomic) NSString *secondsFormat;
 @property (nonatomic) NSString *minutesFormat;
@@ -37,7 +36,6 @@
 @property (nonatomic) int hours;
 @property (nonatomic) BOOL startButtonState;
 
-- (void)timerFired:(NSTimer *) theTimer;
 - (void)displayTenths:(int) t;
 - (void)displaySeconds:(int) s;
 - (void)displayMinutes:(int) m;
