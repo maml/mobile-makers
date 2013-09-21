@@ -7,11 +7,11 @@
 //
 
 #import "MLViewController.h"
-#import "MLTimer.h"
+#import "MLStopwatch.h"
 
 @interface MLViewController ()
 
-// UI
+// UI ----------------------------------------------------------
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 @property (weak, nonatomic) IBOutlet UILabel *minutesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *secondsLabel;
@@ -22,11 +22,18 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonStart;
 @property (weak, nonatomic) IBOutlet UIButton *buttonPause;
 @property (weak, nonatomic) IBOutlet UIButton *buttonStop;
+
 - (IBAction)start:(id)sender;
 - (IBAction)pause:(id)sender;
 - (IBAction)stop:(id)sender;
 
-// Timer
+- (void)displayTenths:(int) t;
+- (void)displaySeconds:(int) s;
+- (void)displayMinutes:(int) m;
+- (void)displayHours:(int) h;
+- (void)resetDisplay;
+
+// Timer ----------------------------------------------------------
 @property (weak, nonatomic) NSTimer *timer;
 @property (nonatomic) int timerFireCount;
 @property (nonatomic) NSString *secondsFormat;
@@ -39,11 +46,6 @@
 @property (nonatomic) BOOL startButtonState;
 
 - (void)timerFired:(NSTimer *) theTimer;
-- (void)displayTenths:(int) t;
-- (void)displaySeconds:(int) s;
-- (void)displayMinutes:(int) m;
-- (void)displayHours:(int) h;
-- (void)resetDisplay;
 - (void)resetTimerProperties;
 - (BOOL)disableStartButton;
 - (BOOL)enableStartButton;
@@ -62,6 +64,9 @@
     _minutesLabel.text = @"00";
     _secondsLabel.text = @"00";
     [self enableStartButton];
+    
+    MLStopwatch *mlsw = [[MLStopwatch alloc] init];
+    NSLog(@"%@", mlsw);
 }
 
 - (void)didReceiveMemoryWarning

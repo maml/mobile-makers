@@ -18,7 +18,7 @@
 		C9842EC617EBA2A900E3474A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9842EC517EBA2A900E3474A /* Default-568h@2x.png */; };
 		C9842EC917EBA2A900E3474A /* MLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9842EC817EBA2A900E3474A /* MLViewController.m */; };
 		C9842ECC17EBA2A900E3474A /* MLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9842ECA17EBA2A900E3474A /* MLViewController.xib */; };
-		C9842ED717ED0A9400E3474A /* MLTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C9842ED617ED0A9400E3474A /* MLTimer.m */; };
+		C9842EDD17ED37AD00E3474A /* MLStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C9842EDC17ED37AD00E3474A /* MLStopwatch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 		C9842EC717EBA2A900E3474A /* MLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLViewController.h; sourceTree = "<group>"; };
 		C9842EC817EBA2A900E3474A /* MLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLViewController.m; sourceTree = "<group>"; };
 		C9842ECB17EBA2A900E3474A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MLViewController.xib; sourceTree = "<group>"; };
-		C9842ED517ED0A9400E3474A /* MLTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLTimer.h; path = ../MLTimer.h; sourceTree = "<group>"; };
-		C9842ED617ED0A9400E3474A /* MLTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLTimer.m; path = ../MLTimer.m; sourceTree = "<group>"; };
+		C9842EDB17ED37AD00E3474A /* MLStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLStopwatch.h; path = ../MLStopwatch.h; sourceTree = "<group>"; };
+		C9842EDC17ED37AD00E3474A /* MLStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLStopwatch.m; path = ../MLStopwatch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +86,10 @@
 		C9842EB517EBA2A900E3474A /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
+				C9842EDB17ED37AD00E3474A /* MLStopwatch.h */,
+				C9842EDC17ED37AD00E3474A /* MLStopwatch.m */,
 				C9842EBE17EBA2A900E3474A /* MLAppDelegate.h */,
 				C9842EBF17EBA2A900E3474A /* MLAppDelegate.m */,
-				C9842ED517ED0A9400E3474A /* MLTimer.h */,
-				C9842ED617ED0A9400E3474A /* MLTimer.m */,
 				C9842EC717EBA2A900E3474A /* MLViewController.h */,
 				C9842EC817EBA2A900E3474A /* MLViewController.m */,
 				C9842ECA17EBA2A900E3474A /* MLViewController.xib */,
@@ -182,7 +182,7 @@
 				C9842EBC17EBA2A900E3474A /* main.m in Sources */,
 				C9842EC017EBA2A900E3474A /* MLAppDelegate.m in Sources */,
 				C9842EC917EBA2A900E3474A /* MLViewController.m in Sources */,
-				C9842ED717ED0A9400E3474A /* MLTimer.m in Sources */,
+				C9842EDD17ED37AD00E3474A /* MLStopwatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
