@@ -13,11 +13,13 @@
 @property (strong, nonatomic) NSString *name;
 @property (nonatomic) BOOL isStartable;
 @property (strong, nonatomic) NSTimer *timer;
+@property int timerTickCount;
 
 - (void)createScheduledTimerWithTimeInterval;
 - (void)enableStartButton;
 - (void)disableStartButton;
-- (void)notify:(NSTimer *)timer;
+- (void)tick:(NSTimer *)timer;
+- (void)incrementTickCount;
 - (void)invalidate;
 
 @end

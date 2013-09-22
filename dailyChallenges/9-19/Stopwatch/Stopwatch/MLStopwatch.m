@@ -20,21 +20,29 @@
     return self;
 }
 
--(void)notify:(NSTimer *)timer
+-(void)tick:(NSTimer *)timer
 {
     // All instances of myClassA will be notified
     [[NSNotificationCenter defaultCenter]
-     postNotificationName:@"tick"
+     postNotificationName:@"timerHasTicked"
      object:self];
+    
+    [self incrementTickCount];
+}
+
+-(void)incrementTickCount;
+{
+    _timerTickCount++;
 }
 
 - (void)createScheduledTimerWithTimeInterval
 {
     [self setTimer:[NSTimer scheduledTimerWithTimeInterval:0.1
-                                                    target:self
-                                                  selector:@selector(notify:)
-                                                  userInfo:nil
-                                                   repeats:YES]];
+     target:self
+     selector:@selector(tick:)
+     userInfo:nil
+     repeats:YES]];
+    
     [self setIsStartable:NO];
 }
 
@@ -47,7 +55,6 @@
 {
     [self setIsStartable:NO];
 }
-
 
 -(void)invalidate
 {

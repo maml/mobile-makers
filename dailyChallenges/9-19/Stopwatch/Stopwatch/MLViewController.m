@@ -26,7 +26,6 @@
 - (IBAction)stop:(id)sender;
 
 // Timer
-@property (nonatomic) int timerFireCount;
 @property (nonatomic) NSString *secondsFormat;
 @property (nonatomic) NSString *minutesFormat;
 @property (nonatomic) NSString *hoursFormat;
@@ -34,7 +33,6 @@
 @property (nonatomic) int seconds;
 @property (nonatomic) int minutes;
 @property (nonatomic) int hours;
-@property (nonatomic) BOOL startButtonState;
 
 - (void)displayTenths:(int) t;
 - (void)displaySeconds:(int) s;
@@ -49,7 +47,7 @@
 
 @implementation MLViewController
 
-@synthesize tenths, seconds, minutes, hours, timerFireCount, startButtonState;
+@synthesize tenths, seconds, minutes, hours;
 
 - (void)viewDidLoad
 {
@@ -58,7 +56,7 @@
     [[NSNotificationCenter defaultCenter]
      addObserver:self
      selector:@selector(handleTick:)
-     name:@"tick"
+     name:@"timerHasTicked"
      object:_stopwatch];
 	
     // Do any additional setup after loading the view, typically from a nib.
@@ -98,7 +96,7 @@
 
 - (void)handleTick:(NSNotification *) notification
 {
-    timerFireCount++;
+    int stopwatchTickCount = [_stopwatch timerTickCount];
     
     if (tenths < 9) {
         tenths++;
@@ -106,7 +104,7 @@
         tenths = 0;
     }
     
-    if (timerFireCount % 10 == 0) {
+    if ((stopwatchTickCount % 10 == 0) && (stopwatchTickCount != 0)) {
         if (seconds < 59) {
             seconds++;
         } else {
@@ -117,7 +115,7 @@
     // timer fires every tenth of a second
     // tenths/second * seconds/minute
     // 10 * 60 = 600 tenths/minute
-    if (timerFireCount % 600 == 0) {
+    if ((stopwatchTickCount % 600 == 0) && (stopwatchTickCount != 0)) {
         if (minutes < 59) {
             minutes++;
         } else {
@@ -127,19 +125,18 @@
     
     // tenths/second * seconds/minute * minutes/hour
     // 10 * 60 * 60 = 36,000 tenths/hour
-    if (timerFireCount % 36000 == 0) {
+    if ((stopwatchTickCount % 36000 == 0) && (stopwatchTickCount != 0)) {
         if (hours < 23) {
             hours++;
         } else {
             hours = 0;
         }
     }
-
     
     [self displayTenths:(tenths)];
     [self displaySeconds:(seconds)];
     [self displayMinutes:(minutes)];
-    
+    [self displayHours:(hours)];
 }
 
 - (void)resetDisplay {
@@ -153,6 +150,7 @@
     tenths = 0;
     seconds = 0;
     minutes = 0;
+    hours = 0;
 }
 
 - (void)displayTenths:(int)t
