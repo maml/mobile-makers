@@ -97,4 +97,13 @@
     [[self timer] invalidate];
 }
 
+-(void)reset
+{
+    [self setTenths:0];
+    [self setSeconds:0];
+    [self setMinutes:0];
+    [self setHours:0];
+    [self setTimerTickCount:0];
+}
+
 @end

@@ -21,6 +21,7 @@
 - (void)tick:(NSTimer *)timer;
 - (void)incrementTickCount;
 - (void)invalidate;
+- (void)reset;
 
 @property (nonatomic) int tenths;
 @property (nonatomic) int seconds;

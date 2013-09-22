@@ -35,7 +35,7 @@
 - (void)displayMinutes:(int) m;
 - (void)displayHours:(int) h;
 - (void)resetDisplay;
-- (void)resetTimerProperties;
+- (void)resetTimer;
 
 @property (strong, nonatomic) MLStopwatch *stopwatch;
 
@@ -84,7 +84,7 @@
     [[_stopwatch timer] invalidate];
     [_stopwatch enableStartButton];
     [self resetDisplay];
-    [self resetTimerProperties];
+    [self resetTimer];
 
 }
 
@@ -103,12 +103,8 @@
     _hoursLabel.text = @"00";
 }
 
-- (void)resetTimerProperties {
-    [_stopwatch setTenths:0];
-    [_stopwatch setSeconds:0];
-    [_stopwatch setMinutes:0];
-    [_stopwatch setHours:0];
-    [_stopwatch setTimerTickCount:0];
+- (void)resetTimer {
+    [_stopwatch reset];
 }
 
 - (void)displayTenths:(int)t
