@@ -22,4 +22,10 @@
 - (void)incrementTickCount;
 - (void)invalidate;
 
+@property (nonatomic) int tenths;
+@property (nonatomic) int seconds;
+@property (nonatomic) int minutes;
+@property (nonatomic) int hours;
+
+
 @end

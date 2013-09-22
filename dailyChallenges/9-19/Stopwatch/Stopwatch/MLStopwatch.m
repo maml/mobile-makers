@@ -10,7 +10,7 @@
 
 @implementation MLStopwatch
 
-@synthesize name, isStartable, timer;
+@synthesize name, isStartable, timer, tenths, seconds, minutes, hours, timerTickCount;
 
 - (MLStopwatch *) init
 {
@@ -21,18 +21,54 @@
 }
 
 -(void)tick:(NSTimer *)timer
-{
-    // All instances of myClassA will be notified
+{    
+    // let Notification center know the timer has ticked
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"timerHasTicked"
      object:self];
-    
+
     [self incrementTickCount];
+
+    if (timerTickCount % 10 != 0) {
+        tenths++;
+    } else {
+        tenths = 0;
+    }
+    
+    if (timerTickCount % 10 == 0) {
+        if (seconds < 59) {
+            seconds++;
+        } else {
+            seconds = 0;
+        }
+    }
+    
+    // timer fires every tenth of a second
+    // tenths/second * seconds/minute
+    // 10 * 60 = 600 tenths/minute
+    if (timerTickCount % 600 == 0) {
+        if (minutes < 59) {
+            minutes++;
+        } else {
+            minutes = 0;
+        }
+    }
+    
+    // tenths/second * seconds/minute * minutes/hour
+    // 10 * 60 * 60 = 36,000 tenths/hour
+    if (timerTickCount % 36000 == 0) {
+        if (hours < 23) {
+            hours++;
+        } else {
+            hours = 0;
+        }
+    }
+
 }
 
 -(void)incrementTickCount;
 {
-    _timerTickCount++;
+    timerTickCount++;
 }
 
 - (void)createScheduledTimerWithTimeInterval

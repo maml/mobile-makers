@@ -21,37 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401553262.305824"
+         timestampString = "401555727.809004"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "102"
-         endingLineNumber = "102"
-         landmarkName = "-handleTick:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401553262.305824"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "108"
-         endingLineNumber = "108"
-         landmarkName = "-handleTick:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401553262.305824"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "167"
-         endingLineNumber = "167"
+         startingLineNumber = "125"
+         endingLineNumber = "125"
          landmarkName = "-displaySeconds:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401550541.527549"
+         timestampString = "401554167.587878"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
          landmarkName = "@implementation MLViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -86,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401550541.527549"
+         timestampString = "401554167.587878"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68"
+         startingLineNumber = "62"
+         endingLineNumber = "62"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -99,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLStopwatch.m"
-         timestampString = "401552461.950198"
+         timestampString = "401555672.378059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "40"
-         endingLineNumber = "40"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
          landmarkName = "-createScheduledTimerWithTimeInterval"
          landmarkType = "5">
       </FileBreakpoint>
@@ -112,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLStopwatch.h"
-         timestampString = "401552416.084869"
+         timestampString = "401554167.587878"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "25"
-         endingLineNumber = "25"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
          landmarkName = "@interface MLStopwatch"
          landmarkType = "2">
       </FileBreakpoint>
@@ -125,24 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401441008.679304"
+         timestampString = "401554167.587878"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
-         landmarkName = "hours"
-         landmarkType = "19">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401441012.752199"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
          landmarkName = "@interface MLViewController()"
          landmarkType = "2">
       </FileBreakpoint>
@@ -151,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401553262.305824"
+         timestampString = "401554767.955859"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "92"
+         endingLineNumber = "92"
          landmarkName = "-handleTick:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401553262.305824"
+         timestampString = "401554767.955859"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "92"
+         endingLineNumber = "92"
          landmarkName = "-handleTick:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -176,13 +137,26 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Stopwatch/MLViewController.m"
-         timestampString = "401553262.305824"
+         filePath = "Stopwatch/MLStopwatch.m"
+         timestampString = "401555672.378059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "109"
-         endingLineNumber = "109"
-         landmarkName = "-handleTick:"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "-tick:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Stopwatch/MLStopwatch.m"
+         timestampString = "401555672.378059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
+         landmarkName = "-tick:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

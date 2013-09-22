@@ -29,10 +29,6 @@
 @property (nonatomic) NSString *secondsFormat;
 @property (nonatomic) NSString *minutesFormat;
 @property (nonatomic) NSString *hoursFormat;
-@property (nonatomic) int tenths;
-@property (nonatomic) int seconds;
-@property (nonatomic) int minutes;
-@property (nonatomic) int hours;
 
 - (void)displayTenths:(int) t;
 - (void)displaySeconds:(int) s;
@@ -46,8 +42,6 @@
 @end
 
 @implementation MLViewController
-
-@synthesize tenths, seconds, minutes, hours;
 
 - (void)viewDidLoad
 {
@@ -96,47 +90,10 @@
 
 - (void)handleTick:(NSNotification *) notification
 {
-    int stopwatchTickCount = [_stopwatch timerTickCount];
-    
-    if (tenths < 9) {
-        tenths++;
-    } else {
-        tenths = 0;
-    }
-    
-    if ((stopwatchTickCount % 10 == 0) && (stopwatchTickCount != 0)) {
-        if (seconds < 59) {
-            seconds++;
-        } else {
-            seconds = 0;
-        }
-    }
-    
-    // timer fires every tenth of a second
-    // tenths/second * seconds/minute
-    // 10 * 60 = 600 tenths/minute
-    if ((stopwatchTickCount % 600 == 0) && (stopwatchTickCount != 0)) {
-        if (minutes < 59) {
-            minutes++;
-        } else {
-            minutes = 0;
-        }
-    }
-    
-    // tenths/second * seconds/minute * minutes/hour
-    // 10 * 60 * 60 = 36,000 tenths/hour
-    if ((stopwatchTickCount % 36000 == 0) && (stopwatchTickCount != 0)) {
-        if (hours < 23) {
-            hours++;
-        } else {
-            hours = 0;
-        }
-    }
-    
-    [self displayTenths:(tenths)];
-    [self displaySeconds:(seconds)];
-    [self displayMinutes:(minutes)];
-    [self displayHours:(hours)];
+    [self displayTenths:([_stopwatch tenths])];
+    [self displaySeconds:([_stopwatch seconds])];
+    [self displayMinutes:([_stopwatch minutes])];
+    [self displayHours:([_stopwatch hours])];
 }
 
 - (void)resetDisplay {
@@ -147,10 +104,11 @@
 }
 
 - (void)resetTimerProperties {
-    tenths = 0;
-    seconds = 0;
-    minutes = 0;
-    hours = 0;
+    [_stopwatch setTenths:0];
+    [_stopwatch setSeconds:0];
+    [_stopwatch setMinutes:0];
+    [_stopwatch setHours:0];
+    [_stopwatch setTimerTickCount:0];
 }
 
 - (void)displayTenths:(int)t
