@@ -22,6 +22,9 @@
 - (void)incrementTickCount;
 - (void)invalidate;
 - (void)reset;
+- (void)stop;
+- (void)pause;
+- (void)start;
 
 @property (nonatomic) int tenths;
 @property (nonatomic) int seconds;

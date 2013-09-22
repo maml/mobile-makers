@@ -35,7 +35,6 @@
 - (void)displayMinutes:(int) m;
 - (void)displayHours:(int) h;
 - (void)resetDisplay;
-- (void)resetTimer;
 
 @property (strong, nonatomic) MLStopwatch *stopwatch;
 
@@ -68,24 +67,17 @@
 }
 
 - (IBAction)start:(id)sender {
-    if (_stopwatch.isStartable == YES) {
-        [_stopwatch createScheduledTimerWithTimeInterval];
-    }
-    // we want prevent multiple timers from running
-    [_stopwatch disableStartButton];
+    [_stopwatch start];
 }
 
 - (IBAction)pause:(id)sender {
-    [[_stopwatch timer] invalidate];
-    [_stopwatch enableStartButton];
+    [_stopwatch pause];
 }
 
 - (IBAction)stop:(id)sender {
-    [[_stopwatch timer] invalidate];
-    [_stopwatch enableStartButton];
+    [_stopwatch stop];
+    [_stopwatch reset];
     [self resetDisplay];
-    [self resetTimer];
-
 }
 
 - (void)handleTick:(NSNotification *) notification
@@ -101,10 +93,6 @@
     _secondsLabel.text = @"00";
     _minutesLabel.text = @"00";
     _hoursLabel.text = @"00";
-}
-
-- (void)resetTimer {
-    [_stopwatch reset];
 }
 
 - (void)displayTenths:(int)t

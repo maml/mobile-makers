@@ -106,4 +106,25 @@
     [self setTimerTickCount:0];
 }
 
+-(void)stop
+{
+    [[self timer] invalidate];
+    [self enableStartButton];
+}
+
+-(void)pause
+{
+    [[self timer] invalidate];
+    [self enableStartButton];
+}
+
+-(void)start
+{
+    if (self.isStartable == YES) {
+        [self createScheduledTimerWithTimeInterval];
+    }
+    // we want prevent multiple timers from running
+    [self disableStartButton];
+}
+
 @end
