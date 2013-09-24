@@ -7,6 +7,7 @@
 //
 
 #import "MLViewController.h"
+#import "MLTimerViewController.h"
 
 @interface MLViewController ()
 
@@ -21,9 +22,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonStart;
 @property (weak, nonatomic) IBOutlet UIButton *buttonPause;
 @property (weak, nonatomic) IBOutlet UIButton *buttonStop;
+@property (weak, nonatomic) IBOutlet UIButton *buttonTimer;
 - (IBAction)start:(id)sender;
 - (IBAction)pause:(id)sender;
 - (IBAction)stop:(id)sender;
+- (IBAction)showTimer:(id)sender;
 
 // Timer
 @property (nonatomic) NSString *secondsFormat;
@@ -78,6 +81,12 @@
     [_stopwatch stop];
     [_stopwatch reset];
     [self resetDisplay];
+}
+
+- (IBAction)showTimer:(id)sender {
+    // do it here . . .
+    MLTimerViewController *mltvc = [[MLTimerViewController alloc] init];
+    [self presentViewController:mltvc animated:YES completion:nil]; 
 }
 
 - (void)handleTick:(NSNotification *) notification
