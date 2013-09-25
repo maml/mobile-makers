@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - ToDos-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MLViewController" sceneMemberID="viewController">
+                <viewController title="ToDos" id="vXZ-lx-hvc" customClass="MLViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4HC-ta-NPv"/>
                         <viewControllerLayoutGuide type="bottom" id="2Sg-lM-cVb"/>
