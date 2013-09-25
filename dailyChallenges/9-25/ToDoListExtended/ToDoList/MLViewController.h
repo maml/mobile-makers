@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonAdd;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *todoArray;
+@property (strong, nonatomic) UINavigationController *uinc;
 
 - (IBAction)AddToDo:(id)sender;
 @end

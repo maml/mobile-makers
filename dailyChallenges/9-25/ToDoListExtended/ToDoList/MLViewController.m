@@ -19,12 +19,13 @@
 {
     [super viewDidLoad];
     self.todoArray = [[NSMutableArray alloc] init];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    // navigation item in the UI controller documentation
+    // menu button item
+    //[self.navigationController.navigationItem.init ]
+    
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(gotoEditingMode)];
+    self.navigationItem.rightBarButtonItem = editButton;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -79,6 +80,7 @@
     [self.navigationController pushViewController:mlevc animated:YES];
 }
 
+
 -(void)editViewController:(id)evc didEdit:(NSString *)text index:(int)index
 {
     // update the todos array
@@ -95,5 +97,12 @@
     [_textField resignFirstResponder];
     [_tableView reloadData];
     _textField.text = @"";
+}
+
+-(void)gotoEditingMode
+{
+    NSLog(@"gotoEditingMode has fired");
+    [self setEditing:YES];
+    [_tableView setEditing:YES];
 }
 @end
