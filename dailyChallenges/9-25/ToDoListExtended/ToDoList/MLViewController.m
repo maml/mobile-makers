@@ -60,15 +60,33 @@
 
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
+    // instantiate
+    // delegatize
+    // set props (passedText and index)
+    // push to navigation controller
+    
     MLEditCellViewController *mlevc = [[MLEditCellViewController alloc] init];
-    [mlevc setCell:[tableView cellForRowAtIndexPath:indexPath]];
-    [self presentViewController:mlevc animated:YES completion:nil];
+    mlevc.delegate = self;
+    mlevc.index = indexPath.row;
+    mlevc.passedText = _todoArray[indexPath.row];
+    [self.navigationController pushViewController:mlevc animated:YES];
+}
+
+-(void)editViewController:(id)evc didEdit:(NSString *)text index:(int)index
+{
+    // update the todos array
+    // reload the data
+    // pop navigation controller
+    
+    _todoArray[index] = text;
+    [_tableView reloadData];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)AddToDo:(id)sender {
-    [self.todoArray addObject:self.textField.text];
-    [self.textField resignFirstResponder];
-    [self.tableView reloadData];
-    self.textField.text = @"";
+    [_todoArray addObject:self.textField.text];
+    [_textField resignFirstResponder];
+    [_tableView reloadData];
+    _textField.text = @"";
 }
 @end

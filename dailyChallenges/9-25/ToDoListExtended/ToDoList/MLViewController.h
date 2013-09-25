@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLEditCellViewController.h"
 
-@interface MLViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MLViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, EditViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *buttonAdd;

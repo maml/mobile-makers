@@ -15,30 +15,15 @@
 
 @implementation MLEditCellViewController
 
-@synthesize cell;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize delegate, passedText, index;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.textFieldOfEditableContent.text = [NSString stringWithFormat:@"%@", cell.textLabel.text];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
+    self.textFieldOfEditableContent.text = passedText;
 }
 
 - (IBAction)update:(id)sender {
-    cell.textLabel.text = self.textFieldOfEditableContent.text;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [delegate editViewController:self didEdit:_textFieldOfEditableContent.text index:index];
 }
 @end

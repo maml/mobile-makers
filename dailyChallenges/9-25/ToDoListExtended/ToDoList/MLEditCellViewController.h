@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldOfEditableContent;
 @property (weak, nonatomic) IBOutlet UIButton *buttonUpdate;
 - (IBAction)update:(id)sender;
-@property (strong, nonatomic) UITableViewCell *cell;
 
 @property (strong, nonatomic) id <EditViewControllerDelegate> delegate;
 @property (strong, nonatomic) NSString *passedText;
