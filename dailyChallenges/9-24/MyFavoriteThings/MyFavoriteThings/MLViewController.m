@@ -7,6 +7,7 @@
 //
 
 #import "MLViewController.h"
+#import "MLEditViewController.h"
 
 @interface MLViewController ()
 
@@ -46,11 +47,27 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MLEditViewController *mlevc = [[MLEditViewController alloc] init];
+    mlevc.delegate = self;
+    mlevc.index = indexPath.row;
+    mlevc.passedText = self.array[indexPath.row];
+    [self.navigationController pushViewController:mlevc animated:YES];
+}
+
 - (IBAction)addToTable:(id)sender {
     [self.array addObject:self.textField.text];
     [self.textField resignFirstResponder];
     [self.tableView reloadData];
     self.textField.text = @"";
+}
+
+- (void)editViewController:(MLEditViewController *)evc didEdit:(NSString *)text index:(int)index
+{
+    self.array[index] = text;
+    [[self tableView] reloadData];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

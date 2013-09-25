@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91BE69D17F343BE00019D67 /* MLEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91BE69B17F343BE00019D67 /* MLEditViewController.m */; };
+		C91BE69E17F343BE00019D67 /* MLEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91BE69C17F343BE00019D67 /* MLEditViewController.xib */; };
 		C96AD2CD17F2323E00DE8ECD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96AD2CC17F2323E00DE8ECD /* Foundation.framework */; };
 		C96AD2CF17F2323E00DE8ECD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96AD2CE17F2323E00DE8ECD /* CoreGraphics.framework */; };
 		C96AD2D117F2323E00DE8ECD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96AD2D017F2323E00DE8ECD /* UIKit.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C91BE69A17F343BE00019D67 /* MLEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEditViewController.h; sourceTree = "<group>"; };
+		C91BE69B17F343BE00019D67 /* MLEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEditViewController.m; sourceTree = "<group>"; };
+		C91BE69C17F343BE00019D67 /* MLEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEditViewController.xib; sourceTree = "<group>"; };
 		C96AD2C917F2323E00DE8ECD /* MyFavoriteThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFavoriteThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AD2CC17F2323E00DE8ECD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C96AD2CE17F2323E00DE8ECD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +122,9 @@
 				C96AD2DE17F2323E00DE8ECD /* Main.storyboard */,
 				C96AD2E117F2323E00DE8ECD /* MLViewController.h */,
 				C96AD2E217F2323E00DE8ECD /* MLViewController.m */,
+				C91BE69A17F343BE00019D67 /* MLEditViewController.h */,
+				C91BE69B17F343BE00019D67 /* MLEditViewController.m */,
+				C91BE69C17F343BE00019D67 /* MLEditViewController.xib */,
 				C96AD2E417F2323E00DE8ECD /* Images.xcassets */,
 				C96AD2D317F2323E00DE8ECD /* Supporting Files */,
 			);
@@ -232,6 +240,7 @@
 				C96AD2E517F2323E00DE8ECD /* Images.xcassets in Resources */,
 				C96AD2D717F2323E00DE8ECD /* InfoPlist.strings in Resources */,
 				C96AD2E017F2323E00DE8ECD /* Main.storyboard in Resources */,
+				C91BE69E17F343BE00019D67 /* MLEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +262,7 @@
 				C96AD2D917F2323E00DE8ECD /* main.m in Sources */,
 				C96AD2E317F2323E00DE8ECD /* MLViewController.m in Sources */,
 				C96AD2DD17F2323E00DE8ECD /* MLAppDelegate.m in Sources */,
+				C91BE69D17F343BE00019D67 /* MLEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +471,7 @@
 				C96AD2FD17F2323E00DE8ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C96AD2FE17F2323E00DE8ECD /* Build configuration list for PBXNativeTarget "MyFavoriteThingsTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +480,7 @@
 				C96AD30017F2323E00DE8ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
