@@ -20,5 +20,7 @@
 @property (strong, nonatomic) UITableViewCell *cell;
 
 @property (strong, nonatomic) id <EditViewControllerDelegate> delegate;
+@property (strong, nonatomic) NSString *passedText;
+@property int index;
 
 @end
