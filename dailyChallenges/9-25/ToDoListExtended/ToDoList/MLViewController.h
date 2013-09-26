@@ -17,5 +17,8 @@
 @property (strong, nonatomic) NSMutableArray *todoArray;
 @property (strong, nonatomic) UINavigationController *uinc;
 
+@property (strong, nonatomic) UIBarButtonItem *editButton;
+@property (strong, nonatomic) UIBarButtonItem *doneButton;
+
 - (IBAction)AddToDo:(id)sender;
 @end

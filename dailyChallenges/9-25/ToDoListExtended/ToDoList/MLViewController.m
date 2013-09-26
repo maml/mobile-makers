@@ -20,12 +20,8 @@
     [super viewDidLoad];
     self.todoArray = [[NSMutableArray alloc] init];
     
-    // navigation item in the UI controller documentation
-    // menu button item
-    //[self.navigationController.navigationItem.init ]
-    
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(gotoEditingMode)];
-    self.navigationItem.rightBarButtonItem = editButton;
+    _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(setEditingTrue)];
+    self.navigationItem.rightBarButtonItem = _editButton;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -99,10 +95,28 @@
     _textField.text = @"";
 }
 
--(void)gotoEditingMode
+-(void)setEditingTrue
 {
-    NSLog(@"gotoEditingMode has fired");
-    [self setEditing:YES];
-    [_tableView setEditing:YES];
+    [self toggleEditing:YES animated:YES];
 }
+
+-(void)setEditingFalse
+{
+    [self toggleEditing:NO animated:YES];
+}
+
+-(void)toggleEditing:(BOOL)flag animated:(BOOL)animated
+{
+    [self setEditing:flag];
+    [_tableView setEditing:flag];
+    
+    if (flag == YES){
+        _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(setEditingFalse)];
+        self.navigationItem.rightBarButtonItem = _doneButton;
+    }
+    else {
+        self.navigationItem.rightBarButtonItem = _editButton;
+    }
+}
+
 @end
