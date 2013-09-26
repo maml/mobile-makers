@@ -20,8 +20,8 @@
     [super viewDidLoad];
     self.todoArray = [[NSMutableArray alloc] init];
     
-    _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(setEditingTrue)];
-    self.navigationItem.rightBarButtonItem = _editButton;
+    // developer documentation for editButtonItem - http://bit.ly/19HjMlq
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -95,27 +95,14 @@
     _textField.text = @"";
 }
 
--(void)setEditingTrue
+- (void)setEditing:(BOOL)flag animated:(BOOL)animated
 {
-    [self toggleEditing:YES animated:YES];
-}
-
--(void)setEditingFalse
-{
-    [self toggleEditing:NO animated:YES];
-}
-
--(void)toggleEditing:(BOOL)flag animated:(BOOL)animated
-{
-    [self setEditing:flag];
-    [_tableView setEditing:flag];
-    
+    [super setEditing:flag animated:animated];
     if (flag == YES){
-        _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(setEditingFalse)];
-        self.navigationItem.rightBarButtonItem = _doneButton;
+        [_tableView setEditing:YES];
     }
     else {
-        self.navigationItem.rightBarButtonItem = _editButton;
+        [_tableView setEditing:NO];
     }
 }
 
