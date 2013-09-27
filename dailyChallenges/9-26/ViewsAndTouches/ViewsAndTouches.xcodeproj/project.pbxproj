@@ -22,6 +22,7 @@
 		C91BE71917F49C6E00019D67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91BE71717F49C6E00019D67 /* InfoPlist.strings */; };
 		C91BE71B17F49C6E00019D67 /* ViewsAndTouchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C91BE71A17F49C6E00019D67 /* ViewsAndTouchesTests.m */; };
 		C91BE72617F49C8300019D67 /* MLmyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C91BE72517F49C8300019D67 /* MLmyView.m */; };
+		C963E72817F61E7B00D81894 /* MLGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C963E72717F61E7B00D81894 /* MLGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		C91BE72417F49C8300019D67 /* MLmyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLmyView.h; path = ../MLmyView.h; sourceTree = "<group>"; };
 		C91BE72517F49C8300019D67 /* MLmyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLmyView.m; path = ../MLmyView.m; sourceTree = "<group>"; };
 		C91BE72817F4A5CA00019D67 /* MLMatchDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLMatchDelegate.h; sourceTree = "<group>"; };
+		C963E72617F61E7B00D81894 /* MLGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLGame.h; sourceTree = "<group>"; };
+		C963E72717F61E7B00D81894 /* MLGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				C91BE70117F49C6E00019D67 /* Main.storyboard */,
 				C91BE70417F49C6E00019D67 /* MLViewController.h */,
 				C91BE70517F49C6E00019D67 /* MLViewController.m */,
+				C963E72617F61E7B00D81894 /* MLGame.h */,
+				C963E72717F61E7B00D81894 /* MLGame.m */,
 				C91BE72817F4A5CA00019D67 /* MLMatchDelegate.h */,
 				C91BE70717F49C6E00019D67 /* Images.xcassets */,
 				C91BE6F617F49C6E00019D67 /* Supporting Files */,
@@ -260,6 +265,7 @@
 				C91BE6FC17F49C6E00019D67 /* main.m in Sources */,
 				C91BE70617F49C6E00019D67 /* MLViewController.m in Sources */,
 				C91BE70017F49C6E00019D67 /* MLAppDelegate.m in Sources */,
+				C963E72817F61E7B00D81894 /* MLGame.m in Sources */,
 				C91BE72617F49C8300019D67 /* MLmyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +475,7 @@
 				C91BE72017F49C6E00019D67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C91BE72117F49C6E00019D67 /* Build configuration list for PBXNativeTarget "ViewsAndTouchesTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +484,7 @@
 				C91BE72317F49C6E00019D67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
