@@ -11,5 +11,6 @@
 @protocol MLMatchDelegate <NSObject>
 
 - (void)didChooseView: (UIView *)view;
+- (void)didTouchView: (UIView *)view;
 
 @end
