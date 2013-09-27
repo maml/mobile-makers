@@ -11,7 +11,6 @@
 
 @interface MLViewController : UIViewController <MLMatchDelegate>
 
-@property int previousSelection;
 @property int selectionCount;
 @property int matchCounter;
 @property int missCounter;

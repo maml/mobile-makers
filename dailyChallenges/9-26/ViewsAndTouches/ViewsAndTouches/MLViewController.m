@@ -18,14 +18,10 @@
 
 @implementation MLViewController
 
-@synthesize previousSelection, selections, selectionCount, matchCounter, missCounter;
+@synthesize selections, selectionCount, matchCounter, missCounter;
 
 - (void)viewDidLoad
 {
-    // buttons are numbered, in pairs, from 1 . . . 8
-    // nothing will match 0
-    self.previousSelection = 0;
-    
     self.selections = [[NSMutableArray alloc] initWithCapacity:2];
     
     self.selectionCount = 0;
