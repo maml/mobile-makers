@@ -8,6 +8,7 @@
 
 #define DEFAULT  [UIColor lightGrayColor]
 #define SELECTED [UIColor orangeColor]
+#define TOUCHED SELECTED
 #define MATCHED  [UIColor greenColor]
 
 #import "MLViewController.h"
@@ -125,6 +126,11 @@
     } else {
         _missesLabel.text = [NSString stringWithFormat:@"Misses: %i", game.missCounter];
     }
+}
+
+- (void)didTouchView:(UIView *)view
+{
+    view.backgroundColor = TOUCHED;
 }
 
 - (void)didChooseView:(MLmyView *)view
