@@ -29,7 +29,8 @@
     
     for (UIView *view in self.view.subviews)
     {
-        if ([view isKindOfClass:[MLmyView class]]) {
+        if ([view isKindOfClass:[MLmyView class]])
+        {
             MLmyView *myView = (MLmyView *) view;
             myView.delegate = self;
             myView.state = YES;
@@ -40,7 +41,8 @@
 // view is playable if its state is `on` ie, YES
 - (BOOL)viewIsPlayable: (MLmyView *)view
 {
-    if (view.state == YES) {
+    if (view.state == YES)
+    {
         return YES;
     } else {
         return NO;
@@ -49,7 +51,8 @@
 
 - (BOOL)itsTimeToCompareViews
 {
-    if (game.selectionCount %2 == 0) {
+    if (game.selectionCount %2 == 0)
+    {
         return YES;
     } else {
         return NO;
@@ -91,7 +94,8 @@
 
 - (void)resetIfGameHasBeenWon
 {
-    if (game.matchCounter == 8) {
+    if (game.matchCounter == 8)
+    {
         [self resetGame];
     }
 }
@@ -100,7 +104,8 @@
 {
     for (UIView *view in self.view.subviews)
     {
-        if ([view isKindOfClass:[MLmyView class]]) {
+        if ([view isKindOfClass:[MLmyView class]])
+        {
             MLmyView *myView = (MLmyView *) view;
             myView.backgroundColor = DEFAULT;
             myView.state = YES;
@@ -114,7 +119,8 @@
 
 - (void)updateLabel: (NSString *)label
 {
-    if ([label isEqual: @"matches"]) {
+    if ([label isEqual: @"matches"])
+    {
         _matchesLabel.text = [NSString stringWithFormat:@"Matches: %i", game.matchCounter];
     } else {
         _missesLabel.text = [NSString stringWithFormat:@"Misses: %i", game.missCounter];
@@ -162,13 +168,16 @@
     //
     // noOp
 
-    if ([self viewIsPlayable: view]) {
+    if ([self viewIsPlayable: view])
+    {
         game.selectionCount++;
         [game.selections addObject:view];
         [self takeViewOutOfPlay: view];
         view.backgroundColor = SELECTED;
-        if ([self itsTimeToCompareViews]) {
-            if ([self compareViews]) {
+        if ([self itsTimeToCompareViews])
+        {
+            if ([self compareViews])
+            {
                 game.matchCounter++;
                 [self setViewBackgroundsTo: MATCHED];
                 [self setPlayabilityOfSelectedViews: NO];
