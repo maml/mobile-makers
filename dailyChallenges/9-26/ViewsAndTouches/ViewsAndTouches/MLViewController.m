@@ -114,6 +114,8 @@
     }
     game.matchCounter = 0;
     game.missCounter = 0;
+    game.selectionCount = 0;
+    [game.selections removeAllObjects];
     _matchesLabel.text = @"Matches:";
     _missesLabel.text = @"Misses:";
 }
