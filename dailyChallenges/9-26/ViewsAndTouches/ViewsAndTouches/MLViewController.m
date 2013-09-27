@@ -177,7 +177,7 @@
      
     ------------------------------------------------------------------------------- */
 
-     if ([self viewIsPlayable: view])
+    if ([self viewIsPlayable: view])
     {
         game.selectionCount++;
         [game.selections addObject:view];
