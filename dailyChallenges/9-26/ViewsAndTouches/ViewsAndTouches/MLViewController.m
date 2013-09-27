@@ -132,7 +132,9 @@
 
 - (void)didTouchView:(UIView *)view
 {
-    view.backgroundColor = TOUCHED;
+    if ([self viewIsPlayable:(MLmyView *)view]) {
+        view.backgroundColor = TOUCHED;
+    }
 }
 
 - (void)didChooseView:(MLmyView *)view
