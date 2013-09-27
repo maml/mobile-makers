@@ -136,45 +136,48 @@
 - (void)didChooseView:(MLmyView *)view
 {
     
-    // When a view's been 'touched' we need to first check and see if it's 'playable'
-    // ie, it's state is YES.
-    //
-    // If it's playable we need to
-    // - increment selectionCount.
-    // - set its background to SELECTED
-    // - add view to selections array
-    // - take it out of play
-    //
-    // Note onf selectionCount - The selectionCount is
-    // what allows us to determine if we need to make a comparison or not. We make a
-    // comparison check every even, or, every other trun.
-    //
-    // If it's time to compare . . .
-    //
-    // If the views' tags are not equal we need to:
-    // - update the misses counter
-    //  - restore their background colors to DEFAULT
-    // - make sure their states are set to YES, ie, 'playable'
-    // - reset the selections array
-    // - reset game if game has been won
-    // - update the misses label
-    //
-    // If the views' tags are equal, we have a match and we need to:
-    // - increment the match counter
-    // - set the views' backgrounds to MATCHED
-    // - make sure the views' states are set to NO
-    // - reset the selections array
-    // - update the matches label
-    //
-    // If it's not time to compare . . .
-    //
-    // noOp
-    //
-    // If it's not playable
-    //
-    // noOp
+    /* -------------------------------------------------------------------------------
+     
+    When a view's been touched we need to first check and see if it's playable,
+    ie, it's state is YES.
 
-    if ([self viewIsPlayable: view])
+    If it's playable we need to
+
+        - increment selectionCount.
+        - set its background to SELECTED
+        - add view to selections array
+        - take it out of play
+
+        If it's time to compare . . .
+
+            If the views' tags are not equal we need to:
+             
+                - update the misses counter
+                - restore their background colors to DEFAULT
+                - make sure their states are set to YES, ie, playable
+                - reset the selections array
+                - reset game if game has been won
+                - update the misses label
+
+            If the views' tags are equal, we have a match and we need to:
+
+                - increment the match counter
+                - set the views' backgrounds to MATCHED
+                - make sure the views' states are set to NO
+                - reset the selections array
+                - update the matches label
+
+        If it's not time to compare . . .
+
+            noOp
+
+    If it's not playable
+
+        noOp
+     
+    ------------------------------------------------------------------------------- */
+
+     if ([self viewIsPlayable: view])
     {
         game.selectionCount++;
         [game.selections addObject:view];
