@@ -24,4 +24,9 @@
     [_delegate didChooseView:(self)];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [_delegate didTouchView:(self)];
+}
+
 @end
