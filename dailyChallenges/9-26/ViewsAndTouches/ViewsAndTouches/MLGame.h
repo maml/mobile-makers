@@ -6,6 +6,13 @@
 //  Copyright (c) 2013 Matthew Loseke. All rights reserved.
 //
 
+/*
+ selections     - a mutable array with capacity 2 used to keep track of the two most recent selections
+ selectionCount - an int used to determine if a comparison needs to be made, which is whenever selectionCount % 2 == 0
+ matchCounter   - an int used to track the number of matches
+ missCounter    - an int used to track the number of misses
+*/
+
 #import <Foundation/Foundation.h>
 
 @interface MLGame : NSObject

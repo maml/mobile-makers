@@ -12,4 +12,16 @@
 
 @synthesize selectionCount, selections, matchCounter, missCounter;
 
+- (MLGame *)init
+{    
+    self = [super init];
+    
+    selections = [[NSMutableArray alloc] initWithCapacity:2];
+    selectionCount = 0;
+    matchCounter = 0;
+    missCounter = 0;
+    
+    return self;
+}
+
 @end

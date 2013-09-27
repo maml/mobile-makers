@@ -22,15 +22,10 @@
 
 - (void)viewDidLoad
 {
-    // create an instance of MLGame
+    // create and initialize instance of MLGame
     game = [[MLGame alloc] init];
     
-    game.selections = [[NSMutableArray alloc] initWithCapacity:2];
-    
-    game.selectionCount = 0;
-    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
     for (UIView *view in self.view.subviews)
     {
