@@ -18,7 +18,7 @@
 
 @implementation MLViewController
 
-@synthesize game, matchCounter, missCounter;
+@synthesize game;
 
 - (void)viewDidLoad
 {
@@ -96,7 +96,7 @@
 
 - (void)resetIfGameHasBeenWon
 {
-    if (matchCounter == 8) {
+    if (game.matchCounter == 8) {
         [self resetGame];
     }
 }
@@ -111,8 +111,8 @@
             myView.state = YES;
         }
     }
-    self.matchCounter = 0;
-    self.missCounter = 0;
+    game.matchCounter = 0;
+    game.missCounter = 0;
     _matchesLabel.text = @"Matches:";
     _missesLabel.text = @"Misses:";
 }
@@ -120,9 +120,9 @@
 - (void)updateLabel: (NSString *)label
 {
     if ([label isEqual: @"matches"]) {
-        _matchesLabel.text = [NSString stringWithFormat:@"Matches: %i", self.matchCounter];
+        _matchesLabel.text = [NSString stringWithFormat:@"Matches: %i", game.matchCounter];
     } else {
-        _missesLabel.text = [NSString stringWithFormat:@"Misses: %i", self.missCounter];
+        _missesLabel.text = [NSString stringWithFormat:@"Misses: %i", game.missCounter];
     }
 }
 
@@ -174,14 +174,14 @@
         view.backgroundColor = SELECTED;
         if ([self itsTimeToCompareViews]) {
             if ([self compareViews]) {
-                self.matchCounter++;
+                game.matchCounter++;
                 [self setViewBackgroundsTo: MATCHED];
                 [self setPlayabilityOfSelectedViews: NO];
                 [self resetSelectionsArray];
                 [self updateLabel: @"matches"];
                 [self resetIfGameHasBeenWon];
             } else {
-                self.missCounter++;
+                game.missCounter++;
                 [self setViewBackgroundsTo: DEFAULT];
                 [self setPlayabilityOfSelectedViews: YES];
                 [self resetSelectionsArray];

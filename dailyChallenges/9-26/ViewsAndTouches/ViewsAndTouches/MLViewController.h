@@ -14,9 +14,6 @@
 
 @property (strong, nonatomic) MLGame *game;
 
-@property int matchCounter;
-@property int missCounter;
-
 @property (weak, nonatomic) IBOutlet UILabel *matchesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *missesLabel;
 - (IBAction)resetGame:(id)sender;

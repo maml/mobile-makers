@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) NSMutableArray *selections;
 @property int selectionCount;
+@property int matchCounter;
+@property int missCounter;
 
 @end
