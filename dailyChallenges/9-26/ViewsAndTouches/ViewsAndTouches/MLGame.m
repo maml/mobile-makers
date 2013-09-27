@@ -10,4 +10,6 @@
 
 @implementation MLGame
 
+@synthesize selectionCount;
+
 @end

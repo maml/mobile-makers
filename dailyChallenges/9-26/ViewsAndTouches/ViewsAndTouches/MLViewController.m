@@ -18,13 +18,16 @@
 
 @implementation MLViewController
 
-@synthesize selections, selectionCount, matchCounter, missCounter;
+@synthesize game, selections, matchCounter, missCounter;
 
 - (void)viewDidLoad
 {
+    // create an instance of MLGame
+    game = [[MLGame alloc] init];
+    
     self.selections = [[NSMutableArray alloc] initWithCapacity:2];
     
-    self.selectionCount = 0;
+    game.selectionCount = 0;
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -51,7 +54,7 @@
 
 - (BOOL)itsTimeToCompareViews
 {
-    if (self.selectionCount %2 == 0) {
+    if (game.selectionCount %2 == 0) {
         return YES;
     } else {
         return NO;
@@ -165,7 +168,7 @@
     // noOp
 
     if ([self viewIsPlayable: view]) {
-        self.selectionCount++;
+        game.selectionCount++;
         [self.selections addObject:view];
         [self takeViewOutOfPlay: view];
         view.backgroundColor = SELECTED;

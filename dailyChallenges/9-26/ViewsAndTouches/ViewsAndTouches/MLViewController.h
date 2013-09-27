@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MLmyView.h"
+#import "MLGame.h"
 
 @interface MLViewController : UIViewController <MLMatchDelegate>
 
-@property int selectionCount;
+@property (strong, nonatomic) MLGame *game;
+
 @property int matchCounter;
 @property int missCounter;
 

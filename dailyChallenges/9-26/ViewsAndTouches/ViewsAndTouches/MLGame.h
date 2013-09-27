@@ -10,4 +10,6 @@
 
 @interface MLGame : NSObject
 
+@property int selectionCount;
+
 @end
