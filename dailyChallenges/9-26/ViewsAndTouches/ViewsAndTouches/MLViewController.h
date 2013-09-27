@@ -17,7 +17,6 @@
 @property int matchCounter;
 @property int missCounter;
 
-@property (strong, nonatomic) NSMutableArray *selections;
 @property (weak, nonatomic) IBOutlet UILabel *matchesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *missesLabel;
 - (IBAction)resetGame:(id)sender;

@@ -18,14 +18,14 @@
 
 @implementation MLViewController
 
-@synthesize game, selections, matchCounter, missCounter;
+@synthesize game, matchCounter, missCounter;
 
 - (void)viewDidLoad
 {
     // create an instance of MLGame
     game = [[MLGame alloc] init];
     
-    self.selections = [[NSMutableArray alloc] initWithCapacity:2];
+    game.selections = [[NSMutableArray alloc] initWithCapacity:2];
     
     game.selectionCount = 0;
     
@@ -63,14 +63,14 @@
 
 - (BOOL)compareViews
 {
-    MLmyView *view1 = self.selections[0];
-    MLmyView *view2 = self.selections[1];
+    MLmyView *view1 = game.selections[0];
+    MLmyView *view2 = game.selections[1];
     return view1.tag == view2.tag;
 }
 
 - (void)setViewBackgroundsTo: (UIColor *)color
 {
-    for (MLmyView *view in selections)
+    for (MLmyView *view in game.selections)
     {
         view.backgroundColor = color;
     }
@@ -78,7 +78,7 @@
 
 - (void)setPlayabilityOfSelectedViews: (BOOL)state
 {
-    for (MLmyView *view in selections)
+    for (MLmyView *view in game.selections)
     {
         view.state = state;
     }
@@ -91,7 +91,7 @@
 
 - (void)resetSelectionsArray
 {
-    [self.selections removeAllObjects];
+    [game.selections removeAllObjects];
 }
 
 - (void)resetIfGameHasBeenWon
@@ -169,7 +169,7 @@
 
     if ([self viewIsPlayable: view]) {
         game.selectionCount++;
-        [self.selections addObject:view];
+        [game.selections addObject:view];
         [self takeViewOutOfPlay: view];
         view.backgroundColor = SELECTED;
         if ([self itsTimeToCompareViews]) {

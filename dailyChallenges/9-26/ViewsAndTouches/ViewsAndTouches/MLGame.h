@@ -10,6 +10,7 @@
 
 @interface MLGame : NSObject
 
+@property (strong, nonatomic) NSMutableArray *selections;
 @property int selectionCount;
 
 @end
