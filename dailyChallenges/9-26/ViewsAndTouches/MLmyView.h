@@ -12,5 +12,6 @@
 @interface MLmyView : UIView
 
 @property (strong, nonatomic) id<MLMatchDelegate> delegate;
+@property BOOL state;
 
 @end
