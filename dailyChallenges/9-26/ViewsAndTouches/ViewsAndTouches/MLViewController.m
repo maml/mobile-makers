@@ -156,7 +156,6 @@
                 - restore their background colors to DEFAULT
                 - make sure their states are set to YES, ie, playable
                 - reset the selections array
-                - reset game if game has been won
                 - update the misses label
 
             If the views' tags are equal, we have a match and we need to:
@@ -166,6 +165,7 @@
                 - make sure the views' states are set to NO
                 - reset the selections array
                 - update the matches label
+                - reset game if game has been won
 
         If it's not time to compare . . .
 
