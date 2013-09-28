@@ -17,5 +17,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *matchesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *missesLabel;
 - (IBAction)resetGame:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *minutesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *secondsLabel;
+
+@property int tickCounter;
+@property int seconds;
+@property int minutes;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end

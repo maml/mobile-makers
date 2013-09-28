@@ -22,4 +22,6 @@
 @property int matchCounter;
 @property int missCounter;
 
+- (void)reset;
+
 @end

@@ -24,4 +24,12 @@
     return self;
 }
 
+- (void)reset
+{
+    matchCounter = 0;
+    missCounter = 0;
+    selectionCount = 0;
+    [selections removeAllObjects];
+}
+
 @end

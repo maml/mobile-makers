@@ -37,6 +37,59 @@
             myView.state = YES;
         }
     }
+    
+    _seconds = 60;
+    _minutes = 1;
+    _minutesLabel.text = [NSString stringWithFormat:@"0%i", _minutes];
+    _secondsLabel.text = @"00";
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                     target:self
+                                   selector:@selector(tick)
+                                   userInfo:nil
+                                    repeats:YES];
+}
+
+- (void)tick
+{
+    _tickCounter++;
+    _seconds--;
+    [self updateSecondsLabel];
+    
+    if (_tickCounter % 60 == 0) {
+        _seconds = 60;
+    }
+    
+    if (_seconds == 59) {
+        _minutes--;
+        [self updateMinutesLabel];
+    }
+    
+    if (_seconds == 60 && _minutes == 0) {
+        NSLog(@"Game Over !!!");
+        [_timer invalidate];
+        [self resetGame];
+    }
+    NSLog(@"minutes are %i", _minutes);
+    NSLog(@"seconds are %i", _seconds);
+}
+
+- (void)updateSecondsLabel
+{
+    if (_seconds < 10) {
+        _secondsLabel.text = [NSString stringWithFormat:@"0%i", _seconds];
+    } else {
+        _secondsLabel.text = [NSString stringWithFormat:@"%i", _seconds];
+    }
+}
+
+- (void)updateMinutesLabel
+{
+    if (_minutes < 1) {
+        _minutesLabel.text = @"00";
+    } else {
+        _minutesLabel.text = [NSString stringWithFormat:@"0%i", _minutes];
+    }
 }
 
 // view is playable if its state is `on` ie, YES
@@ -103,6 +156,13 @@
 
 - (void)resetGame
 {
+    [self resetUI];
+    [game reset];
+}
+
+- (void)resetUI
+{
+    // set each view's color back to default and their state to playable
     for (UIView *view in self.view.subviews)
     {
         if ([view isKindOfClass:[MLmyView class]])
@@ -112,10 +172,7 @@
             myView.state = YES;
         }
     }
-    game.matchCounter = 0;
-    game.missCounter = 0;
-    game.selectionCount = 0;
-    [game.selections removeAllObjects];
+    // update the matches and misses labels
     _matchesLabel.text = @"Matches:";
     _missesLabel.text = @"Misses:";
 }
