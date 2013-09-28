@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MLmyView.h"
 #import "MLGame.h"
+#import "MLTimer.h"
 
 @interface MLViewController : UIViewController <MLMatchDelegate>
 
@@ -21,8 +22,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *secondsLabel;
 
 @property int tickCounter;
+@property int timerSeconds;
 @property int seconds;
 @property int minutes;
 @property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) MLTimer *mlt;
+@property (strong, nonatomic) NSTimer *mltTimer;
 
 @end

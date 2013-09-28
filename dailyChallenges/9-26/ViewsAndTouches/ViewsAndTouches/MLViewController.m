@@ -19,12 +19,14 @@
 
 @implementation MLViewController
 
-@synthesize game;
+@synthesize game, mlt, mltTimer, minutes, seconds, timerSeconds;
 
 - (void)viewDidLoad
 {
     // create and initialize instance of MLGame
     game = [[MLGame alloc] init];
+    mlt = [[MLTimer alloc] init];
+    mltTimer = mlt.timer;
     
     [super viewDidLoad];
     
@@ -38,10 +40,11 @@
         }
     }
     
-    _seconds = 60;
-    _minutes = 1;
-    _minutesLabel.text = [NSString stringWithFormat:@"0%i", _minutes];
-    _secondsLabel.text = @"00";
+    timerSeconds = 4;
+    minutes = timerSeconds / 60;
+    seconds = timerSeconds % 60;
+    [self updateMinutesLabel];
+    [self updateSecondsLabel];
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:1
                                      target:self
@@ -52,44 +55,39 @@
 
 - (void)tick
 {
-    _tickCounter++;
-    _seconds--;
-    [self updateSecondsLabel];
+    timerSeconds--;
     
-    if (_tickCounter % 60 == 0) {
-        _seconds = 60;
-    }
-    
-    if (_seconds == 59) {
-        _minutes--;
-        [self updateMinutesLabel];
-    }
-    
-    if (_seconds == 60 && _minutes == 0) {
-        NSLog(@"Game Over !!!");
-        [_timer invalidate];
+    if (timerSeconds == 0)
+    {
+        seconds = timerSeconds % 60;
+        [self updateSecondsLabel];
         [self resetGame];
+        [_timer invalidate];
+    } else {
+        minutes = timerSeconds / 60;
+        NSLog(@"minutes are %i\n", minutes);
+        [self updateMinutesLabel];
+        
+        seconds = timerSeconds % 60;
+        NSLog(@"seconds are %i", seconds);
+        [self updateSecondsLabel];
     }
-    NSLog(@"minutes are %i", _minutes);
-    NSLog(@"seconds are %i", _seconds);
 }
 
 - (void)updateSecondsLabel
 {
-    if (_seconds < 10) {
-        _secondsLabel.text = [NSString stringWithFormat:@"0%i", _seconds];
+    if (seconds == 0) {
+        _secondsLabel.text = @"00";
+    } else if (seconds < 10) {
+        _secondsLabel.text = [NSString stringWithFormat:@"0%i", seconds];
     } else {
-        _secondsLabel.text = [NSString stringWithFormat:@"%i", _seconds];
+        _secondsLabel.text = [NSString stringWithFormat:@"%i", seconds];
     }
 }
 
 - (void)updateMinutesLabel
 {
-    if (_minutes < 1) {
-        _minutesLabel.text = @"00";
-    } else {
-        _minutesLabel.text = [NSString stringWithFormat:@"0%i", _minutes];
-    }
+    _minutesLabel.text = [NSString stringWithFormat:@"%i", minutes];
 }
 
 // view is playable if its state is `on` ie, YES
