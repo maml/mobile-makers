@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MLTickDelegate.h"
 
 @interface MLTimer : NSObject
 
+@property (strong, nonatomic) id<MLTickDelegate> delegate;
+
+- (MLTimer *)initWithDelegate: (id)controller andTimeInSeconds:(int)timeInSeconds;
+
+@property (strong, nonatomic) NSTimer *timer;
+@property int tickCounter;
 @property int seconds;
 @property int minutes;
-@property (strong, nonatomic) NSTimer *timer;
 
 @end

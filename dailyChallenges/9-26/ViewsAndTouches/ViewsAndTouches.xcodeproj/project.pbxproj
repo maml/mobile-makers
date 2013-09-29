@@ -23,6 +23,7 @@
 		C91BE71B17F49C6E00019D67 /* ViewsAndTouchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C91BE71A17F49C6E00019D67 /* ViewsAndTouchesTests.m */; };
 		C91BE72617F49C8300019D67 /* MLmyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C91BE72517F49C8300019D67 /* MLmyView.m */; };
 		C963E72817F61E7B00D81894 /* MLGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C963E72717F61E7B00D81894 /* MLGame.m */; };
+		C9C92AB817F67B8B00D4A074 /* MLTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92AB717F67B8B00D4A074 /* MLTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		C91BE72817F4A5CA00019D67 /* MLMatchDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLMatchDelegate.h; sourceTree = "<group>"; };
 		C963E72617F61E7B00D81894 /* MLGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLGame.h; sourceTree = "<group>"; };
 		C963E72717F61E7B00D81894 /* MLGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLGame.m; sourceTree = "<group>"; };
+		C9C92AB617F67B8B00D4A074 /* MLTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTimer.h; sourceTree = "<group>"; };
+		C9C92AB717F67B8B00D4A074 /* MLTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				C91BE70517F49C6E00019D67 /* MLViewController.m */,
 				C963E72617F61E7B00D81894 /* MLGame.h */,
 				C963E72717F61E7B00D81894 /* MLGame.m */,
+				C9C92AB617F67B8B00D4A074 /* MLTimer.h */,
+				C9C92AB717F67B8B00D4A074 /* MLTimer.m */,
 				C91BE72817F4A5CA00019D67 /* MLMatchDelegate.h */,
 				C91BE70717F49C6E00019D67 /* Images.xcassets */,
 				C91BE6F617F49C6E00019D67 /* Supporting Files */,
@@ -266,6 +271,7 @@
 				C91BE70617F49C6E00019D67 /* MLViewController.m in Sources */,
 				C91BE70017F49C6E00019D67 /* MLAppDelegate.m in Sources */,
 				C963E72817F61E7B00D81894 /* MLGame.m in Sources */,
+				C9C92AB817F67B8B00D4A074 /* MLTimer.m in Sources */,
 				C91BE72617F49C8300019D67 /* MLmyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

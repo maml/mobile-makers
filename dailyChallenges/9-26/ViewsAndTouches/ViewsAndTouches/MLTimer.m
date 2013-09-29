@@ -10,25 +10,68 @@
 
 @implementation MLTimer
 
-@synthesize seconds, minutes, timer;
+@synthesize seconds, minutes, timer, delegate, tickCounter;
 
-
-- (MLTimer *)init
+- (MLTimer *)initWithDelegate: (id)controller andTimeInSeconds:(int)timeInSeconds
 {
+    /*
+     Setting the passed in controller instance as the delegate when initializing
+     allows us to set up the initial timer values in the interface
+    */
     self = [super init];
+    timer = [self setUpTimer:timeInSeconds];
+    delegate = controller;
+    [delegate displayInitialTimeValues:minutes seconds:seconds];
+    return self;
+}
 
-    timer = [NSTimer scheduledTimerWithTimeInterval:1
+- (NSTimer *)setUpTimer: (int)timeInSeconds
+{
+    // 1 tick = 1 second
+    tickCounter = timeInSeconds;
+    
+    [self setMinutesAndSeconds];
+    
+    return [NSTimer scheduledTimerWithTimeInterval:1
         target:self
         selector:@selector(tick)
         userInfo:nil
         repeats:YES];
+}
 
-    return self;
+- (int)setMinutes
+{
+    minutes = tickCounter / 60;
+    return minutes;
+}
+
+- (int)setSeconds
+{
+    seconds = tickCounter % 60;
+    return seconds;
+}
+
+- (void)setMinutesAndSeconds
+{
+    [self setMinutes];
+    [self setSeconds];
 }
 
 - (void)tick
 {
-    //NSLog(@"tick from Timer class");
+    tickCounter--;
+    [self setMinutesAndSeconds];
+
+    if (tickCounter == 0)
+    {
+        seconds = tickCounter % 60;
+        [timer invalidate];
+    } else {
+        minutes = tickCounter / 60;
+        seconds = tickCounter % 60;
+    }
+
+    [delegate timerDidTick: minutes seconds:seconds];
 }
 
 @end

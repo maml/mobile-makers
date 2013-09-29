@@ -11,22 +11,17 @@
 #import "MLGame.h"
 #import "MLTimer.h"
 
-@interface MLViewController : UIViewController <MLMatchDelegate>
-
-@property (strong, nonatomic) MLGame *game;
+@interface MLViewController : UIViewController <MLMatchDelegate, MLTickDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *matchesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *missesLabel;
-- (IBAction)resetGame:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *minutesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *secondsLabel;
 
-@property int tickCounter;
-@property int timerSeconds;
-@property int seconds;
-@property int minutes;
-@property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) MLGame *game;
 @property (strong, nonatomic) MLTimer *mlt;
 @property (strong, nonatomic) NSTimer *mltTimer;
+
+- (IBAction)resetGame:(id)sender;
 
 @end

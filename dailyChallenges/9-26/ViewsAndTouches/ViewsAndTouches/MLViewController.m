@@ -19,17 +19,15 @@
 
 @implementation MLViewController
 
-@synthesize game, mlt, mltTimer, minutes, seconds, timerSeconds;
+@synthesize game, mlt;
 
 - (void)viewDidLoad
 {
-    // create and initialize instance of MLGame
-    game = [[MLGame alloc] init];
-    mlt = [[MLTimer alloc] init];
-    mltTimer = mlt.timer;
-    
     [super viewDidLoad];
-    
+
+    game = [[MLGame alloc] init];
+    mlt = [[MLTimer alloc] initWithDelegate:self andTimeInSeconds:60];
+
     for (UIView *view in self.view.subviews)
     {
         if ([view isKindOfClass:[MLmyView class]])
@@ -39,42 +37,21 @@
             myView.state = YES;
         }
     }
-    
-    timerSeconds = 4;
-    minutes = timerSeconds / 60;
-    seconds = timerSeconds % 60;
-    [self updateMinutesLabel];
-    [self updateSecondsLabel];
-    
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1
-                                     target:self
-                                   selector:@selector(tick)
-                                   userInfo:nil
-                                    repeats:YES];
 }
 
-- (void)tick
+- (void)displayInitialTimeValues: (int)minutes seconds:(int)seconds
 {
-    timerSeconds--;
-    
-    if (timerSeconds == 0)
-    {
-        seconds = timerSeconds % 60;
-        [self updateSecondsLabel];
-        [self resetGame];
-        [_timer invalidate];
-    } else {
-        minutes = timerSeconds / 60;
-        NSLog(@"minutes are %i\n", minutes);
-        [self updateMinutesLabel];
-        
-        seconds = timerSeconds % 60;
-        NSLog(@"seconds are %i", seconds);
-        [self updateSecondsLabel];
-    }
+    [self updateMinutesLabel:minutes];
+    [self updateSecondsLabel:seconds];
 }
 
-- (void)updateSecondsLabel
+- (void)timerDidTick: (int)minutes seconds:(int)seconds
+{
+    [self updateSecondsLabel:seconds];
+    [self updateMinutesLabel:minutes];
+}
+
+- (void)updateSecondsLabel: (int)seconds
 {
     if (seconds == 0) {
         _secondsLabel.text = @"00";
@@ -85,7 +62,7 @@
     }
 }
 
-- (void)updateMinutesLabel
+- (void)updateMinutesLabel: (int)minutes
 {
     _minutesLabel.text = [NSString stringWithFormat:@"%i", minutes];
 }
@@ -196,11 +173,8 @@
 {
     
     /* -------------------------------------------------------------------------------
-     
-    When a view's been touched we need to first check and see if it's playable,
-    ie, it's state is YES.
 
-    If it's playable we need to
+    Is the touched view playable? If so we neet to:
 
         - increment selectionCount.
         - set its background to SELECTED
