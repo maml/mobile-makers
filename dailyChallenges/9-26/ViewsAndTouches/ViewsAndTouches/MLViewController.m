@@ -35,6 +35,20 @@
             MLmyView *myView = (MLmyView *) view;
             myView.delegate = self;
             myView.state = YES;
+
+            NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Users/matt/Projects/mobile-makers/dailyChallenges/9-26/ViewsAndTouches/ViewsAndTouches"];
+            
+            NSString *path = [bundle pathForResource:@"circular" ofType:@"jpeg"];
+
+            CALayer *imageLayer = [CALayer layer];
+            imageLayer.contents = (id) [[UIImage alloc] initWithContentsOfFile:path].CGImage;
+            imageLayer.frame = CGRectMake(0, 0, 64, 64);
+            imageLayer.opacity = 0;
+            imageLayer.name = @"imageLayer";
+            
+            myView.layer.backgroundColor = DEFAULT.CGColor;
+            myView.layer.name = @"colorLayer";
+            [myView.layer addSublayer:imageLayer];
         }
     }
 }
@@ -95,11 +109,20 @@
     return view1.tag == view2.tag;
 }
 
-- (void)setViewBackgroundsTo: (UIColor *)color
+- (void)setViewLayerBackgroundsTo: (NSString *)str
 {
-    for (MLmyView *view in game.selections)
-    {
-        view.backgroundColor = color;
+    if ([str isEqualToString:@"matched"]) {
+        for (MLmyView *view in game.selections)
+        {
+            //view.layer.backgroundColor = color.CGColor;
+            CALayer *imageLayer = view.layer.sublayers[0];
+            imageLayer.opacity = 1;
+        }
+    } else if ([str isEqualToString:@"default"]) {
+        for (MLmyView *view in game.selections) {
+            CALayer *imageLayer = view.layer.sublayers[0];
+            imageLayer.opacity = 0;
+        }
     }
 }
 
@@ -143,7 +166,11 @@
         if ([view isKindOfClass:[MLmyView class]])
         {
             MLmyView *myView = (MLmyView *) view;
-            myView.backgroundColor = DEFAULT;
+
+            myView.layer.backgroundColor = DEFAULT.CGColor;
+            CALayer *imageLayer = view.layer.sublayers[0];
+            imageLayer.opacity = 0;
+
             myView.state = YES;
         }
     }
@@ -165,7 +192,9 @@
 - (void)didTouchView:(UIView *)view
 {
     if ([self viewIsPlayable:(MLmyView *)view]) {
-        view.backgroundColor = TOUCHED;
+        //view.backgroundColor = TOUCHED;
+        CALayer *imageLayer = view.layer.sublayers[0];
+        imageLayer.opacity = 1;
     }
 }
 
@@ -215,20 +244,28 @@
         game.selectionCount++;
         [game.selections addObject:view];
         [self takeViewOutOfPlay: view];
-        view.backgroundColor = SELECTED;
+
+        //view.layer.backgroundColor = SELECTED.CGColor;
+        CALayer *imageLayer = view.layer.sublayers[0];
+        imageLayer.opacity = 1;
+        
         if ([self itsTimeToCompareViews])
         {
             if ([self compareViews])
             {
                 game.matchCounter++;
-                [self setViewBackgroundsTo: MATCHED];
+
+                [self setViewLayerBackgroundsTo: @"matched"];
+                
                 [self setPlayabilityOfSelectedViews: NO];
                 [self resetSelectionsArray];
                 [self updateLabel: @"matches"];
                 [self resetIfGameHasBeenWon];
             } else {
                 game.missCounter++;
-                [self setViewBackgroundsTo: DEFAULT];
+
+                [self setViewLayerBackgroundsTo: @"default"];
+
                 [self setPlayabilityOfSelectedViews: YES];
                 [self resetSelectionsArray];
                 [self updateLabel: @"misses"];
