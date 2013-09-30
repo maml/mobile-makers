@@ -16,7 +16,7 @@
 
 @implementation MLViewController
 
-@synthesize game, mlt;
+@synthesize game, mlt, myViews, images;
 
 - (void)viewDidLoad
 {
@@ -33,21 +33,74 @@
             myView.delegate = self;
             myView.state = YES;
 
-            NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Users/matt/Projects/mobile-makers/dailyChallenges/9-26/ViewsAndTouches/ViewsAndTouches"];
-            
-            NSString *path = [bundle pathForResource:@"circular" ofType:@"jpeg"];
-
-            CALayer *imageLayer = [CALayer layer];
-            imageLayer.contents = (id) [[UIImage alloc] initWithContentsOfFile:path].CGImage;
-            imageLayer.frame = CGRectMake(0, 0, 64, 64);
-            imageLayer.opacity = 0;
-            imageLayer.name = @"imageLayer";
-            
             myView.layer.backgroundColor = DEFAULT.CGColor;
             myView.layer.name = @"colorLayer";
-            [myView.layer addSublayer:imageLayer];
         }
     }
+    
+    [self associateImagesWithViews];
+}
+
+- (void)associateImagesWithViews
+{
+    // create a mutable array to hold each instance of MLmyView
+    // create a mutable array to hold each image
+    // then,
+    // randomly grab two view instances and randomly grab one image
+    // give them the same tag number
+    // and the image as a layer name imageLayer to each of the two views
+    // then,
+    // remove the two views from the mutable array holding the views and
+    
+    myViews = [[NSMutableArray alloc] init];
+    images = game.imageNames;
+    
+    for (UIView *view in self.view.subviews)
+    {
+        if ([view isKindOfClass:[MLmyView class]])
+        {
+            MLmyView *myView = (MLmyView *) view;
+            [myViews addObject:myView];
+        }
+    }
+    
+    int i = 0;
+    
+    while (myViews.count != 0) {
+        int index = arc4random() % (myViews.count);
+        MLmyView *view1 = myViews[index];
+        [myViews removeObject:view1];
+        
+        index = arc4random() % (myViews.count);
+        MLmyView *view2 = myViews[index];
+        [myViews removeObject:view2];
+        
+        [view1 setTag:i];
+        [view2 setTag:i];
+        [self setIMageToLayerOfView: view1 index:i];
+        [self setIMageToLayerOfView: view2 index:i];
+        i++;
+    }
+}
+
+- (void)setIMageToLayerOfView: (MLmyView *)view index:(int)index;
+{
+    // the sublayer with the image is name (imageLayer) but right now
+    // we know we only have one sublayer, which is the sublayer with the imave
+    if ([view.layer sublayers]) {
+        NSLog(@"all subsequent resets");
+        CALayer *layer = view.layer.sublayers[0];
+        layer.contents = (id) [[UIImage alloc] initWithContentsOfFile:images[index]].CGImage;
+    } else {
+        NSLog(@"first time through");
+        CALayer *imageLayer = [CALayer layer];
+        imageLayer.contents = (id) [[UIImage alloc] initWithContentsOfFile:images[index]].CGImage;
+        imageLayer.frame = CGRectMake(0, 0, 64, 64);
+        imageLayer.opacity = 0;
+        imageLayer.name = @"imageLayer";
+        [view.layer addSublayer:imageLayer];
+    }
+
 }
 
 - (void)displayInitialTimeValues: (int)minutes seconds:(int)seconds
@@ -153,6 +206,7 @@
 {
     [self resetUI];
     [game reset];
+    [self associateImagesWithViews];
 }
 
 - (void)resetUI

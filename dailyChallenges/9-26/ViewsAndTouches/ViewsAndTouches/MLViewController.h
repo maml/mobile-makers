@@ -22,6 +22,9 @@
 @property (strong, nonatomic) MLTimer *mlt;
 @property (strong, nonatomic) NSTimer *mltTimer;
 
+@property (strong, nonatomic) NSMutableArray *myViews;
+@property (strong, nonatomic) NSMutableArray *images;
+
 - (IBAction)resetGame:(id)sender;
 
 @end
