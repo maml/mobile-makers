@@ -7,9 +7,6 @@
 //
 
 #define DEFAULT  [UIColor lightGrayColor]
-#define SELECTED [UIColor orangeColor]
-#define TOUCHED SELECTED
-#define MATCHED  [UIColor greenColor]
 
 #import "MLViewController.h"
 
