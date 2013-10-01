@@ -63,6 +63,7 @@
 		C963E72717F61E7B00D81894 /* MLGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLGame.m; sourceTree = "<group>"; };
 		C9C92AB617F67B8B00D4A074 /* MLTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTimer.h; sourceTree = "<group>"; };
 		C9C92AB717F67B8B00D4A074 /* MLTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTimer.m; sourceTree = "<group>"; };
+		C9C92AB917F7AB6B00D4A074 /* MLTickDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLTickDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 				C9C92AB617F67B8B00D4A074 /* MLTimer.h */,
 				C9C92AB717F67B8B00D4A074 /* MLTimer.m */,
 				C91BE72817F4A5CA00019D67 /* MLMatchDelegate.h */,
+				C9C92AB917F7AB6B00D4A074 /* MLTickDelegate.h */,
 				C91BE70717F49C6E00019D67 /* Images.xcassets */,
 				C91BE6F617F49C6E00019D67 /* Supporting Files */,
 			);

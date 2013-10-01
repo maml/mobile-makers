@@ -64,6 +64,7 @@
         }
     }
     
+    // NSInteger should be used here . . .
     int i = 0;
     
     while (myViews.count != 0) {
