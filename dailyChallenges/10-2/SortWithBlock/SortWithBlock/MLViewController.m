@@ -20,17 +20,24 @@
     [super viewDidLoad];
 
     NSMutableArray *people = [[NSMutableArray alloc] init];
-    
-    MLPerson *p1 = [[MLPerson alloc] initWithFirstName:@"Julio" andLastName:@"Juarez"];
-    MLPerson *p2 = [[MLPerson alloc] initWithFirstName:@"Don" andLastName:@"Juan"];
-    MLPerson *p3 = [[MLPerson alloc] initWithFirstName:@"Manuel" andLastName:@"Noriega"];
-    MLPerson *p4 = [[MLPerson alloc] initWithFirstName:@"Juan" andLastName:@"Valdez"];
-    MLPerson *p5 = [[MLPerson alloc] initWithFirstName:@"Juanita" andLastName:@"Valdez"];
-    
-    [@[p1, p2, p3, p4, p5] enumerateObjectsUsingBlock:^(MLPerson *obj, NSUInteger idx, BOOL *stop) {
-        [people addObject:obj];
+
+    // array of attributes we'll use to create instances of Person
+    NSArray *params =
+        @[
+          @[@"Julio", @"Juarez"],
+          @[@"Don", @"Juan"],
+          @[@"Manuel", @"Noriega"],
+          @[@"Juan", @"Valdez"],
+          @[@"Juanita", @"Valdez"]
+        ];
+
+    // iterate through params and create instances of Person, and then add to the people array
+    [params enumerateObjectsUsingBlock:^(NSArray *array, NSUInteger idx, BOOL *stop) {
+        MLPerson *p = [[MLPerson alloc] initWithFirstName:array[0] andLastName:array[1]];
+        [people addObject:p];
     }];
-    
+
+    // sort people by last name, if last name is equal, then sort by first name
     [people sortUsingComparator:^NSComparisonResult(MLPerson *obj1, MLPerson *obj2) {
         
         int lastNameOrder = [obj1.lastName compare:obj2.lastName];
@@ -42,10 +49,7 @@
         }
     }];
     
-    for (MLPerson *person in people) {
-        NSLog(@"%@, %@", person.lastName, person.firstName);
-    }
-    
+    // enumeration example
     [people enumerateObjectsUsingBlock:^(MLPerson *obj, NSUInteger idx, BOOL *stop) {
         NSLog(@"Person %d %@ %@", idx, obj.firstName, obj.lastName);
     }];
