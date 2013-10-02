@@ -22,6 +22,7 @@
 		C9C92C8817FCA4B700D4A074 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9C92C8617FCA4B700D4A074 /* InfoPlist.strings */; };
 		C9C92C8A17FCA4B700D4A074 /* Word_BrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92C8917FCA4B700D4A074 /* Word_BrowserTests.m */; };
 		C9C92C9517FCA4CE00D4A074 /* MLWord.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92C9417FCA4CE00D4A074 /* MLWord.m */; };
+		C9C92C9817FCBB1700D4A074 /* MLWordDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92C9717FCBB1700D4A074 /* MLWordDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		C9C92C8917FCA4B700D4A074 /* Word_BrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Word_BrowserTests.m; sourceTree = "<group>"; };
 		C9C92C9317FCA4CE00D4A074 /* MLWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLWord.h; sourceTree = "<group>"; };
 		C9C92C9417FCA4CE00D4A074 /* MLWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLWord.m; sourceTree = "<group>"; };
+		C9C92C9617FCBB1700D4A074 /* MLWordDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLWordDetailsViewController.h; sourceTree = "<group>"; };
+		C9C92C9717FCBB1700D4A074 /* MLWordDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLWordDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				C9C92C7017FCA4B700D4A074 /* Main.storyboard */,
 				C9C92C7317FCA4B700D4A074 /* MLViewController.h */,
 				C9C92C7417FCA4B700D4A074 /* MLViewController.m */,
+				C9C92C9617FCBB1700D4A074 /* MLWordDetailsViewController.h */,
+				C9C92C9717FCBB1700D4A074 /* MLWordDetailsViewController.m */,
 				C9C92C7617FCA4B700D4A074 /* Images.xcassets */,
 				C9C92C6517FCA4B700D4A074 /* Supporting Files */,
 				C9C92C9317FCA4CE00D4A074 /* MLWord.h */,
@@ -258,6 +263,7 @@
 				C9C92C9517FCA4CE00D4A074 /* MLWord.m in Sources */,
 				C9C92C6B17FCA4B700D4A074 /* main.m in Sources */,
 				C9C92C7517FCA4B700D4A074 /* MLViewController.m in Sources */,
+				C9C92C9817FCBB1700D4A074 /* MLWordDetailsViewController.m in Sources */,
 				C9C92C6F17FCA4B700D4A074 /* MLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

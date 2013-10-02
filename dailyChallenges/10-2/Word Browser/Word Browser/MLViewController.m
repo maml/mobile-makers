@@ -60,15 +60,11 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    //Person *personTemp =self.people[indexPath.row];
-    //cell.textLabel.text =  [NSString stringWithFormat:@" %@  %@", personTemp.firstName,personTemp.lastName ];
-    
     NSArray *keys = dict.allKeys;
     NSString *key = keys[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", key];
     
     return cell;
-
 }
 
 - (void)createSomeWords
