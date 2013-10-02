@@ -12,4 +12,14 @@
 
 @synthesize name, definition, synonyms;
 
+- (MLWord *)initWithName: (NSString *)_name andDefinition:(NSString *)_definition
+{
+    self = [super init];
+    
+    name = _name;
+    definition = _definition;
+    
+    return self;
+}
+
 @end
