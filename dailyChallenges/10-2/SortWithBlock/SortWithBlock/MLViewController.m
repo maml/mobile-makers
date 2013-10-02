@@ -19,14 +19,6 @@
 {
     [super viewDidLoad];
 
-//	NSArray *things = @[@"a", @"b", @"c"];
-//    NSLog(@"things before sorted %@", things);
-//    
-//    NSArray *sortedThings = [things sortedArrayUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
-//        return [obj1 compare:obj2];
-//    }];
-//    NSLog(@"array after sorting %@", sortedThings);
-    
     NSMutableArray *people = [[NSMutableArray alloc] init];
     
     MLPerson *p1 = [[MLPerson alloc] init];
@@ -50,8 +42,21 @@
     [people addObject:p3];
     [people addObject:p4];
     
+    MLPerson *p5 = [[MLPerson alloc] init];
+    [p5 setFirstName:@"Juanita"];
+    [p5 setLastName:@"Valdez"];
+    
+    [people addObject:p5];
+    
     [people sortUsingComparator:^NSComparisonResult(MLPerson *obj1, MLPerson *obj2) {
-        return [obj1.lastName compare:obj2.lastName];
+        
+        int lastNameOrder = [obj1.lastName compare:obj2.lastName];
+        
+        if (lastNameOrder == NSOrderedSame) {
+            return [obj1.firstName compare:obj2.firstName];
+        } else {
+            return lastNameOrder;
+        }
     }];
     
     for (MLPerson *person in people) {
