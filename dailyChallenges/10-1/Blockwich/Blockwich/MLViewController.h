@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MLViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *xtextField;
 @property (weak, nonatomic) IBOutlet UITextField *ytextField;
 
