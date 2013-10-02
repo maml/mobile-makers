@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9C92C5F17FCA4B700D4A074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C92C5E17FCA4B700D4A074 /* Foundation.framework */; };
+		C9C92C6117FCA4B700D4A074 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C92C6017FCA4B700D4A074 /* CoreGraphics.framework */; };
+		C9C92C6317FCA4B700D4A074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C92C6217FCA4B700D4A074 /* UIKit.framework */; };
+		C9C92C6917FCA4B700D4A074 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9C92C6717FCA4B700D4A074 /* InfoPlist.strings */; };
+		C9C92C6B17FCA4B700D4A074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92C6A17FCA4B700D4A074 /* main.m */; };
+		C9C92C6F17FCA4B700D4A074 /* MLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92C6E17FCA4B700D4A074 /* MLAppDelegate.m */; };
+		C9C92C7217FCA4B700D4A074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C92C7017FCA4B700D4A074 /* Main.storyboard */; };
+		C9C92C7517FCA4B700D4A074 /* MLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92C7417FCA4B700D4A074 /* MLViewController.m */; };
+		C9C92C7717FCA4B700D4A074 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C92C7617FCA4B700D4A074 /* Images.xcassets */; };
+		C9C92C7E17FCA4B700D4A074 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C92C7D17FCA4B700D4A074 /* XCTest.framework */; };
+		C9C92C7F17FCA4B700D4A074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C92C5E17FCA4B700D4A074 /* Foundation.framework */; };
+		C9C92C8017FCA4B700D4A074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C92C6217FCA4B700D4A074 /* UIKit.framework */; };
+		C9C92C8817FCA4B700D4A074 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9C92C8617FCA4B700D4A074 /* InfoPlist.strings */; };
+		C9C92C8A17FCA4B700D4A074 /* Word_BrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92C8917FCA4B700D4A074 /* Word_BrowserTests.m */; };
+		C9C92C9517FCA4CE00D4A074 /* MLWord.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92C9417FCA4CE00D4A074 /* MLWord.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9C92C8117FCA4B700D4A074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C92C5317FCA4B700D4A074 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9C92C5A17FCA4B700D4A074;
+			remoteInfo = "Word Browser";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9C92C5B17FCA4B700D4A074 /* Word Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C92C5E17FCA4B700D4A074 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9C92C6017FCA4B700D4A074 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9C92C6217FCA4B700D4A074 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9C92C6617FCA4B700D4A074 /* Word Browser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Word Browser-Info.plist"; sourceTree = "<group>"; };
+		C9C92C6817FCA4B700D4A074 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9C92C6A17FCA4B700D4A074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9C92C6C17FCA4B700D4A074 /* Word Browser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Word Browser-Prefix.pch"; sourceTree = "<group>"; };
+		C9C92C6D17FCA4B700D4A074 /* MLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLAppDelegate.h; sourceTree = "<group>"; };
+		C9C92C6E17FCA4B700D4A074 /* MLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLAppDelegate.m; sourceTree = "<group>"; };
+		C9C92C7117FCA4B700D4A074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9C92C7317FCA4B700D4A074 /* MLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLViewController.h; sourceTree = "<group>"; };
+		C9C92C7417FCA4B700D4A074 /* MLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLViewController.m; sourceTree = "<group>"; };
+		C9C92C7617FCA4B700D4A074 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C9C92C7C17FCA4B700D4A074 /* Word BrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Word BrowserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C92C7D17FCA4B700D4A074 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C9C92C8517FCA4B700D4A074 /* Word BrowserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Word BrowserTests-Info.plist"; sourceTree = "<group>"; };
+		C9C92C8717FCA4B700D4A074 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9C92C8917FCA4B700D4A074 /* Word_BrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Word_BrowserTests.m; sourceTree = "<group>"; };
+		C9C92C9317FCA4CE00D4A074 /* MLWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLWord.h; sourceTree = "<group>"; };
+		C9C92C9417FCA4CE00D4A074 /* MLWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLWord.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9C92C5817FCA4B700D4A074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C92C6117FCA4B700D4A074 /* CoreGraphics.framework in Frameworks */,
+				C9C92C6317FCA4B700D4A074 /* UIKit.framework in Frameworks */,
+				C9C92C5F17FCA4B700D4A074 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C92C7917FCA4B700D4A074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C92C7E17FCA4B700D4A074 /* XCTest.framework in Frameworks */,
+				C9C92C8017FCA4B700D4A074 /* UIKit.framework in Frameworks */,
+				C9C92C7F17FCA4B700D4A074 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9C92C5217FCA4B700D4A074 = {
+			isa = PBXGroup;
+			children = (
+				C9C92C6417FCA4B700D4A074 /* Word Browser */,
+				C9C92C8317FCA4B700D4A074 /* Word BrowserTests */,
+				C9C92C5D17FCA4B700D4A074 /* Frameworks */,
+				C9C92C5C17FCA4B700D4A074 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9C92C5C17FCA4B700D4A074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9C92C5B17FCA4B700D4A074 /* Word Browser.app */,
+				C9C92C7C17FCA4B700D4A074 /* Word BrowserTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9C92C5D17FCA4B700D4A074 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9C92C5E17FCA4B700D4A074 /* Foundation.framework */,
+				C9C92C6017FCA4B700D4A074 /* CoreGraphics.framework */,
+				C9C92C6217FCA4B700D4A074 /* UIKit.framework */,
+				C9C92C7D17FCA4B700D4A074 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9C92C6417FCA4B700D4A074 /* Word Browser */ = {
+			isa = PBXGroup;
+			children = (
+				C9C92C6D17FCA4B700D4A074 /* MLAppDelegate.h */,
+				C9C92C6E17FCA4B700D4A074 /* MLAppDelegate.m */,
+				C9C92C7017FCA4B700D4A074 /* Main.storyboard */,
+				C9C92C7317FCA4B700D4A074 /* MLViewController.h */,
+				C9C92C7417FCA4B700D4A074 /* MLViewController.m */,
+				C9C92C7617FCA4B700D4A074 /* Images.xcassets */,
+				C9C92C6517FCA4B700D4A074 /* Supporting Files */,
+				C9C92C9317FCA4CE00D4A074 /* MLWord.h */,
+				C9C92C9417FCA4CE00D4A074 /* MLWord.m */,
+			);
+			path = "Word Browser";
+			sourceTree = "<group>";
+		};
+		C9C92C6517FCA4B700D4A074 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9C92C6617FCA4B700D4A074 /* Word Browser-Info.plist */,
+				C9C92C6717FCA4B700D4A074 /* InfoPlist.strings */,
+				C9C92C6A17FCA4B700D4A074 /* main.m */,
+				C9C92C6C17FCA4B700D4A074 /* Word Browser-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9C92C8317FCA4B700D4A074 /* Word BrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C92C8917FCA4B700D4A074 /* Word_BrowserTests.m */,
+				C9C92C8417FCA4B700D4A074 /* Supporting Files */,
+			);
+			path = "Word BrowserTests";
+			sourceTree = "<group>";
+		};
+		C9C92C8417FCA4B700D4A074 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9C92C8517FCA4B700D4A074 /* Word BrowserTests-Info.plist */,
+				C9C92C8617FCA4B700D4A074 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9C92C5A17FCA4B700D4A074 /* Word Browser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C92C8D17FCA4B700D4A074 /* Build configuration list for PBXNativeTarget "Word Browser" */;
+			buildPhases = (
+				C9C92C5717FCA4B700D4A074 /* Sources */,
+				C9C92C5817FCA4B700D4A074 /* Frameworks */,
+				C9C92C5917FCA4B700D4A074 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Word Browser";
+			productName = "Word Browser";
+			productReference = C9C92C5B17FCA4B700D4A074 /* Word Browser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9C92C7B17FCA4B700D4A074 /* Word BrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C92C9017FCA4B700D4A074 /* Build configuration list for PBXNativeTarget "Word BrowserTests" */;
+			buildPhases = (
+				C9C92C7817FCA4B700D4A074 /* Sources */,
+				C9C92C7917FCA4B700D4A074 /* Frameworks */,
+				C9C92C7A17FCA4B700D4A074 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9C92C8217FCA4B700D4A074 /* PBXTargetDependency */,
+			);
+			name = "Word BrowserTests";
+			productName = "Word BrowserTests";
+			productReference = C9C92C7C17FCA4B700D4A074 /* Word BrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9C92C5317FCA4B700D4A074 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ML;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Matthew Loseke";
+				TargetAttributes = {
+					C9C92C7B17FCA4B700D4A074 = {
+						TestTargetID = C9C92C5A17FCA4B700D4A074;
+					};
+				};
+			};
+			buildConfigurationList = C9C92C5617FCA4B700D4A074 /* Build configuration list for PBXProject "Word Browser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9C92C5217FCA4B700D4A074;
+			productRefGroup = C9C92C5C17FCA4B700D4A074 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9C92C5A17FCA4B700D4A074 /* Word Browser */,
+				C9C92C7B17FCA4B700D4A074 /* Word BrowserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9C92C5917FCA4B700D4A074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C92C7717FCA4B700D4A074 /* Images.xcassets in Resources */,
+				C9C92C6917FCA4B700D4A074 /* InfoPlist.strings in Resources */,
+				C9C92C7217FCA4B700D4A074 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C92C7A17FCA4B700D4A074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C92C8817FCA4B700D4A074 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9C92C5717FCA4B700D4A074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C92C9517FCA4CE00D4A074 /* MLWord.m in Sources */,
+				C9C92C6B17FCA4B700D4A074 /* main.m in Sources */,
+				C9C92C7517FCA4B700D4A074 /* MLViewController.m in Sources */,
+				C9C92C6F17FCA4B700D4A074 /* MLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C92C7817FCA4B700D4A074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C92C8A17FCA4B700D4A074 /* Word_BrowserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9C92C8217FCA4B700D4A074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9C92C5A17FCA4B700D4A074 /* Word Browser */;
+			targetProxy = C9C92C8117FCA4B700D4A074 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9C92C6717FCA4B700D4A074 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C92C6817FCA4B700D4A074 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9C92C7017FCA4B700D4A074 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C92C7117FCA4B700D4A074 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9C92C8617FCA4B700D4A074 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C92C8717FCA4B700D4A074 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9C92C8B17FCA4B700D4A074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9C92C8C17FCA4B700D4A074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9C92C8E17FCA4B700D4A074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Word Browser/Word Browser-Prefix.pch";
+				INFOPLIST_FILE = "Word Browser/Word Browser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9C92C8F17FCA4B700D4A074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Word Browser/Word Browser-Prefix.pch";
+				INFOPLIST_FILE = "Word Browser/Word Browser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9C92C9117FCA4B700D4A074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Word Browser.app/Word Browser";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Word Browser/Word Browser-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Word BrowserTests/Word BrowserTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9C92C9217FCA4B700D4A074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Word Browser.app/Word Browser";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Word Browser/Word Browser-Prefix.pch";
+				INFOPLIST_FILE = "Word BrowserTests/Word BrowserTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9C92C5617FCA4B700D4A074 /* Build configuration list for PBXProject "Word Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C92C8B17FCA4B700D4A074 /* Debug */,
+				C9C92C8C17FCA4B700D4A074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C92C8D17FCA4B700D4A074 /* Build configuration list for PBXNativeTarget "Word Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C92C8E17FCA4B700D4A074 /* Debug */,
+				C9C92C8F17FCA4B700D4A074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9C92C9017FCA4B700D4A074 /* Build configuration list for PBXNativeTarget "Word BrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C92C9117FCA4B700D4A074 /* Debug */,
+				C9C92C9217FCA4B700D4A074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9C92C5317FCA4B700D4A074 /* Project object */;
+}
