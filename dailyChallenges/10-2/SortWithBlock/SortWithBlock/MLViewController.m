@@ -46,6 +46,10 @@
         NSLog(@"%@, %@", person.lastName, person.firstName);
     }
     
+    [people enumerateObjectsUsingBlock:^(MLPerson *obj, NSUInteger idx, BOOL *stop) {
+        NSLog(@"Person %d %@ %@", idx, obj.firstName, obj.lastName);
+    }];
+    
 }
 
 @end
