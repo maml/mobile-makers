@@ -67,6 +67,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"segue into word details view . . .");
+}
+
 - (void)createSomeWords
 {
     // construct some words
