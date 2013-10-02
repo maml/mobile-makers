@@ -10,6 +10,8 @@
 
 @interface MLWord : NSObject
 
+- (MLWord *)initWithName: (NSString *)_name andDefinition:(NSString *)_definition;
+
 @property (weak, nonatomic) NSString *name;
 @property (weak, nonatomic) NSString *definition;
 @property (weak, nonatomic) NSMutableArray *synonyms;
