@@ -11,18 +11,29 @@
 
 @interface MLViewController ()
 
+@property (strong, nonatomic) NSMutableDictionary *dict;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation MLViewController
 
+@synthesize dict;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    // construct 20 new words, for each new word, construct 2 synonyms
+}
+
+- (UIViewController *)initWithCoder: (NSCoder *)aCoder
+{
+    self = [super initWithCoder: aCoder];
+    
+    dict = [[NSMutableDictionary alloc] init];
+
     [self createSomeWords];
     
-    
+    return self;
 }
 
 - (MLWord *)constructWordWithName: (NSString *)name andDefinition:(NSString *)definition
@@ -34,8 +45,38 @@
     return word;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return dict.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identifier =@"abc";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+    //Person *personTemp =self.people[indexPath.row];
+    //cell.textLabel.text =  [NSString stringWithFormat:@" %@  %@", personTemp.firstName,personTemp.lastName ];
+    
+    NSArray *keys = dict.allKeys;
+    NSString *key = keys[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", key];
+    
+    return cell;
+
+}
+
 - (void)createSomeWords
 {
+    // construct some words
+    // set some synonyms for each word
+    // add words to dictionary
+
     MLWord *octothorp = [[MLWord alloc] initWithName:@"octothorp" andDefinition:@"another term for the pound sign (#)."];
     MLWord *poundsign = [[MLWord alloc] initWithName:@"pound sign" andDefinition:@"the sign (#), representing a pound as a unit of weight or mass, or as represented on a telephone keypad or computer keyboard."];
     MLWord *hashtag = [[MLWord alloc] initWithName:@"hash tag" andDefinition:@"a symbol used for tagging on Twitter."];
@@ -65,6 +106,10 @@
     [hashtag.synonyms addObject:poundsign];
     [hashtag.synonyms addObject:octothorp];
     
+    [dict setObject:[NSString stringWithFormat:@"%@", octothorp.definition] forKey:@"octothorp"];
+    [dict setObject:[NSString stringWithFormat:@"%@", poundsign.definition] forKey:@"poundsign"];
+    [dict setObject:[NSString stringWithFormat:@"%@", hashtag.definition] forKey:@"hashtag"];
+    
     // synonyms for variable
     [variable.synonyms addObject:mutable];
     [variable.synonyms addObject:capricious];
@@ -76,6 +121,10 @@
     // synonyms for capricious
     [capricious.synonyms addObject:variable];
     [capricious.synonyms addObject:mutable];
+    
+    [dict setObject:[NSString stringWithFormat:@"%@", mutable.definition] forKey:@"mutable"];
+    [dict setObject:[NSString stringWithFormat:@"%@", capricious.definition] forKey:@"capricious"];
+    [dict setObject:[NSString stringWithFormat:@"%@", variable.definition] forKey:@"variable"];
     
     // synonyms for loop
     [loop.synonyms addObject:helix];
@@ -89,6 +138,10 @@
     [noose.synonyms addObject:loop];
     [noose.synonyms addObject:helix];
     
+    [dict setObject:[NSString stringWithFormat:@"%@", helix.definition] forKey:@"helix"];
+    [dict setObject:[NSString stringWithFormat:@"%@", loop.definition] forKey:@"loop"];
+    [dict setObject:[NSString stringWithFormat:@"%@", noose.definition] forKey:@"noose"];
+    
     // synonyms for block
     [block.synonyms addObject:cube];
     [block.synonyms addObject:bar];
@@ -100,6 +153,10 @@
     // synonyms for bar
     [bar.synonyms addObject:block];
     [bar.synonyms addObject:cube];
+    
+    [dict setObject:[NSString stringWithFormat:@"%@", cube.definition] forKey:@"cube"];
+    [dict setObject:[NSString stringWithFormat:@"%@", block.definition] forKey:@"block"];
+    [dict setObject:[NSString stringWithFormat:@"%@", bar.definition] forKey:@"bar"];
 
 }
 

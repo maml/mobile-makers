@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MLViewController : UIViewController
+@interface MLViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
