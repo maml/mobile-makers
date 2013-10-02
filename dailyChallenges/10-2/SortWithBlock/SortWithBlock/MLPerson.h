@@ -10,6 +10,8 @@
 
 @interface MLPerson : NSObject
 
+- (MLPerson *)initWithFirstName: (NSString *)firstName andLastName:(NSString *)lastName;
+
 @property (weak, nonatomic) NSString *firstName;
 @property (weak, nonatomic) NSString *lastName;
 

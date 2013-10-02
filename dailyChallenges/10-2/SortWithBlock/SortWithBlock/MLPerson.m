@@ -10,4 +10,14 @@
 
 @implementation MLPerson
 
+- (MLPerson *)initWithFirstName: (NSString *)firstName andLastName:(NSString *)lastName
+{
+    self = [super init];
+
+    [self setFirstName:firstName];
+    [self setLastName:lastName];
+
+    return self;
+}
+
 @end
