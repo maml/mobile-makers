@@ -14,6 +14,6 @@
 
 @property (weak, nonatomic) NSString *name;
 @property (weak, nonatomic) NSString *definition;
-@property (weak, nonatomic) NSMutableArray *synonyms;
+@property (strong, nonatomic) NSMutableArray *synonyms;
 
 @end

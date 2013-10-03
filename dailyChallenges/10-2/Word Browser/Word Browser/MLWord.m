@@ -18,6 +18,7 @@
     
     name = _name;
     definition = _definition;
+    synonyms = [[NSMutableArray alloc] init];
     
     return self;
 }

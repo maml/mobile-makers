@@ -8,10 +8,12 @@
 
 #import "MLViewController.h"
 #import "MLWord.h"
+#import "MLWordDetailsViewController.h"
 
 @interface MLViewController ()
 
 @property (strong, nonatomic) NSMutableDictionary *dict;
+@property (strong, nonatomic) NSArray *keys;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -60,16 +62,24 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    NSArray *keys = dict.allKeys;
-    NSString *key = keys[indexPath.row];
+    _keys = dict.allKeys;
+    NSString *key = _keys[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", key];
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableView *)sender
 {
-    NSLog(@"segue into word details view . . .");
+    NSIndexPath *indexPath = [_tableView indexPathForSelectedRow];
+    NSString *key = _keys[indexPath.row];
+    NSString *definition  = [dict objectForKey:key][0];
+    NSArray *synonyms = [dict objectForKey:key][1];
+    MLWordDetailsViewController *vc = segue.destinationViewController;
+    vc.definition = definition;
+    vc.key = key;
+    vc.synonymsArray = synonyms;
+    
 }
 
 - (void)createSomeWords
@@ -81,6 +91,7 @@
     MLWord *octothorp = [[MLWord alloc] initWithName:@"octothorp" andDefinition:@"another term for the pound sign (#)."];
     MLWord *poundsign = [[MLWord alloc] initWithName:@"pound sign" andDefinition:@"the sign (#), representing a pound as a unit of weight or mass, or as represented on a telephone keypad or computer keyboard."];
     MLWord *hashtag = [[MLWord alloc] initWithName:@"hash tag" andDefinition:@"a symbol used for tagging on Twitter."];
+    
     
     MLWord *variable = [[MLWord alloc] initWithName:@"variable" andDefinition:@"a data item that may take on more than one value during the runtime of a program."];
     MLWord *mutable = [[MLWord alloc] initWithName:@"mutable" andDefinition:@"liable to change."];
@@ -107,9 +118,9 @@
     [hashtag.synonyms addObject:poundsign];
     [hashtag.synonyms addObject:octothorp];
     
-    [dict setObject:[NSString stringWithFormat:@"%@", octothorp.definition] forKey:@"octothorp"];
-    [dict setObject:[NSString stringWithFormat:@"%@", poundsign.definition] forKey:@"poundsign"];
-    [dict setObject:[NSString stringWithFormat:@"%@", hashtag.definition] forKey:@"hashtag"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", octothorp.definition], octothorp.synonyms] forKey:@"octothorp"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", poundsign.definition], poundsign.synonyms] forKey:@"poundsign"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", hashtag.definition], hashtag.synonyms] forKey:@"hashtag"];
     
     // synonyms for variable
     [variable.synonyms addObject:mutable];
@@ -123,9 +134,9 @@
     [capricious.synonyms addObject:variable];
     [capricious.synonyms addObject:mutable];
     
-    [dict setObject:[NSString stringWithFormat:@"%@", mutable.definition] forKey:@"mutable"];
-    [dict setObject:[NSString stringWithFormat:@"%@", capricious.definition] forKey:@"capricious"];
-    [dict setObject:[NSString stringWithFormat:@"%@", variable.definition] forKey:@"variable"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", mutable.definition], mutable.synonyms] forKey:@"mutable"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", capricious.definition], capricious.synonyms] forKey:@"capricious"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", variable.definition], variable.synonyms] forKey:@"variable"];
     
     // synonyms for loop
     [loop.synonyms addObject:helix];
@@ -139,9 +150,9 @@
     [noose.synonyms addObject:loop];
     [noose.synonyms addObject:helix];
     
-    [dict setObject:[NSString stringWithFormat:@"%@", helix.definition] forKey:@"helix"];
-    [dict setObject:[NSString stringWithFormat:@"%@", loop.definition] forKey:@"loop"];
-    [dict setObject:[NSString stringWithFormat:@"%@", noose.definition] forKey:@"noose"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", helix.definition], helix.synonyms] forKey:@"helix"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", loop.definition], loop.synonyms] forKey:@"loop"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", noose.definition], noose.synonyms] forKey:@"noose"];
     
     // synonyms for block
     [block.synonyms addObject:cube];
@@ -155,29 +166,10 @@
     [bar.synonyms addObject:block];
     [bar.synonyms addObject:cube];
     
-    [dict setObject:[NSString stringWithFormat:@"%@", cube.definition] forKey:@"cube"];
-    [dict setObject:[NSString stringWithFormat:@"%@", block.definition] forKey:@"block"];
-    [dict setObject:[NSString stringWithFormat:@"%@", bar.definition] forKey:@"bar"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", cube.definition], cube.synonyms] forKey:@"cube"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", block.definition], block.synonyms] forKey:@"block"];
+    [dict setObject:@[[NSString stringWithFormat:@"%@", bar.definition], bar.synonyms] forKey:@"bar"];
 
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

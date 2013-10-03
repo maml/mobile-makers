@@ -7,12 +7,19 @@
 //
 
 #import "MLWordDetailsViewController.h"
+#import "MLWord.h"
 
 @interface MLWordDetailsViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *definitionTextView;
+@property (weak, nonatomic) IBOutlet UILabel *synonymsLabel;
 
 @end
 
 @implementation MLWordDetailsViewController
+
+@synthesize definition, key, synonymsText, synonymsArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,10 +36,26 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+- (void) viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    _nameLabel.text = key;
+    _definitionTextView.text = definition;
+    _synonymsLabel.text = [self synonymsArray2Text];
+}
+
+- (NSString *)synonymsArray2Text
+{
+    NSString *synonyms = @"";
+    
+    for (MLWord *word in synonymsArray) {
+        synonyms = [NSString stringWithFormat:@"%@ %@", synonyms, word.name ];
+    }
+    return synonyms;
 }
 
 @end
+
+
+
+
