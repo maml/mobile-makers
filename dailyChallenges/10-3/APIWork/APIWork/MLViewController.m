@@ -53,10 +53,12 @@
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
 
     cell.textLabel.text = [(NSDictionary *) [superHeroesArray objectAtIndex:indexPath.row] objectForKey:@"name"];
+    
+    cell.detailTextLabel.text = [(NSDictionary *) [superHeroesArray objectAtIndex:indexPath.row] objectForKey:@"description"];
     
     return cell;
 
