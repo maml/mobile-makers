@@ -49,7 +49,7 @@
     NSString *synonyms = @"";
     
     for (MLWord *word in synonymsArray) {
-        synonyms = [NSString stringWithFormat:@"%@ %@", synonyms, word.name ];
+        synonyms = [synonyms stringByAppendingString:[NSString stringWithFormat:@"%@ ", word.name]];
     }
     return synonyms;
 }
