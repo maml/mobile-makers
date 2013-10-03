@@ -20,19 +20,21 @@
 {
     NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLResponse *response;
-    NSError *error;
-    
-    
-    NSData *data = [NSURLConnection sendSynchronousRequest:request
-                                         returningResponse:&response
-                                                     error:&error];
 
-    NSString *responseString = [[NSString alloc] initWithBytes:[data bytes]
-                                                        length:[data length]
-                                                      encoding:NSUTF8StringEncoding];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               
+        NSString *responseString = [[NSString alloc] initWithBytes:[data bytes]
+                                                            length:[data length]
+                                                          encoding:NSUTF8StringEncoding];
     
-    textView.text = responseString;
+        textView.text = responseString;
+        NSLog(@"inside the block");
+    }];
+    
+    NSLog(@"just made the web call");
+
     
     [super viewDidLoad];
 }
