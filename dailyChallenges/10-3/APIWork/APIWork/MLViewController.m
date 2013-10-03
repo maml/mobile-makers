@@ -14,7 +14,7 @@
 
 @implementation MLViewController
 
-@synthesize textView;
+@synthesize tableView, superHeroesArray;
 
 - (void)viewDidLoad
 {
@@ -25,17 +25,9 @@
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                
-        NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:&connectionError];
-        NSMutableString *superHeroString = [[NSMutableString alloc] init];
-        
-                               for (NSDictionary *superHeroDictionary in responseArray) {
-                                   NSString *name = [superHeroDictionary objectForKey:@"name"];
-                                   NSString *description = [superHeroDictionary objectForKey:@"description"];
-                                   
-                                   [superHeroString appendFormat:@"%@\n%@\n\n", name, description];
-                               }
-    
-        textView.text = superHeroString;
+        superHeroesArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:&connectionError];
+                               
+        [tableView reloadData];
     }];
 
 
@@ -47,6 +39,27 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return superHeroesArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)_tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identifier =@"abc";
+    
+    UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+
+    cell.textLabel.text = [(NSDictionary *) [superHeroesArray objectAtIndex:indexPath.row] objectForKey:@"name"];
+    
+    return cell;
+
 }
 
 @end

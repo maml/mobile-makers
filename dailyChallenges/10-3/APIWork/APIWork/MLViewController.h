@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MLViewController : UIViewController
+@interface MLViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *superHeroesArray;
 
 @end
