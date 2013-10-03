@@ -18,22 +18,26 @@
 
 - (void)viewDidLoad
 {
-    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+    NSURL *url = [NSURL URLWithString:@"http://www.mobilemakers.co/lib/superheroes.json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-
+    
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                
-        NSString *responseString = [[NSString alloc] initWithBytes:[data bytes]
-                                                            length:[data length]
-                                                          encoding:NSUTF8StringEncoding];
+        NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:&connectionError];
+        NSMutableString *superHeroString = [[NSMutableString alloc] init];
+        
+                               for (NSDictionary *superHeroDictionary in responseArray) {
+                                   NSString *name = [superHeroDictionary objectForKey:@"name"];
+                                   NSString *description = [superHeroDictionary objectForKey:@"description"];
+                                   
+                                   [superHeroString appendFormat:@"%@\n%@\n\n", name, description];
+                               }
     
-        textView.text = responseString;
-        NSLog(@"inside the block");
+        textView.text = superHeroString;
     }];
-    
-    NSLog(@"just made the web call");
+
 
     
     [super viewDidLoad];
