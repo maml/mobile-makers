@@ -11,15 +11,11 @@
 
 @interface MLWordDetailsViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UITextView *definitionTextView;
-@property (weak, nonatomic) IBOutlet UILabel *synonymsLabel;
-
 @end
 
 @implementation MLWordDetailsViewController
 
-@synthesize definition, key, synonymsText, synonymsArray;
+@synthesize definition, key, synonymsArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,17 +37,32 @@
     [super viewWillAppear:animated];
     _nameLabel.text = key;
     _definitionTextView.text = definition;
-    _synonymsLabel.text = [self synonymsArray2Text];
 }
 
-- (NSString *)synonymsArray2Text
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *synonyms = @"";
+    NSString *identifier =@"abc";
     
-    for (MLWord *word in synonymsArray) {
-        synonyms = [synonyms stringByAppendingString:[NSString stringWithFormat:@"%@ ", word.name]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    return synonyms;
+
+    MLWord *word = synonymsArray[indexPath.row];
+    cell.textLabel.text = word.name;
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return synonymsArray.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Synonyms";
 }
 
 @end

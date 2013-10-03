@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MLWord.h"
 
-@interface MLWordDetailsViewController : UIViewController
+@interface MLWordDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *definitionTextView;
+@property (weak, nonatomic) IBOutlet UITableView *synonymTableView;
 
 @property (strong, nonatomic) NSString *definition;
 @property (strong, nonatomic) NSString *key;
 @property (strong, nonatomic) NSArray *synonymsArray;
-@property (strong, nonatomic) NSString *synonymsText;
 
 @end
