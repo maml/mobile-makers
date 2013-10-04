@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MMViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *searchTermTextField;
-- (IBAction)searchButton:(id)sender;
+@interface MMViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) NSString *searchURL;
+@property (strong, nonatomic) NSMutableDictionary *searchResults;
+@property (strong, nonatomic) NSMutableArray *titlesForTable;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) NSString *titleOfSelected;
 
 @end
