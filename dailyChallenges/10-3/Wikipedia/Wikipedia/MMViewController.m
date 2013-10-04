@@ -15,7 +15,7 @@
 
 @implementation MMViewController
 
-@synthesize searchURL, searchResults, titlesForTable, tableView, searchBar, titleOfSelected;
+@synthesize searchURL, searchResults, titlesForTable, tableView, searchBar, titleOfSelected, spinner;
 
 - (void)viewDidLoad
 {
@@ -28,6 +28,9 @@
     [self setSearchURL: _searchBar.text];
     [self search];
     [self.view endEditing:YES];
+    
+    [tableView setHidden:YES];
+    [spinner startAnimating];
 }
 
 - (void)setSearchURL:(NSString *)searchTerm
@@ -69,6 +72,8 @@
                                            
                                        }
                                    }
+                                   [spinner stopAnimating];
+                                   [tableView setHidden:NO];
                                    [tableView reloadData];
                                }
                            }];

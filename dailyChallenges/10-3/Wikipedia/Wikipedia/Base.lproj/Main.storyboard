@@ -24,15 +24,19 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="AlL-vi-fpz"/>
                                 </connections>
                             </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-wK-Tvp">
+                                <rect key="frame" x="145" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tMJ-X6-l0d">
-                                <rect key="frame" x="0.0" y="108" width="320" height="377"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="440"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tky-EK-bgM">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tky-EK-bgM">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tky-EK-bgM" id="FEH-c8-h9j">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -52,6 +56,7 @@
                     <navigationItem key="navigationItem" title="Wikipedia Search" id="ayX-7r-f5g"/>
                     <connections>
                         <outlet property="searchBar" destination="nA9-Ku-dnb" id="Dp7-NB-x4K"/>
+                        <outlet property="spinner" destination="Boq-wK-Tvp" id="PtC-pl-7WF"/>
                         <outlet property="tableView" destination="tMJ-X6-l0d" id="uUw-ip-RD8"/>
                     </connections>
                 </viewController>
@@ -62,7 +67,6 @@
         <!--Snippet View Controller-->
         <scene sceneID="WmA-En-WmE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dA1-4N-Y1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="g2P-Wg-Cch" customClass="MMSnippetViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V2Q-Eb-mUR"/>
@@ -88,6 +92,7 @@
                         <outlet property="snippetTextView" destination="2yI-kh-n34" id="jSe-vk-tXC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dA1-4N-Y1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="658" y="70"/>
         </scene>
