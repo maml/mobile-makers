@@ -42,6 +42,7 @@
     NSString *urlPart1 = [urlString1 stringByAppendingString:urlString2];
     NSString *urlWhole = [urlPart1 stringByAppendingString:urlString3];
     
+    NSLog(@"%@", urlWhole);
     searchURL = urlWhole;
 }
 
@@ -121,6 +122,7 @@
                 if ([titleOfSelected isEqualToString:title]) {
                     NSString *snippet = [dict objectForKey:@"snippet"];
                     vc.snippet = snippet;
+                    vc.title = titleOfSelected;
                 }
                 
             }

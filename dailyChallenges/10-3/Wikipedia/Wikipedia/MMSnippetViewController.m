@@ -7,6 +7,7 @@
 //
 
 #import "MMSnippetViewController.h"
+#import "MMWebViewController.h"
 
 @interface MMSnippetViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation MMSnippetViewController
 
-@synthesize snippet, snippetTextView;
+@synthesize title, snippet, snippetTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +30,18 @@
 {
     [super viewDidLoad];
     snippetTextView.text = snippet;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MMWebViewController *vc = segue.destinationViewController;
+
+    // construct the URI of the Wikipedia page we need to load
+    NSString *baseURIofWikiPage = @"https://en.wikipedia.org/wiki/";
+    NSString *URIofWikiPage = [baseURIofWikiPage stringByAppendingString:[NSString stringWithFormat:@"%@", title]];
+    NSURL *url = [[NSURL alloc] initWithString:URIofWikiPage];
+    
+    vc.url = url;
 }
 
 @end

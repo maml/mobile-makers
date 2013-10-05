@@ -22,6 +22,7 @@
 		8FD18F5117FE075A00CCE40C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FD18F4F17FE075A00CCE40C /* InfoPlist.strings */; };
 		8FD18F5317FE075A00CCE40C /* WikipediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD18F5217FE075A00CCE40C /* WikipediaTests.m */; };
 		C9C92D6C17FE633700D4A074 /* MMSnippetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92D6B17FE633700D4A074 /* MMSnippetViewController.m */; };
+		C9C92D6F17FF8CB500D4A074 /* MMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C92D6E17FF8CB500D4A074 /* MMWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		8FD18F5217FE075A00CCE40C /* WikipediaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WikipediaTests.m; sourceTree = "<group>"; };
 		C9C92D6A17FE633700D4A074 /* MMSnippetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSnippetViewController.h; sourceTree = "<group>"; };
 		C9C92D6B17FE633700D4A074 /* MMSnippetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSnippetViewController.m; sourceTree = "<group>"; };
+		C9C92D6D17FF8CB500D4A074 /* MMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWebViewController.h; sourceTree = "<group>"; };
+		C9C92D6E17FF8CB500D4A074 /* MMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				8FD18F3617FE075A00CCE40C /* MMAppDelegate.h */,
 				8FD18F3717FE075A00CCE40C /* MMAppDelegate.m */,
 				8FD18F3917FE075A00CCE40C /* Main.storyboard */,
+				C9C92D6D17FF8CB500D4A074 /* MMWebViewController.h */,
+				C9C92D6E17FF8CB500D4A074 /* MMWebViewController.m */,
 				C9C92D6A17FE633700D4A074 /* MMSnippetViewController.h */,
 				C9C92D6B17FE633700D4A074 /* MMSnippetViewController.m */,
 				8FD18F3C17FE075A00CCE40C /* MMViewController.h */,
@@ -259,6 +264,7 @@
 				8FD18F3817FE075A00CCE40C /* MMAppDelegate.m in Sources */,
 				8FD18F3E17FE075A00CCE40C /* MMViewController.m in Sources */,
 				8FD18F3417FE075A00CCE40C /* main.m in Sources */,
+				C9C92D6F17FF8CB500D4A074 /* MMWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
