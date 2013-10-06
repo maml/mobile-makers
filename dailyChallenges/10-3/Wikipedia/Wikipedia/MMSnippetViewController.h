@@ -11,7 +11,7 @@
 @interface MMSnippetViewController : UIViewController
 
 @property (weak, nonatomic) NSString *snippet;
-@property (weak, nonatomic) NSString *title;
+@property (weak, nonatomic) NSString *wikipediaTitle;
 @property (weak, nonatomic) IBOutlet UITextView *snippetTextView;
 
 @end

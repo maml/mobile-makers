@@ -122,7 +122,7 @@
                 if ([titleOfSelected isEqualToString:title]) {
                     NSString *snippet = [dict objectForKey:@"snippet"];
                     vc.snippet = snippet;
-                    vc.title = titleOfSelected;
+                    vc.wikipediaTitle = titleOfSelected;
                 }
                 
             }

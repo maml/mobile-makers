@@ -15,7 +15,7 @@
 
 @implementation MMSnippetViewController
 
-@synthesize title, snippet, snippetTextView;
+@synthesize wikipediaTitle, snippet, snippetTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,7 +38,7 @@
 
     // construct the URI of the Wikipedia page we need to load
     NSString *baseURIofWikiPage = @"https://en.wikipedia.org/wiki/";
-    NSString *URIofWikiPage = [baseURIofWikiPage stringByAppendingString:[NSString stringWithFormat:@"%@", title]];
+    NSString *URIofWikiPage = [baseURIofWikiPage stringByAppendingString:[NSString stringWithFormat:@"%@", wikipediaTitle]];
     NSURL *url = [[NSURL alloc] initWithString:URIofWikiPage];
     
     vc.url = url;
