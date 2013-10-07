@@ -25,14 +25,30 @@
 
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
 {
-    NSLog(@"mapViewDidFinishLoadingMap has fired");
+    while (!_didLoadMobileMakersLocation) {
+        [self loadMobileMakersLocation];
+    }
+
 }
 
-- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+- (void)loadMobileMakersLocation
 {
-    NSLog(@"didUpdateUserLocation has fired");
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2800, 2800);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    MKCoordinateRegion coordinateRegion;
+    MKCoordinateSpan coordinateSpan;
+    CLLocationCoordinate2D locationCoordinate2D;
+    
+    locationCoordinate2D.latitude = 41.893932;
+    locationCoordinate2D.longitude = -87.636650;
+    
+    coordinateSpan.latitudeDelta = 0.02;
+    coordinateSpan.longitudeDelta = 0.02;
+    
+    coordinateRegion.center = locationCoordinate2D;
+    coordinateRegion.span = coordinateSpan;
+    
+    [self.mapView setRegion:coordinateRegion animated:YES];
+    
+    _didLoadMobileMakersLocation = YES;
 }
 
 @end
