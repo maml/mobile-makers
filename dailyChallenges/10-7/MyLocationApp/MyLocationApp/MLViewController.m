@@ -8,6 +8,8 @@
 
 #import "MLViewController.h"
 
+#define LAT_LONG_DELTA 0.02
+
 @interface MLViewController ()
 
 @end
@@ -30,9 +32,7 @@
     MKCoordinateSpan coordinateSpan;
     CLLocationCoordinate2D center;
     
-    coordinateSpan.latitudeDelta = 0.02;
-    coordinateSpan.longitudeDelta = 0.02;
-   
+    coordinateSpan = [self setSpanFromAppDefaults];
     center = [self setCenterFromLatitude:41.893932 andLongitude:-87.636650];
     coordinateRegion = [self setMKCoordinateRegionWithCenter:center andSpan:coordinateSpan];
     
@@ -44,6 +44,7 @@
     MKCoordinateRegion coordinateRegion;
     coordinateRegion.center = center;
     coordinateRegion.span = span;
+    
     return coordinateRegion;
 }
 
@@ -52,7 +53,17 @@
     CLLocationCoordinate2D center;
     center.latitude = latitude;
     center.longitude = longitude;
+    
     return center;
+}
+
+- (MKCoordinateSpan)setSpanFromAppDefaults
+{
+    MKCoordinateSpan coordinateSpan;
+    coordinateSpan.latitudeDelta = LAT_LONG_DELTA;
+    coordinateSpan.longitudeDelta = LAT_LONG_DELTA;
+    
+    return coordinateSpan;
 }
 
 @end
