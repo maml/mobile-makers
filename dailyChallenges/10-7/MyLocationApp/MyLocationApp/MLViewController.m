@@ -28,15 +28,13 @@
 {
     MKCoordinateRegion coordinateRegion;
     MKCoordinateSpan coordinateSpan;
-    CLLocationCoordinate2D locationCoordinate2D;
-    
-    locationCoordinate2D.latitude = 41.893932;
-    locationCoordinate2D.longitude = -87.636650;
+    CLLocationCoordinate2D center;
     
     coordinateSpan.latitudeDelta = 0.02;
     coordinateSpan.longitudeDelta = 0.02;
-    
-    coordinateRegion = [self setMKCoordinateRegionWithCenter:locationCoordinate2D andSpan:coordinateSpan];
+   
+    center = [self setCenterFromLatitude:41.893932 andLongitude:-87.636650];
+    coordinateRegion = [self setMKCoordinateRegionWithCenter:center andSpan:coordinateSpan];
     
     [mapView setRegion:coordinateRegion animated:YES];
 }
@@ -47,6 +45,14 @@
     coordinateRegion.center = center;
     coordinateRegion.span = span;
     return coordinateRegion;
+}
+
+- (CLLocationCoordinate2D)setCenterFromLatitude: (double)latitude andLongitude:(double)longitude
+{
+    CLLocationCoordinate2D center;
+    center.latitude = latitude;
+    center.longitude = longitude;
+    return center;
 }
 
 @end
