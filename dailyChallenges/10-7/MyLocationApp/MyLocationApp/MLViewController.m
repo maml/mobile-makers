@@ -20,15 +20,8 @@
 {
     [super viewDidLoad];
     
-    self.mapView.delegate = self;
-}
-
-- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
-{
-    while (!_didLoadMobileMakersLocation) {
-        [self loadMobileMakersLocation];
-    }
-
+    mapView.delegate = self;
+    [self loadMobileMakersLocation];
 }
 
 - (void)loadMobileMakersLocation
@@ -46,9 +39,7 @@
     coordinateRegion.center = locationCoordinate2D;
     coordinateRegion.span = coordinateSpan;
     
-    [self.mapView setRegion:coordinateRegion animated:YES];
-    
-    _didLoadMobileMakersLocation = YES;
+    [mapView setRegion:coordinateRegion animated:YES];
 }
 
 @end

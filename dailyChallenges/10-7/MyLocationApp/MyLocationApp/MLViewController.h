@@ -12,6 +12,5 @@
 @interface MLViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
-@property BOOL didLoadMobileMakersLocation;
 
 @end
