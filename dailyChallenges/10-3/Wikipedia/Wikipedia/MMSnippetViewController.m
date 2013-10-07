@@ -40,8 +40,10 @@
     NSString *baseURIofWikiPage = @"https://en.wikipedia.org/wiki/";
     NSString *URIofWikiPage = [baseURIofWikiPage stringByAppendingString:[NSString stringWithFormat:@"%@", wikipediaTitle]];
     NSURL *url = [[NSURL alloc] initWithString:URIofWikiPage];
-    
+   
+    NSLog(@"url is %@", url);
     vc.url = url;
+    NSLog(@"vc.url is %@", vc.url);
 }
 
 @end
