@@ -36,10 +36,17 @@
     coordinateSpan.latitudeDelta = 0.02;
     coordinateSpan.longitudeDelta = 0.02;
     
-    coordinateRegion.center = locationCoordinate2D;
-    coordinateRegion.span = coordinateSpan;
+    coordinateRegion = [self setMKCoordinateRegionWithCenter:locationCoordinate2D andSpan:coordinateSpan];
     
     [mapView setRegion:coordinateRegion animated:YES];
+}
+
+- (MKCoordinateRegion)setMKCoordinateRegionWithCenter: (CLLocationCoordinate2D)center andSpan:(MKCoordinateSpan)span
+{
+    MKCoordinateRegion coordinateRegion;
+    coordinateRegion.center = center;
+    coordinateRegion.span = span;
+    return coordinateRegion;
 }
 
 @end
