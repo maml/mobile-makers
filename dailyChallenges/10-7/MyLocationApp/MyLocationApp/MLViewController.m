@@ -27,6 +27,7 @@
     [super viewDidLoad];
     
     mapView.delegate = self;
+    
     [self loadMobileMakersLocation];
     [self annotateMobileMakersOnMap];
 }
@@ -73,6 +74,7 @@
     point.coordinate = [self setCoordinateFromLatitude:MOBILE_MAKERS_LAT andLongitude:MOBILE_MAKERS_LONG];
     point.title = MOBILE_MAKERS_ANNOTATION_TITLE;
     point.subtitle = MOBILE_MAKERS_ANNOTATION_SUBTITLE;
+    
     [mapView addAnnotation:point];
 }
 
