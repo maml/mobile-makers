@@ -11,6 +11,8 @@
 #define LAT_LONG_DELTA 0.02
 #define MOBILE_MAKERS_LAT 41.893932
 #define MOBILE_MAKERS_LONG -87.636650
+#define MOBILE_MAKERS_ANNOTATION_TITLE @"Mobile Makers Academy"
+#define MOBILE_MAKERS_ANNOTATION_SUBTITLE @"323 W. Erie"
 
 @interface MLViewController ()
 
@@ -26,6 +28,7 @@
     
     mapView.delegate = self;
     [self loadMobileMakersLocation];
+    [self annotateMobileMakersOnMap];
 }
 
 - (void)loadMobileMakersLocation
@@ -62,6 +65,15 @@
     coordinateSpan.longitudeDelta = LAT_LONG_DELTA;
     
     return coordinateSpan;
+}
+
+- (void)annotateMobileMakersOnMap
+{
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = [self setCenterFromLatitude:MOBILE_MAKERS_LAT andLongitude:MOBILE_MAKERS_LONG];
+    point.title = MOBILE_MAKERS_ANNOTATION_TITLE;
+    point.subtitle = MOBILE_MAKERS_ANNOTATION_SUBTITLE;
+    [mapView addAnnotation:point];
 }
 
 @end
