@@ -9,6 +9,8 @@
 #import "MLViewController.h"
 
 #define LAT_LONG_DELTA 0.02
+#define MOBILE_MAKERS_LAT 41.893932
+#define MOBILE_MAKERS_LONG -87.636650
 
 @interface MLViewController ()
 
@@ -28,13 +30,9 @@
 
 - (void)loadMobileMakersLocation
 {
-    MKCoordinateRegion coordinateRegion;
-    MKCoordinateSpan coordinateSpan;
-    CLLocationCoordinate2D center;
-    
-    coordinateSpan = [self setSpanFromAppDefaults];
-    center = [self setCenterFromLatitude:41.893932 andLongitude:-87.636650];
-    coordinateRegion = [self setMKCoordinateRegionWithCenter:center andSpan:coordinateSpan];
+    MKCoordinateSpan coordinateSpan = [self setSpanFromAppDefaults];
+    CLLocationCoordinate2D center = [self setCenterFromLatitude:MOBILE_MAKERS_LAT andLongitude:MOBILE_MAKERS_LONG];
+    MKCoordinateRegion coordinateRegion = [self setMKCoordinateRegionWithCenter:center andSpan:coordinateSpan];
     
     [mapView setRegion:coordinateRegion animated:YES];
 }
