@@ -34,7 +34,7 @@
 - (void)loadMobileMakersLocation
 {
     MKCoordinateSpan coordinateSpan = [self setSpanFromAppDefaults];
-    CLLocationCoordinate2D center = [self setCenterFromLatitude:MOBILE_MAKERS_LAT andLongitude:MOBILE_MAKERS_LONG];
+    CLLocationCoordinate2D center = [self setCoordinateFromLatitude:MOBILE_MAKERS_LAT andLongitude:MOBILE_MAKERS_LONG];
     MKCoordinateRegion coordinateRegion = [self setMKCoordinateRegionWithCenter:center andSpan:coordinateSpan];
     
     [mapView setRegion:coordinateRegion animated:YES];
@@ -49,7 +49,7 @@
     return coordinateRegion;
 }
 
-- (CLLocationCoordinate2D)setCenterFromLatitude: (double)latitude andLongitude:(double)longitude
+- (CLLocationCoordinate2D)setCoordinateFromLatitude: (double)latitude andLongitude:(double)longitude
 {
     CLLocationCoordinate2D center;
     center.latitude = latitude;
@@ -70,7 +70,7 @@
 - (void)annotateMobileMakersOnMap
 {
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    point.coordinate = [self setCenterFromLatitude:MOBILE_MAKERS_LAT andLongitude:MOBILE_MAKERS_LONG];
+    point.coordinate = [self setCoordinateFromLatitude:MOBILE_MAKERS_LAT andLongitude:MOBILE_MAKERS_LONG];
     point.title = MOBILE_MAKERS_ANNOTATION_TITLE;
     point.subtitle = MOBILE_MAKERS_ANNOTATION_SUBTITLE;
     [mapView addAnnotation:point];
