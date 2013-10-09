@@ -23,11 +23,17 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="3iO-Sj-Z23"/>
                                 </connections>
                             </mapView>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-zh-yHJ">
+                                <rect key="frame" x="140" y="20" width="160" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="ukx-Z5-kEm" id="lSR-Fm-qJD"/>
+                        <outlet property="routeDetailsView" destination="Ib7-zh-yHJ" id="zl8-5v-2Zf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

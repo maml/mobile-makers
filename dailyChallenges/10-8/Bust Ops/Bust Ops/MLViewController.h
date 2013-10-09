@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MLViewController : UIViewController
+@interface MLViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSArray *busStops;
+@property (strong, nonatomic) IBOutlet UIView *routeDetailsView;
 
 @end

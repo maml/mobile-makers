@@ -23,6 +23,8 @@
 		C92CAC921804800700AA8FA7 /* Bust_OpsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAC911804800700AA8FA7 /* Bust_OpsTests.m */; };
 		C92CAC9C1804802000AA8FA7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92CAC9B1804801F00AA8FA7 /* MapKit.framework */; };
 		C92CAC9F1804842E00AA8FA7 /* MLBusStopLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAC9E1804842E00AA8FA7 /* MLBusStopLocation.m */; };
+		C92CACA218049B2400AA8FA7 /* MLAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CACA118049B2400AA8FA7 /* MLAnnotationView.m */; };
+		C92CACA41804A0EB00AA8FA7 /* mobilemakers.png in Resources */ = {isa = PBXBuildFile; fileRef = C92CACA31804A0EB00AA8FA7 /* mobilemakers.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		C92CAC9B1804801F00AA8FA7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C92CAC9D1804842E00AA8FA7 /* MLBusStopLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBusStopLocation.h; sourceTree = "<group>"; };
 		C92CAC9E1804842E00AA8FA7 /* MLBusStopLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBusStopLocation.m; sourceTree = "<group>"; };
+		C92CACA018049B2400AA8FA7 /* MLAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAnnotationView.h; sourceTree = "<group>"; };
+		C92CACA118049B2400AA8FA7 /* MLAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAnnotationView.m; sourceTree = "<group>"; };
+		C92CACA31804A0EB00AA8FA7 /* mobilemakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mobilemakers.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +124,7 @@
 		C92CAC6C1804800600AA8FA7 /* Bust Ops */ = {
 			isa = PBXGroup;
 			children = (
+				C92CACA31804A0EB00AA8FA7 /* mobilemakers.png */,
 				C92CAC751804800600AA8FA7 /* MLAppDelegate.h */,
 				C92CAC761804800600AA8FA7 /* MLAppDelegate.m */,
 				C92CAC781804800600AA8FA7 /* Main.storyboard */,
@@ -128,6 +134,8 @@
 				C92CAC6D1804800600AA8FA7 /* Supporting Files */,
 				C92CAC9D1804842E00AA8FA7 /* MLBusStopLocation.h */,
 				C92CAC9E1804842E00AA8FA7 /* MLBusStopLocation.m */,
+				C92CACA018049B2400AA8FA7 /* MLAnnotationView.h */,
+				C92CACA118049B2400AA8FA7 /* MLAnnotationView.m */,
 			);
 			path = "Bust Ops";
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 			files = (
 				C92CAC7F1804800600AA8FA7 /* Images.xcassets in Resources */,
 				C92CAC711804800600AA8FA7 /* InfoPlist.strings in Resources */,
+				C92CACA41804A0EB00AA8FA7 /* mobilemakers.png in Resources */,
 				C92CAC7A1804800600AA8FA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +271,7 @@
 				C92CAC9F1804842E00AA8FA7 /* MLBusStopLocation.m in Sources */,
 				C92CAC731804800600AA8FA7 /* main.m in Sources */,
 				C92CAC7D1804800600AA8FA7 /* MLViewController.m in Sources */,
+				C92CACA218049B2400AA8FA7 /* MLAnnotationView.m in Sources */,
 				C92CAC771804800600AA8FA7 /* MLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,12 +8,15 @@
 
 #import "MLViewController.h"
 #import "MLBusStopLocation.h"
+#import "MLAnnotationView.h"
 
 @interface MLViewController ()
 
 @end
 
 @implementation MLViewController
+
+@synthesize routeDetailsView, busStops;
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -57,4 +60,53 @@
     }
 }
 
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+ 
+    NSString *reuseID = @"abc";
+    
+    MKAnnotationView *view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:reuseID];
+    
+    if (!view) {
+        view = [[MLAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseID];
+        view.canShowCallout = YES;
+        view.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    } else {
+        view.annotation = annotation;
+    }
+    
+    return view;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    [self toggleRouteDetailsView];
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
+{
+    [routeDetailsView setAlpha:0];
+}
+
+- (void)toggleRouteDetailsView
+{
+    if (routeDetailsView.alpha) {
+        [UIView animateWithDuration:0.4f animations:^{
+            [routeDetailsView setAlpha:0];
+        }];
+    } else {
+        [UIView animateWithDuration:0.4f animations:^{
+            [routeDetailsView setAlpha:1.0];
+        }];
+    }
+}
+
+
+
 @end
+
+
+
+
+
+
