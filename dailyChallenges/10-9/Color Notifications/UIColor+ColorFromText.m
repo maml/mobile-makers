@@ -12,54 +12,26 @@
 
 + (UIColor *)getUIColorFromTextColor: (NSString *)color
 {
-    UIColor *colorToReturn;
+   
+    NSDictionary *colorDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                     [UIColor blackColor], @"black",
+                                     [UIColor darkGrayColor], @"dark gray",
+                                     [UIColor lightGrayColor], @"light gray",
+                                     [UIColor whiteColor], @"white",
+                                     [UIColor grayColor], @"gray",
+                                     [UIColor redColor], @"red",
+                                     [UIColor greenColor], @"green",
+                                     [UIColor blueColor], @"blue",
+                                     [UIColor cyanColor], @"cyan",
+                                     [UIColor yellowColor], @"yellow",
+                                     [UIColor magentaColor], @"magenta",
+                                     [UIColor orangeColor], @"orange",
+                                     [UIColor purpleColor], @"purple",
+                                     [UIColor brownColor], @"brown",
+                                     [UIColor clearColor], @"clear",
+                                    nil];
     
-    if ([color isEqualToString:@"black"]) {
-        colorToReturn = [UIColor redColor];
-    }
-    if ([color isEqualToString:@"darkGray"]) {
-        colorToReturn = [UIColor darkGrayColor];
-    }
-    if ([color isEqualToString:@"lightGray"]) {
-        colorToReturn = [UIColor lightGrayColor];
-    }
-    if ([color isEqualToString:@"white"]) {
-        colorToReturn = [UIColor whiteColor];
-    }
-    if ([color isEqualToString:@"gray"]) {
-        colorToReturn = [UIColor grayColor];
-    }
-    if ([color isEqualToString:@"red"]) {
-        colorToReturn = [UIColor redColor];
-    }
-    if ([color isEqualToString:@"green"]) {
-        colorToReturn = [UIColor greenColor];
-    }
-    if ([color isEqualToString:@"blueGray"]) {
-        colorToReturn = [UIColor blueColor];
-    }
-    if ([color isEqualToString:@"cyan"]) {
-        colorToReturn = [UIColor cyanColor];
-    }
-    if ([color isEqualToString:@"yello"]) {
-        colorToReturn = [UIColor yellowColor];
-    }
-    if ([color isEqualToString:@"magenta"]) {
-        colorToReturn = [UIColor magentaColor];
-    }
-    if ([color isEqualToString:@"orange"]) {
-        colorToReturn = [UIColor orangeColor];
-    }
-    if ([color isEqualToString:@"purple"]) {
-        colorToReturn = [UIColor purpleColor];
-    }
-    if ([color isEqualToString:@"brown"]) {
-        colorToReturn = [UIColor brownColor];
-    }
-    if ([color isEqualToString:@"clear"]) {
-        colorToReturn = [UIColor clearColor];
-    }
-    return colorToReturn;
+    return [colorDictionary objectForKey:color];
 }
 
 @end
