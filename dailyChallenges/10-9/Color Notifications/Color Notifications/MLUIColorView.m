@@ -7,6 +7,7 @@
 //
 
 #import "MLUIColorView.h"
+#import "UIColor+ColorFromText.h"
 
 @interface MLUIColorView () {
     id observer;
@@ -39,59 +40,7 @@
 
 - (void)newColorWithNotification: (NSString *)color
 {
-    [self setBackgroundColor:[self getUIColorFromTextColor:color]];
-}
-
-- (UIColor *)getUIColorFromTextColor: (NSString *)color
-{
-    UIColor *colorToReturn;
-    
-    if ([color isEqualToString:@"black"]) {
-        colorToReturn = [UIColor redColor];
-    }
-    if ([color isEqualToString:@"darkGray"]) {
-        colorToReturn = [UIColor darkGrayColor];
-    }
-    if ([color isEqualToString:@"lightGray"]) {
-        colorToReturn = [UIColor lightGrayColor];
-    }
-    if ([color isEqualToString:@"white"]) {
-        colorToReturn = [UIColor whiteColor];
-    }
-    if ([color isEqualToString:@"gray"]) {
-        colorToReturn = [UIColor grayColor];
-    }
-    if ([color isEqualToString:@"red"]) {
-        colorToReturn = [UIColor redColor];
-    }
-    if ([color isEqualToString:@"green"]) {
-        colorToReturn = [UIColor greenColor];
-    }
-    if ([color isEqualToString:@"blueGray"]) {
-        colorToReturn = [UIColor blueColor];
-    }
-    if ([color isEqualToString:@"cyan"]) {
-        colorToReturn = [UIColor cyanColor];
-    }
-    if ([color isEqualToString:@"yello"]) {
-        colorToReturn = [UIColor yellowColor];
-    }
-    if ([color isEqualToString:@"magenta"]) {
-        colorToReturn = [UIColor magentaColor];
-    }
-    if ([color isEqualToString:@"orange"]) {
-        colorToReturn = [UIColor orangeColor];
-    }
-    if ([color isEqualToString:@"purple"]) {
-        colorToReturn = [UIColor purpleColor];
-    }
-    if ([color isEqualToString:@"brown"]) {
-        colorToReturn = [UIColor brownColor];
-    }
-    if ([color isEqualToString:@"clear"]) {
-        colorToReturn = [UIColor clearColor];
-    }
-    return colorToReturn;
+    [self setBackgroundColor:[UIColor getUIColorFromTextColor:color]];
 }
 
 @end

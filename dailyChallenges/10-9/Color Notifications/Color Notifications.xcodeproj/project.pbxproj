@@ -22,6 +22,7 @@
 		C92CAD601805D8C500AA8FA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92CAD5E1805D8C500AA8FA7 /* InfoPlist.strings */; };
 		C92CAD621805D8C500AA8FA7 /* Color_NotificationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAD611805D8C500AA8FA7 /* Color_NotificationsTests.m */; };
 		C92CAD6D1805DA7D00AA8FA7 /* MLUIColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAD6C1805DA7D00AA8FA7 /* MLUIColorView.m */; };
+		C92CAD731805EC5E00AA8FA7 /* UIColor+ColorFromText.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAD721805EC5E00AA8FA7 /* UIColor+ColorFromText.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		C92CAD611805D8C500AA8FA7 /* Color_NotificationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Color_NotificationsTests.m; sourceTree = "<group>"; };
 		C92CAD6B1805DA7D00AA8FA7 /* MLUIColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLUIColorView.h; sourceTree = "<group>"; };
 		C92CAD6C1805DA7D00AA8FA7 /* MLUIColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLUIColorView.m; sourceTree = "<group>"; };
+		C92CAD711805EC5E00AA8FA7 /* UIColor+ColorFromText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ColorFromText.h"; path = "../UIColor+ColorFromText.h"; sourceTree = "<group>"; };
+		C92CAD721805EC5E00AA8FA7 /* UIColor+ColorFromText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ColorFromText.m"; path = "../UIColor+ColorFromText.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				C92CAD451805D8C500AA8FA7 /* MLAppDelegate.h */,
+				C92CAD711805EC5E00AA8FA7 /* UIColor+ColorFromText.h */,
+				C92CAD721805EC5E00AA8FA7 /* UIColor+ColorFromText.m */,
 				C92CAD461805D8C500AA8FA7 /* MLAppDelegate.m */,
 				C92CAD481805D8C500AA8FA7 /* Main.storyboard */,
 				C92CAD4B1805D8C500AA8FA7 /* MLViewController.h */,
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92CAD731805EC5E00AA8FA7 /* UIColor+ColorFromText.m in Sources */,
 				C92CAD431805D8C500AA8FA7 /* main.m in Sources */,
 				C92CAD4D1805D8C500AA8FA7 /* MLViewController.m in Sources */,
 				C92CAD471805D8C500AA8FA7 /* MLAppDelegate.m in Sources */,

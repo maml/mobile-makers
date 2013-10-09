@@ -1,5 +1,5 @@
 //
-//  MLViewController.h
+//  UIColor+ColorFromText.h
 //  Color Notifications
 //
 //  Created by Matthew Loseke on 10/9/13.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MLViewController : UIViewController
+@interface UIColor (ColorFromText)
 
-@property (strong, nonatomic) IBOutlet UITextField *colorTextField;
-
-- (IBAction)go:(id)sender;
++ (UIColor *)getUIColorFromTextColor: (NSString *)color;
 
 @end
