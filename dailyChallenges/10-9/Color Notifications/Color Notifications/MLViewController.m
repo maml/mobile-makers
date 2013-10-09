@@ -22,7 +22,7 @@
 
 - (IBAction)go:(id)sender {
     
-    // note - we pass the UI's instance of UITextField as the object
+    // we pass the UI's instance of UITextField as the object
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Time to change the color" object:_colorTextField];
     
     // remove the keyboard from UI

@@ -12,7 +12,7 @@
 
 + (UIColor *)getUIColorFromTextColor: (NSString *)color
 {
-   
+    
     NSDictionary *colorDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
                                      [UIColor blackColor], @"black",
                                      [UIColor darkGrayColor], @"dark gray",
@@ -29,7 +29,7 @@
                                      [UIColor purpleColor], @"purple",
                                      [UIColor brownColor], @"brown",
                                      [UIColor clearColor], @"clear",
-                                    nil];
+                                     nil];
     
     return [colorDictionary objectForKey:color];
 }
