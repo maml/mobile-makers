@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSArray *busStops;
 @property (strong, nonatomic) IBOutlet UIView *routeDetailsView;
+- (IBAction)changeIcons:(id)sender;
 
 @end

@@ -25,6 +25,8 @@
 		C92CAC9F1804842E00AA8FA7 /* MLBusStopLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAC9E1804842E00AA8FA7 /* MLBusStopLocation.m */; };
 		C92CACA218049B2400AA8FA7 /* MLAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CACA118049B2400AA8FA7 /* MLAnnotationView.m */; };
 		C92CACA41804A0EB00AA8FA7 /* mobilemakers.png in Resources */ = {isa = PBXBuildFile; fileRef = C92CACA31804A0EB00AA8FA7 /* mobilemakers.png */; };
+		C92CAD7C1806051A00AA8FA7 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = C92CAD7A1806051A00AA8FA7 /* cloud.png */; };
+		C92CAD7D1806051A00AA8FA7 /* cloud-wind.png in Resources */ = {isa = PBXBuildFile; fileRef = C92CAD7B1806051A00AA8FA7 /* cloud-wind.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		C92CACA018049B2400AA8FA7 /* MLAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAnnotationView.h; sourceTree = "<group>"; };
 		C92CACA118049B2400AA8FA7 /* MLAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAnnotationView.m; sourceTree = "<group>"; };
 		C92CACA31804A0EB00AA8FA7 /* mobilemakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mobilemakers.png; sourceTree = "<group>"; };
+		C92CAD7A1806051A00AA8FA7 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		C92CAD7B1806051A00AA8FA7 /* cloud-wind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-wind.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 		C92CAC6C1804800600AA8FA7 /* Bust Ops */ = {
 			isa = PBXGroup;
 			children = (
+				C92CAD7A1806051A00AA8FA7 /* cloud.png */,
+				C92CAD7B1806051A00AA8FA7 /* cloud-wind.png */,
 				C92CACA31804A0EB00AA8FA7 /* mobilemakers.png */,
 				C92CAC751804800600AA8FA7 /* MLAppDelegate.h */,
 				C92CAC761804800600AA8FA7 /* MLAppDelegate.m */,
@@ -246,10 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92CAD7C1806051A00AA8FA7 /* cloud.png in Resources */,
 				C92CAC7F1804800600AA8FA7 /* Images.xcassets in Resources */,
 				C92CAC711804800600AA8FA7 /* InfoPlist.strings in Resources */,
 				C92CACA41804A0EB00AA8FA7 /* mobilemakers.png in Resources */,
 				C92CAC7A1804800600AA8FA7 /* Main.storyboard in Resources */,
+				C92CAD7D1806051A00AA8FA7 /* cloud-wind.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +489,7 @@
 				C92CAC971804800700AA8FA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C92CAC981804800700AA8FA7 /* Build configuration list for PBXNativeTarget "Bust OpsTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +498,7 @@
 				C92CAC9A1804800700AA8FA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
