@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLColorPanelView.h"
 
-@interface MLViewController : UIViewController
+@interface MLViewController : UIViewController <ColorPanelDelegate>
 
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) NSMutableDictionary *views;

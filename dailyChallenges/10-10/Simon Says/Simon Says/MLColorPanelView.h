@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ColorPanelDelegate
+
+- (void)didTouchColorPanelView: (int)tagNumber;
+
+@end
+
 @interface MLColorPanelView : UIView
+
+@property (strong, nonatomic) id<ColorPanelDelegate> delegate;
 
 @end

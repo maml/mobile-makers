@@ -18,9 +18,12 @@
     
     [super viewDidLoad];
     
-    for (UIView *view in self.view.subviews) {
+    for (MLColorPanelView *view in self.view.subviews) {
         if ([view isKindOfClass:[MLColorPanelView class]]) {
+            
+            ((MLColorPanelView *)view).delegate = self;
             [_views setObject:view forKey:[NSString stringWithFormat:@"%i", view.tag]];
+            
         }
     }
     
@@ -52,6 +55,11 @@
     } else {
         _i++;
     }
+}
+
+-(void)didTouchColorPanelView: (int)tagNumber
+{
+    NSLog(@"tagNumber is: %i", tagNumber);
 }
 
 @end
