@@ -10,4 +10,8 @@
 
 @interface MLViewController : UIViewController
 
+@property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) NSMutableDictionary *views;
+@property int i;
+
 @end

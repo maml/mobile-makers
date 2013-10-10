@@ -21,6 +21,7 @@
 		C92CADF918072A8C00AA8FA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92CADDB18072A8C00AA8FA7 /* UIKit.framework */; };
 		C92CAE0118072A8C00AA8FA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92CADFF18072A8C00AA8FA7 /* InfoPlist.strings */; };
 		C92CAE0318072A8C00AA8FA7 /* Simon_SaysTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAE0218072A8C00AA8FA7 /* Simon_SaysTests.m */; };
+		C92CAE0E18072AFB00AA8FA7 /* MLColorPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAE0D18072AFB00AA8FA7 /* MLColorPanelView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C92CADFE18072A8C00AA8FA7 /* Simon SaysTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simon SaysTests-Info.plist"; sourceTree = "<group>"; };
 		C92CAE0018072A8C00AA8FA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C92CAE0218072A8C00AA8FA7 /* Simon_SaysTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simon_SaysTests.m; sourceTree = "<group>"; };
+		C92CAE0C18072AFB00AA8FA7 /* MLColorPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLColorPanelView.h; sourceTree = "<group>"; };
+		C92CAE0D18072AFB00AA8FA7 /* MLColorPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLColorPanelView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				C92CADE618072A8C00AA8FA7 /* MLAppDelegate.h */,
 				C92CADE718072A8C00AA8FA7 /* MLAppDelegate.m */,
 				C92CADE918072A8C00AA8FA7 /* Main.storyboard */,
+				C92CAE0C18072AFB00AA8FA7 /* MLColorPanelView.h */,
+				C92CAE0D18072AFB00AA8FA7 /* MLColorPanelView.m */,
 				C92CADEC18072A8C00AA8FA7 /* MLViewController.h */,
 				C92CADED18072A8C00AA8FA7 /* MLViewController.m */,
 				C92CADEF18072A8C00AA8FA7 /* Images.xcassets */,
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92CAE0E18072AFB00AA8FA7 /* MLColorPanelView.m in Sources */,
 				C92CADE418072A8C00AA8FA7 /* main.m in Sources */,
 				C92CADEE18072A8C00AA8FA7 /* MLViewController.m in Sources */,
 				C92CADE818072A8C00AA8FA7 /* MLAppDelegate.m in Sources */,
