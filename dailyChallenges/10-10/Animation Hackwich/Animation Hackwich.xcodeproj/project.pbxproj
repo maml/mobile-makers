@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C92CAD941806FD0800AA8FA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92CAD931806FD0800AA8FA7 /* Foundation.framework */; };
+		C92CAD961806FD0800AA8FA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92CAD951806FD0800AA8FA7 /* CoreGraphics.framework */; };
+		C92CAD981806FD0800AA8FA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92CAD971806FD0800AA8FA7 /* UIKit.framework */; };
+		C92CAD9E1806FD0800AA8FA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92CAD9C1806FD0800AA8FA7 /* InfoPlist.strings */; };
+		C92CADA01806FD0800AA8FA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAD9F1806FD0800AA8FA7 /* main.m */; };
+		C92CADA41806FD0800AA8FA7 /* MLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CADA31806FD0800AA8FA7 /* MLAppDelegate.m */; };
+		C92CADA71806FD0800AA8FA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92CADA51806FD0800AA8FA7 /* Main.storyboard */; };
+		C92CADAA1806FD0800AA8FA7 /* MLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CADA91806FD0800AA8FA7 /* MLViewController.m */; };
+		C92CADAC1806FD0800AA8FA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C92CADAB1806FD0800AA8FA7 /* Images.xcassets */; };
+		C92CADB31806FD0800AA8FA7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92CADB21806FD0800AA8FA7 /* XCTest.framework */; };
+		C92CADB41806FD0800AA8FA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92CAD931806FD0800AA8FA7 /* Foundation.framework */; };
+		C92CADB51806FD0800AA8FA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92CAD971806FD0800AA8FA7 /* UIKit.framework */; };
+		C92CADBD1806FD0800AA8FA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92CADBB1806FD0800AA8FA7 /* InfoPlist.strings */; };
+		C92CADBF1806FD0800AA8FA7 /* Animation_HackwichTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CADBE1806FD0800AA8FA7 /* Animation_HackwichTests.m */; };
+		C92CADCA1806FD2200AA8FA7 /* MLPixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CADC91806FD2200AA8FA7 /* MLPixelView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C92CADB61806FD0800AA8FA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C92CAD881806FD0800AA8FA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C92CAD8F1806FD0800AA8FA7;
+			remoteInfo = "Animation Hackwich";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C92CAD901806FD0800AA8FA7 /* Animation Hackwich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animation Hackwich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92CAD931806FD0800AA8FA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C92CAD951806FD0800AA8FA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C92CAD971806FD0800AA8FA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C92CAD9B1806FD0800AA8FA7 /* Animation Hackwich-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Animation Hackwich-Info.plist"; sourceTree = "<group>"; };
+		C92CAD9D1806FD0800AA8FA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C92CAD9F1806FD0800AA8FA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C92CADA11806FD0800AA8FA7 /* Animation Hackwich-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Animation Hackwich-Prefix.pch"; sourceTree = "<group>"; };
+		C92CADA21806FD0800AA8FA7 /* MLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLAppDelegate.h; sourceTree = "<group>"; };
+		C92CADA31806FD0800AA8FA7 /* MLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLAppDelegate.m; sourceTree = "<group>"; };
+		C92CADA61806FD0800AA8FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C92CADA81806FD0800AA8FA7 /* MLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLViewController.h; sourceTree = "<group>"; };
+		C92CADA91806FD0800AA8FA7 /* MLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLViewController.m; sourceTree = "<group>"; };
+		C92CADAB1806FD0800AA8FA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C92CADB11806FD0800AA8FA7 /* Animation HackwichTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Animation HackwichTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92CADB21806FD0800AA8FA7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C92CADBA1806FD0800AA8FA7 /* Animation HackwichTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Animation HackwichTests-Info.plist"; sourceTree = "<group>"; };
+		C92CADBC1806FD0800AA8FA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C92CADBE1806FD0800AA8FA7 /* Animation_HackwichTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animation_HackwichTests.m; sourceTree = "<group>"; };
+		C92CADC81806FD2200AA8FA7 /* MLPixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPixelView.h; path = ../MLPixelView.h; sourceTree = "<group>"; };
+		C92CADC91806FD2200AA8FA7 /* MLPixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLPixelView.m; path = ../MLPixelView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C92CAD8D1806FD0800AA8FA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92CAD961806FD0800AA8FA7 /* CoreGraphics.framework in Frameworks */,
+				C92CAD981806FD0800AA8FA7 /* UIKit.framework in Frameworks */,
+				C92CAD941806FD0800AA8FA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92CADAE1806FD0800AA8FA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92CADB31806FD0800AA8FA7 /* XCTest.framework in Frameworks */,
+				C92CADB51806FD0800AA8FA7 /* UIKit.framework in Frameworks */,
+				C92CADB41806FD0800AA8FA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C92CAD871806FD0800AA8FA7 = {
+			isa = PBXGroup;
+			children = (
+				C92CAD991806FD0800AA8FA7 /* Animation Hackwich */,
+				C92CADB81806FD0800AA8FA7 /* Animation HackwichTests */,
+				C92CAD921806FD0800AA8FA7 /* Frameworks */,
+				C92CAD911806FD0800AA8FA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C92CAD911806FD0800AA8FA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C92CAD901806FD0800AA8FA7 /* Animation Hackwich.app */,
+				C92CADB11806FD0800AA8FA7 /* Animation HackwichTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C92CAD921806FD0800AA8FA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C92CAD931806FD0800AA8FA7 /* Foundation.framework */,
+				C92CAD951806FD0800AA8FA7 /* CoreGraphics.framework */,
+				C92CAD971806FD0800AA8FA7 /* UIKit.framework */,
+				C92CADB21806FD0800AA8FA7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C92CAD991806FD0800AA8FA7 /* Animation Hackwich */ = {
+			isa = PBXGroup;
+			children = (
+				C92CADA21806FD0800AA8FA7 /* MLAppDelegate.h */,
+				C92CADC81806FD2200AA8FA7 /* MLPixelView.h */,
+				C92CADC91806FD2200AA8FA7 /* MLPixelView.m */,
+				C92CADA31806FD0800AA8FA7 /* MLAppDelegate.m */,
+				C92CADA51806FD0800AA8FA7 /* Main.storyboard */,
+				C92CADA81806FD0800AA8FA7 /* MLViewController.h */,
+				C92CADA91806FD0800AA8FA7 /* MLViewController.m */,
+				C92CADAB1806FD0800AA8FA7 /* Images.xcassets */,
+				C92CAD9A1806FD0800AA8FA7 /* Supporting Files */,
+			);
+			path = "Animation Hackwich";
+			sourceTree = "<group>";
+		};
+		C92CAD9A1806FD0800AA8FA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C92CAD9B1806FD0800AA8FA7 /* Animation Hackwich-Info.plist */,
+				C92CAD9C1806FD0800AA8FA7 /* InfoPlist.strings */,
+				C92CAD9F1806FD0800AA8FA7 /* main.m */,
+				C92CADA11806FD0800AA8FA7 /* Animation Hackwich-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C92CADB81806FD0800AA8FA7 /* Animation HackwichTests */ = {
+			isa = PBXGroup;
+			children = (
+				C92CADBE1806FD0800AA8FA7 /* Animation_HackwichTests.m */,
+				C92CADB91806FD0800AA8FA7 /* Supporting Files */,
+			);
+			path = "Animation HackwichTests";
+			sourceTree = "<group>";
+		};
+		C92CADB91806FD0800AA8FA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C92CADBA1806FD0800AA8FA7 /* Animation HackwichTests-Info.plist */,
+				C92CADBB1806FD0800AA8FA7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C92CAD8F1806FD0800AA8FA7 /* Animation Hackwich */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C92CADC21806FD0800AA8FA7 /* Build configuration list for PBXNativeTarget "Animation Hackwich" */;
+			buildPhases = (
+				C92CAD8C1806FD0800AA8FA7 /* Sources */,
+				C92CAD8D1806FD0800AA8FA7 /* Frameworks */,
+				C92CAD8E1806FD0800AA8FA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Animation Hackwich";
+			productName = "Animation Hackwich";
+			productReference = C92CAD901806FD0800AA8FA7 /* Animation Hackwich.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C92CADB01806FD0800AA8FA7 /* Animation HackwichTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C92CADC51806FD0800AA8FA7 /* Build configuration list for PBXNativeTarget "Animation HackwichTests" */;
+			buildPhases = (
+				C92CADAD1806FD0800AA8FA7 /* Sources */,
+				C92CADAE1806FD0800AA8FA7 /* Frameworks */,
+				C92CADAF1806FD0800AA8FA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C92CADB71806FD0800AA8FA7 /* PBXTargetDependency */,
+			);
+			name = "Animation HackwichTests";
+			productName = "Animation HackwichTests";
+			productReference = C92CADB11806FD0800AA8FA7 /* Animation HackwichTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C92CAD881806FD0800AA8FA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ML;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Matthew Loseke";
+				TargetAttributes = {
+					C92CADB01806FD0800AA8FA7 = {
+						TestTargetID = C92CAD8F1806FD0800AA8FA7;
+					};
+				};
+			};
+			buildConfigurationList = C92CAD8B1806FD0800AA8FA7 /* Build configuration list for PBXProject "Animation Hackwich" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C92CAD871806FD0800AA8FA7;
+			productRefGroup = C92CAD911806FD0800AA8FA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C92CAD8F1806FD0800AA8FA7 /* Animation Hackwich */,
+				C92CADB01806FD0800AA8FA7 /* Animation HackwichTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C92CAD8E1806FD0800AA8FA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92CADAC1806FD0800AA8FA7 /* Images.xcassets in Resources */,
+				C92CAD9E1806FD0800AA8FA7 /* InfoPlist.strings in Resources */,
+				C92CADA71806FD0800AA8FA7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92CADAF1806FD0800AA8FA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92CADBD1806FD0800AA8FA7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C92CAD8C1806FD0800AA8FA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92CADA01806FD0800AA8FA7 /* main.m in Sources */,
+				C92CADAA1806FD0800AA8FA7 /* MLViewController.m in Sources */,
+				C92CADA41806FD0800AA8FA7 /* MLAppDelegate.m in Sources */,
+				C92CADCA1806FD2200AA8FA7 /* MLPixelView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92CADAD1806FD0800AA8FA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92CADBF1806FD0800AA8FA7 /* Animation_HackwichTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C92CADB71806FD0800AA8FA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C92CAD8F1806FD0800AA8FA7 /* Animation Hackwich */;
+			targetProxy = C92CADB61806FD0800AA8FA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C92CAD9C1806FD0800AA8FA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C92CAD9D1806FD0800AA8FA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C92CADA51806FD0800AA8FA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C92CADA61806FD0800AA8FA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C92CADBB1806FD0800AA8FA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C92CADBC1806FD0800AA8FA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C92CADC01806FD0800AA8FA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C92CADC11806FD0800AA8FA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C92CADC31806FD0800AA8FA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Animation Hackwich/Animation Hackwich-Prefix.pch";
+				INFOPLIST_FILE = "Animation Hackwich/Animation Hackwich-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C92CADC41806FD0800AA8FA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Animation Hackwich/Animation Hackwich-Prefix.pch";
+				INFOPLIST_FILE = "Animation Hackwich/Animation Hackwich-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C92CADC61806FD0800AA8FA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Animation Hackwich.app/Animation Hackwich";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Animation Hackwich/Animation Hackwich-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Animation HackwichTests/Animation HackwichTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C92CADC71806FD0800AA8FA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Animation Hackwich.app/Animation Hackwich";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Animation Hackwich/Animation Hackwich-Prefix.pch";
+				INFOPLIST_FILE = "Animation HackwichTests/Animation HackwichTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C92CAD8B1806FD0800AA8FA7 /* Build configuration list for PBXProject "Animation Hackwich" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92CADC01806FD0800AA8FA7 /* Debug */,
+				C92CADC11806FD0800AA8FA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C92CADC21806FD0800AA8FA7 /* Build configuration list for PBXNativeTarget "Animation Hackwich" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92CADC31806FD0800AA8FA7 /* Debug */,
+				C92CADC41806FD0800AA8FA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C92CADC51806FD0800AA8FA7 /* Build configuration list for PBXNativeTarget "Animation HackwichTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92CADC61806FD0800AA8FA7 /* Debug */,
+				C92CADC71806FD0800AA8FA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C92CAD881806FD0800AA8FA7 /* Project object */;
+}

@@ -101,19 +101,7 @@
 }
 
 - (IBAction)changeIcons:(id)sender {
-    
-    /*
-    NSArray *annotations = [[self mapView] annotations];
-    
-    for (MLBusStopLocation *annotation in annotations) {
-        MKAnnotationView *av = [[self mapView] viewForAnnotation:annotation];
-        NSLog(@"annotation view is: %@", av);
-        NSLog(@"its image is: %@", av.image);
-        [av setImage:[UIImage imageNamed:@"cloud-wind.png"]];
-    }
-     */
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"change annotation view icons" object:[self mapView]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"change image" object:[self mapView]];
 }
 @end
 

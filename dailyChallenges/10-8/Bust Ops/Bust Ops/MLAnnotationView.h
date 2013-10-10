@@ -10,4 +10,6 @@
 
 @interface MLAnnotationView : MKAnnotationView
 
+@property (strong, nonatomic) NSArray *images;
+
 @end
