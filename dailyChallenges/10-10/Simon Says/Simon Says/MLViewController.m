@@ -13,21 +13,44 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+   
+    [self storeColorPanelInstancesInDictionary];
+    [self setDelegateOnColorPanelInstancesToSelf];
+    
     _i = 1;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+}
+
+/*
+ Store each instance of this controller's MLColorPanelView's in a mutable dictionary, _views.
+ Each view's key will be a string representation of its tag property.
+*/
+- (void)storeColorPanelInstancesInDictionary
+{
     _views = [[NSMutableDictionary alloc] init];
     
-    [super viewDidLoad];
-    
     for (MLColorPanelView *view in self.view.subviews) {
+   
         if ([view isKindOfClass:[MLColorPanelView class]]) {
             
-            ((MLColorPanelView *)view).delegate = self;
             [_views setObject:view forKey:[NSString stringWithFormat:@"%i", view.tag]];
             
         }
     }
-    
-    _timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+}
+
+/*
+ Enumerate through each view in the dictionary and assign this instance of MLViewController as the view's delegate.
+ (remember: the dictionary contains instances of MLColorPanelView)
+*/
+- (void)setDelegateOnColorPanelInstancesToSelf
+{
+    [_views enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        // Why is typecasting necessary here? Logging each obj shows them to be instances of MLColorPanelView
+        // NSLog(@"obj is: %@", obj);
+        ((MLColorPanelView *)obj).delegate = self;
+    }];
 }
 
 - (void)tick
