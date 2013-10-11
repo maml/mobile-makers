@@ -56,25 +56,19 @@
 - (void)tick
 {
     MLColorPanelView *view = [_views objectForKey:[NSString stringWithFormat:@"%i", _i]];
-
     UIColor *prevColor = [view backgroundColor];
-    NSLog(@"prevColor is: %@", prevColor);
 
-    [view setBackgroundColor:[UIColor whiteColor]];
-    
     [UIView animateWithDuration:0.2f animations:^{
          [view setBackgroundColor:[UIColor redColor]];
-        
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.2f animations:^{
             [view setBackgroundColor:prevColor];
         }];
     }];
     
-    if (_i == 6) {
+    if (_i > [_views allValues].count) {
         _i = 0;
         [_timer invalidate];
-        NSLog(@"timer is done!!!");
     } else {
         _i++;
     }
