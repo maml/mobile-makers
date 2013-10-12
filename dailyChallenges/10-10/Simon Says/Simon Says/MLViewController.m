@@ -11,7 +11,7 @@
 
 @implementation MLViewController
 
-@synthesize colorPanelViews;
+@synthesize colorPanelViews, cpuSequence;
 
 - (void)viewDidLoad
 {
@@ -22,6 +22,10 @@
     
     _i = 1;
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+
+    // hard code the intial cpu sequence for now . . .
+    _playerTouchCount = 0;
+    cpuSequence = @[@"1", @"2", @"3", @"4", @"5", @"6"];
 }
 
 /*
@@ -68,7 +72,28 @@
 
 -(void)didTouchColorPanelView: (int)tagNumber
 {
-    NSLog(@"tagNumber is: %i", tagNumber);
+    (tagNumber == [[cpuSequence objectAtIndex:_playerTouchCount] integerValue]) ? [self didTouchCorrectColorPanelView] : [self didTouchIncorrectColorPanelView];
+}
+
+// ------------------------------------------------------
+
+- (void)didTouchCorrectColorPanelView
+{
+    NSLog(@"correct touch");
+    _playerTouchCount++;
+}
+
+- (void)didTouchIncorrectColorPanelView
+{
+    NSLog(@"incorrect touch - Game Over");
 }
 
 @end
+
+
+
+
+
+
+
+

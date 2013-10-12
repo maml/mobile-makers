@@ -13,6 +13,9 @@
 
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) NSMutableDictionary *colorPanelViews;
+@property (strong, nonatomic) NSArray *cpuSequence;
+
+@property int playerTouchCount;
 @property int i;
 
 @end
