@@ -17,5 +17,8 @@
 @interface MLColorPanelView : UIView
 
 @property (strong, nonatomic) id<ColorPanelDelegate> delegate;
+@property (strong, nonatomic) UIColor *color;
+
+- (void)animateToWhiteAndBack;
 
 @end

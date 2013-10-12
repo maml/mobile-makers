@@ -10,7 +10,7 @@
 
 @implementation MLColorPanelView
 
-@synthesize delegate;
+@synthesize delegate, color;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -24,6 +24,19 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [delegate didTouchColorPanelView: self.tag];
+}
+
+- (void)animateToWhiteAndBack
+{
+    UIColor *prevColor = [self backgroundColor];
+    
+    [UIView animateWithDuration:0.2f animations:^{
+        [self setBackgroundColor:[UIColor whiteColor]];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2f animations:^{
+            [self setBackgroundColor:prevColor];
+        }];
+    }];
 }
 
 @end

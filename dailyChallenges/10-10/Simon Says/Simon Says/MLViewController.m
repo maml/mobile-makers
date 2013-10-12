@@ -21,7 +21,7 @@
     [self setDelegateOnColorPanelInstancesToSelf];
     
     _i = 1;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 }
 
 /*
@@ -56,15 +56,7 @@
 - (void)tick
 {
     MLColorPanelView *view = [colorPanelViews objectForKey:[NSString stringWithFormat:@"%i", _i]];
-    UIColor *prevColor = [view backgroundColor];
-
-    [UIView animateWithDuration:0.2f animations:^{
-         [view setBackgroundColor:[UIColor redColor]];
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.2f animations:^{
-            [view setBackgroundColor:prevColor];
-        }];
-    }];
+    [view animateToWhiteAndBack];
     
     if (_i > [colorPanelViews allValues].count) {
         _i = 0;
