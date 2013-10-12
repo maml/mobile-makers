@@ -12,7 +12,7 @@
 @interface MLViewController : UIViewController <ColorPanelDelegate>
 
 @property (strong, nonatomic) NSTimer *timer;
-@property (strong, nonatomic) NSMutableDictionary *views;
+@property (strong, nonatomic) NSMutableDictionary *colorPanelViews;
 @property int i;
 
 @end

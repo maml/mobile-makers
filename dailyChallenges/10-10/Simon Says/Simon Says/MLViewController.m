@@ -11,6 +11,8 @@
 
 @implementation MLViewController
 
+@synthesize colorPanelViews;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -23,39 +25,37 @@
 }
 
 /*
- Store each instance of this controller's MLColorPanelView's in a mutable dictionary, _views.
+ Store each instance of this controller's MLColorPanelView's in a mutable dictionary, colorPanelViews.
  Each view's key will be a string representation of its tag property.
 */
 - (void)storeColorPanelInstancesInDictionary
 {
-    _views = [[NSMutableDictionary alloc] init];
+    colorPanelViews = [[NSMutableDictionary alloc] init];
     
     for (MLColorPanelView *view in self.view.subviews) {
    
         if ([view isKindOfClass:[MLColorPanelView class]]) {
             
-            [_views setObject:view forKey:[NSString stringWithFormat:@"%i", view.tag]];
+            [colorPanelViews setObject:view forKey:[NSString stringWithFormat:@"%i", view.tag]];
             
         }
     }
 }
 
 /*
- Enumerate through each view in the dictionary and assign this instance of MLViewController as the view's delegate.
+ Enumerate views in the dictionary and assign (this instance of) MLViewController as the views' delegate.
  (remember: the dictionary contains instances of MLColorPanelView)
 */
 - (void)setDelegateOnColorPanelInstancesToSelf
 {
-    [_views enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        // Why is typecasting necessary here? Logging each obj shows them to be instances of MLColorPanelView
-        // NSLog(@"obj is: %@", obj);
-        ((MLColorPanelView *)obj).delegate = self;
+    [colorPanelViews enumerateKeysAndObjectsUsingBlock:^(id key, MLColorPanelView *view, BOOL *stop) {
+        view.delegate = self;
     }];
 }
 
 - (void)tick
 {
-    MLColorPanelView *view = [_views objectForKey:[NSString stringWithFormat:@"%i", _i]];
+    MLColorPanelView *view = [colorPanelViews objectForKey:[NSString stringWithFormat:@"%i", _i]];
     UIColor *prevColor = [view backgroundColor];
 
     [UIView animateWithDuration:0.2f animations:^{
@@ -66,7 +66,7 @@
         }];
     }];
     
-    if (_i > [_views allValues].count) {
+    if (_i > [colorPanelViews allValues].count) {
         _i = 0;
         [_timer invalidate];
     } else {
