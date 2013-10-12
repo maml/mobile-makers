@@ -23,9 +23,8 @@
     _i = 1;
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 
-    // hard code the intial cpu sequence for now . . .
+    cpuSequence = [self generatedSequence];
     _playerTouchCount = 0;
-    cpuSequence = @[@"1", @"2", @"3", @"4", @"5", @"6"];
 }
 
 /*
@@ -61,21 +60,17 @@
 {
     MLColorPanelView *view = [colorPanelViews objectForKey:[NSString stringWithFormat:@"%i", _i]];
     [view animateToWhiteAndBack];
-    
-    if (_i > [colorPanelViews allValues].count) {
-        _i = 0;
-        [_timer invalidate];
-    } else {
-        _i++;
-    }
+
+    (_i > [colorPanelViews allValues].count) ? [_timer invalidate] : _i++;
 }
 
+// ---------------------- Game Event and Handlers -----------------------------
+
+# pragma ColorPanelDelegate method
 -(void)didTouchColorPanelView: (int)tagNumber
 {
     (tagNumber == [[cpuSequence objectAtIndex:_playerTouchCount] integerValue]) ? [self didTouchCorrectColorPanelView] : [self didTouchIncorrectColorPanelView];
 }
-
-// ------------------------------------------------------
 
 - (void)didTouchCorrectColorPanelView
 {
@@ -86,6 +81,21 @@
 - (void)didTouchIncorrectColorPanelView
 {
     NSLog(@"incorrect touch - Game Over");
+}
+
+// --------------------- Game Setup -------------------------------------------
+
+- (NSMutableArray *)generatedSequence
+{
+    NSMutableArray *sequence = [[NSMutableArray alloc] init];
+
+    for (int i = 0; i < [colorPanelViews allValues].count; i++) {
+        int integer = arc4random() % ([colorPanelViews allValues].count + 1);
+        NSString *integerToString = [NSString stringWithFormat:@"%i", integer];
+        [sequence addObject:integerToString];
+    }
+    
+    return sequence;
 }
 
 @end
