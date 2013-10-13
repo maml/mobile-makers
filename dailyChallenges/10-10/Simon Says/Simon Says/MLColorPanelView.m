@@ -24,6 +24,12 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [delegate didTouchColorPanelView: self.tag];
+    self.alpha = 0.5f;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.alpha = 1.0f;
 }
 
 - (void)animateToClearAndBack
