@@ -12,26 +12,26 @@
 
 @synthesize cpuSequence, playerTouchCount;
 
-- (id)initWithCpuSequence
+- (id)initWithCpuSequenceWithLength: (int)length
 {
     self = [super init];
     
     if (self) {
-        [self generateSequence];
+        [self generateSequenceWithLength: 6];
         playerTouchCount = 0;
     }
     
     return self;
 }
 
-- (void)generateSequence
+- (void)generateSequenceWithLength: (int)length
 {
     cpuSequence = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 6; i++) {
-        int integer = (arc4random() % 6) + 1;
+
+    for (int i = 0; i < length; i++) {
+        int integer = (arc4random() % length) + 1;
         NSString *integerToString = [NSString stringWithFormat:@"%i", integer];
         [cpuSequence addObject:integerToString];
     }
-    NSLog(@"cpuSequence is: %@", cpuSequence);
 }
 @end
