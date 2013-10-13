@@ -11,11 +11,15 @@
 @interface MLGame : NSObject
 
 - (id)initWithCpuSequence;
+- (void)handleCorrectTouch;
+- (void)handleIncorrectTouch;
 
 @property (strong, nonatomic) NSMutableArray *cpuSequence;
 
 @property int playerTouchCount;
+@property int playerTouchCountForRound;
 @property int level;
 @property int sequenceLength;
+@property int numberOfErrors;
 
 @end

@@ -77,13 +77,12 @@
 
 - (void)didTouchCorrectColorPanelView
 {
-    NSLog(@"correct touch");
-    game.playerTouchCount++;
+    [game handleCorrectTouch];
 }
 
 - (void)didTouchIncorrectColorPanelView
 {
-    NSLog(@"incorrect touch - Game Over");
+    [game handleIncorrectTouch];
 }
 
 @end

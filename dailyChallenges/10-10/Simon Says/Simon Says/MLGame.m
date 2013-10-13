@@ -10,7 +10,7 @@
 
 @implementation MLGame
 
-@synthesize cpuSequence, playerTouchCount, level, sequenceLength;
+@synthesize cpuSequence, playerTouchCount, playerTouchCountForRound, level, sequenceLength, numberOfErrors;
 
 - (id)initWithCpuSequence
 {
@@ -20,7 +20,7 @@
         // we have the game start at level 1 and set the length of cpuSequence to two times the current level
         level = 1;
         [self generateSequenceWithLength: level * 2];
-        playerTouchCount = 0;
+        playerTouchCount, numberOfErrors = 0;
     }
     
     return self;
@@ -39,4 +39,51 @@
     
     sequenceLength = cpuSequence.count;
 }
+
+- (void)handleCorrectTouch
+{
+    playerTouchCount++;
+    playerTouchCountForRound++;
+    
+    // need to determine if the round has been won
+    // we know it will have been won if the playerTouchCountForRound % sequenceLength is 0 since we only increment playerTouchCountForRound
+    // on correct touches and set back to zero on incorrect touches.
+   
+    if (playerTouchCountForRound % sequenceLength == 0) {
+        [self handleRoundWin];
+    }
+}
+
+- (void)handleIncorrectTouch
+{
+    /*
+     need to determine if the game has been lost
+     the game has been lost if numberOfErrors is 3
+     if the game has not been lost we start the round over at the current level
+    */
+    
+    if (numberOfErrors == 3) {
+        [self handleGameOver];
+    } else {
+        numberOfErrors++;
+        [self restartRoundToCurrentLevel];
+    }
+}
+
+- (void)handleRoundWin
+{
+    NSLog(@"Round has been won");
+}
+
+- (void)handleGameOver
+{
+    NSLog(@"Game has been lost");
+    // need to reset the game
+}
+
+- (void)restartRoundToCurrentLevel
+{
+    NSLog(@"Game has not been lost yet. Need to restart the round at the current level.");
+}
+
 @end
