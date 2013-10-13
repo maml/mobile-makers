@@ -29,6 +29,7 @@
     cpuSequence = [[NSMutableArray alloc] init];
 
     for (int i = 0; i < length; i++) {
+        // since there are no color panels with tag 0 we bump the result up by 1 to ensure the returned value matches a color panel tag
         int integer = (arc4random() % length) + 1;
         NSString *integerToString = [NSString stringWithFormat:@"%i", integer];
         [cpuSequence addObject:integerToString];
