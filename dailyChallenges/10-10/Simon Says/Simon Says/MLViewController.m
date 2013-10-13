@@ -11,11 +11,13 @@
 
 @implementation MLViewController
 
-@synthesize colorPanelViews, cpuSequence;
+@synthesize game, colorPanelViews, cpuSequence;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.game = [[MLGame alloc] init];
     
     [self storeColorPanelInstancesInDictionary];
     [self setDelegateOnColorPanelInstancesToSelf];

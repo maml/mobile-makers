@@ -23,6 +23,7 @@
 		C92CAE0318072A8C00AA8FA7 /* Simon_SaysTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAE0218072A8C00AA8FA7 /* Simon_SaysTests.m */; };
 		C92CAE0E18072AFB00AA8FA7 /* MLColorPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAE0D18072AFB00AA8FA7 /* MLColorPanelView.m */; };
 		C9B25E85180B334600944E7B /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9B25E84180B334600944E7B /* background.jpg */; };
+		C9CB4BF2180B4E4900B5D958 /* MLGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CB4BF1180B4E4900B5D958 /* MLGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		C92CAE0C18072AFB00AA8FA7 /* MLColorPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLColorPanelView.h; sourceTree = "<group>"; };
 		C92CAE0D18072AFB00AA8FA7 /* MLColorPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLColorPanelView.m; sourceTree = "<group>"; };
 		C9B25E84180B334600944E7B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		C9CB4BF0180B4E4900B5D958 /* MLGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLGame.h; sourceTree = "<group>"; };
+		C9CB4BF1180B4E4900B5D958 /* MLGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				C92CADE918072A8C00AA8FA7 /* Main.storyboard */,
 				C92CAE0C18072AFB00AA8FA7 /* MLColorPanelView.h */,
 				C92CAE0D18072AFB00AA8FA7 /* MLColorPanelView.m */,
+				C9CB4BF0180B4E4900B5D958 /* MLGame.h */,
+				C9CB4BF1180B4E4900B5D958 /* MLGame.m */,
 				C92CADEC18072A8C00AA8FA7 /* MLViewController.h */,
 				C92CADED18072A8C00AA8FA7 /* MLViewController.m */,
 				C92CADEF18072A8C00AA8FA7 /* Images.xcassets */,
@@ -262,6 +267,7 @@
 				C92CAE0E18072AFB00AA8FA7 /* MLColorPanelView.m in Sources */,
 				C92CADE418072A8C00AA8FA7 /* main.m in Sources */,
 				C92CADEE18072A8C00AA8FA7 /* MLViewController.m in Sources */,
+				C9CB4BF2180B4E4900B5D958 /* MLGame.m in Sources */,
 				C92CADE818072A8C00AA8FA7 /* MLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

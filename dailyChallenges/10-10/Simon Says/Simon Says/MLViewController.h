@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "MLColorPanelView.h"
+#import "MLGame.h"
 
 @interface MLViewController : UIViewController <ColorPanelDelegate>
 
+@property (strong, nonatomic) MLGame *game;
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) NSMutableDictionary *colorPanelViews;
 @property (strong, nonatomic) NSMutableArray *cpuSequence;
