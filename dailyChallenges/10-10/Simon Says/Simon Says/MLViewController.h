@@ -15,7 +15,6 @@
 @property (strong, nonatomic) MLGame *game;
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) NSMutableDictionary *colorPanelViews;
-@property (strong, nonatomic) NSMutableArray *cpuSequence;
 
 @property int playerTouchCount;
 @property int i;

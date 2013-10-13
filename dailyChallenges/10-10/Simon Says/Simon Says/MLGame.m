@@ -12,4 +12,25 @@
 
 @synthesize cpuSequence;
 
+- (id)initWithCpuSequence
+{
+    self = [super init];
+    
+    if (self) {
+        [self generateSequence];
+    }
+    
+    return self;
+}
+
+- (void)generateSequence
+{
+    cpuSequence = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 6; i++) {
+        int integer = (arc4random() % 6) + 1;
+        NSString *integerToString = [NSString stringWithFormat:@"%i", integer];
+        [cpuSequence addObject:integerToString];
+    }
+    NSLog(@"cpuSequence is: %@", cpuSequence);
+}
 @end

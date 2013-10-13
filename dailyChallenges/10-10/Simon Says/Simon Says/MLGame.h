@@ -10,6 +10,8 @@
 
 @interface MLGame : NSObject
 
+- (id)initWithCpuSequence;
+
 @property (strong, nonatomic) NSMutableArray *cpuSequence;
 
 @end

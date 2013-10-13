@@ -11,21 +11,21 @@
 
 @implementation MLViewController
 
-@synthesize game, colorPanelViews, cpuSequence;
+@synthesize game, colorPanelViews;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.game = [[MLGame alloc] init];
+    self.game = [[MLGame alloc] initWithCpuSequence];
     
     [self storeColorPanelInstancesInDictionary];
     [self setDelegateOnColorPanelInstancesToSelf];
-    
-    cpuSequence = [self generatedSequence];
+
+    // move to MLGame
     _playerTouchCount = 0;
   
-    // Used to animate through the instances of MLColorPanelView as they "appear" in cpuSequence
+    // Used to animate through the instances of MLColorPanelView as they "appear" in game.cpuSequence
     // _i keeps track of ticks
     _i = 0;
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:YES];
@@ -63,7 +63,7 @@
 - (void)tick
 {
     if (_i < [colorPanelViews allValues].count) {
-        NSString *tagNumber = [cpuSequence  objectAtIndex:_i];
+        NSString *tagNumber = [game.cpuSequence  objectAtIndex:_i];
         MLColorPanelView *view = [colorPanelViews objectForKey:tagNumber];
         [view animateToClearAndBack];
         _i++;
@@ -72,13 +72,10 @@
     }
 }
 
-
-// ---------------------- Game Event and Handlers -----------------------------
-
 # pragma ColorPanelDelegate
 -(void)didTouchColorPanelView: (int)tagNumber
 {
-    (tagNumber == [[cpuSequence objectAtIndex:_playerTouchCount] integerValue]) ? [self didTouchCorrectColorPanelView] : [self didTouchIncorrectColorPanelView];
+    (tagNumber == [[game.cpuSequence objectAtIndex:_playerTouchCount] integerValue]) ? [self didTouchCorrectColorPanelView] : [self didTouchIncorrectColorPanelView];
 }
 
 - (void)didTouchCorrectColorPanelView
@@ -90,21 +87,6 @@
 - (void)didTouchIncorrectColorPanelView
 {
     NSLog(@"incorrect touch - Game Over");
-}
-
-// --------------------- Game Setup -------------------------------------------
-
-- (NSMutableArray *)generatedSequence
-{
-    NSMutableArray *sequence = [[NSMutableArray alloc] init];
-
-    for (int i = 0; i < [colorPanelViews allValues].count; i++) {
-        int integer = (arc4random() % [colorPanelViews allValues].count) + 1;
-        NSString *integerToString = [NSString stringWithFormat:@"%i", integer];
-        [sequence addObject:integerToString];
-    }
-    
-    return sequence;
 }
 
 @end
