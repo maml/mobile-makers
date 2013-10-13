@@ -20,11 +20,12 @@
     [self storeColorPanelInstancesInDictionary];
     [self setDelegateOnColorPanelInstancesToSelf];
     
-    _i = 1;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:YES];
-
     cpuSequence = [self generatedSequence];
     _playerTouchCount = 0;
+  
+    // Used to animate through the instances of MLColorPanelView as they "appear" in cpuSequence
+    _i = 0;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 }
 
 /*
@@ -58,15 +59,20 @@
 
 - (void)tick
 {
-    MLColorPanelView *view = [colorPanelViews objectForKey:[NSString stringWithFormat:@"%i", _i]];
-    [view animateToWhiteAndBack];
-
-    (_i > [colorPanelViews allValues].count) ? [_timer invalidate] : _i++;
+    if (_i < [colorPanelViews allValues].count) {
+        NSString *tagNumber = [cpuSequence  objectAtIndex:_i];
+        MLColorPanelView *view = [colorPanelViews objectForKey:tagNumber];
+        [view animateToWhiteAndBack];
+        _i++;
+    } else {
+        [_timer invalidate];
+    }
 }
+
 
 // ---------------------- Game Event and Handlers -----------------------------
 
-# pragma ColorPanelDelegate method
+# pragma ColorPanelDelegate
 -(void)didTouchColorPanelView: (int)tagNumber
 {
     (tagNumber == [[cpuSequence objectAtIndex:_playerTouchCount] integerValue]) ? [self didTouchCorrectColorPanelView] : [self didTouchIncorrectColorPanelView];
@@ -90,7 +96,7 @@
     NSMutableArray *sequence = [[NSMutableArray alloc] init];
 
     for (int i = 0; i < [colorPanelViews allValues].count; i++) {
-        int integer = arc4random() % ([colorPanelViews allValues].count + 1);
+        int integer = (arc4random() % [colorPanelViews allValues].count) + 1;
         NSString *integerToString = [NSString stringWithFormat:@"%i", integer];
         [sequence addObject:integerToString];
     }
