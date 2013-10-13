@@ -10,14 +10,16 @@
 
 @implementation MLGame
 
-@synthesize cpuSequence, playerTouchCount;
+@synthesize cpuSequence, playerTouchCount, level, sequenceLength;
 
-- (id)initWithCpuSequenceWithLength: (int)length
+- (id)initWithCpuSequence
 {
     self = [super init];
     
     if (self) {
-        [self generateSequenceWithLength: 6];
+        // we have the game start at level 1 and set the length of cpuSequence to two times the current level
+        level = 1;
+        [self generateSequenceWithLength: level * 2];
         playerTouchCount = 0;
     }
     
@@ -34,5 +36,7 @@
         NSString *integerToString = [NSString stringWithFormat:@"%i", integer];
         [cpuSequence addObject:integerToString];
     }
+    
+    sequenceLength = cpuSequence.count;
 }
 @end

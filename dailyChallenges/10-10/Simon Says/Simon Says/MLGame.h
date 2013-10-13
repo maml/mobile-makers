@@ -10,9 +10,12 @@
 
 @interface MLGame : NSObject
 
-- (id)initWithCpuSequenceWithLength: (int)length;
+- (id)initWithCpuSequence;
 
 @property (strong, nonatomic) NSMutableArray *cpuSequence;
+
 @property int playerTouchCount;
+@property int level;
+@property int sequenceLength;
 
 @end

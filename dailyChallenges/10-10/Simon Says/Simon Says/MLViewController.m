@@ -11,17 +11,16 @@
 
 @implementation MLViewController
 
-@synthesize game, colorPanelViews, numberOfColorPanelViews;
+@synthesize game, colorPanelViews;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self storeColorPanelInstancesInDictionary];
-    [self setNumberOfColorPanelViews:[colorPanelViews allValues].count];
     [self setDelegateOnColorPanelInstancesToSelf];
 
-    self.game = [[MLGame alloc] initWithCpuSequenceWithLength: numberOfColorPanelViews];
+    self.game = [[MLGame alloc] initWithCpuSequence];
     
     // Used to animate through the instances of MLColorPanelView as they "appear" in game.cpuSequence
     // _i keeps track of ticks
@@ -60,7 +59,7 @@
 
 - (void)tick
 {
-    if (_i < numberOfColorPanelViews) {
+    if (_i < game.sequenceLength) {
         NSString *tagNumber = [game.cpuSequence  objectAtIndex:_i];
         MLColorPanelView *view = [colorPanelViews objectForKey:tagNumber];
         [view animateToClearAndBack];
