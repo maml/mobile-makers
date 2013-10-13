@@ -19,6 +19,6 @@
 @property (strong, nonatomic) id<ColorPanelDelegate> delegate;
 @property (strong, nonatomic) UIColor *color;
 
-- (void)animateToWhiteAndBack;
+- (void)animateToClearAndBack;
 
 @end

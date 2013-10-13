@@ -26,12 +26,12 @@
     [delegate didTouchColorPanelView: self.tag];
 }
 
-- (void)animateToWhiteAndBack
+- (void)animateToClearAndBack
 {
     UIColor *prevColor = [self backgroundColor];
     
     [UIView animateWithDuration:0.2f animations:^{
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:[UIColor clearColor]];
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.2f animations:^{
             [self setBackgroundColor:prevColor];

@@ -16,7 +16,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    
     [self storeColorPanelInstancesInDictionary];
     [self setDelegateOnColorPanelInstancesToSelf];
     
@@ -24,6 +24,7 @@
     _playerTouchCount = 0;
   
     // Used to animate through the instances of MLColorPanelView as they "appear" in cpuSequence
+    // _i keeps track of ticks
     _i = 0;
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 }
@@ -62,7 +63,7 @@
     if (_i < [colorPanelViews allValues].count) {
         NSString *tagNumber = [cpuSequence  objectAtIndex:_i];
         MLColorPanelView *view = [colorPanelViews objectForKey:tagNumber];
-        [view animateToWhiteAndBack];
+        [view animateToClearAndBack];
         _i++;
     } else {
         [_timer invalidate];

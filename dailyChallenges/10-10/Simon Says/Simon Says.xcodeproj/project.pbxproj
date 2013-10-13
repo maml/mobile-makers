@@ -22,6 +22,7 @@
 		C92CAE0118072A8C00AA8FA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92CADFF18072A8C00AA8FA7 /* InfoPlist.strings */; };
 		C92CAE0318072A8C00AA8FA7 /* Simon_SaysTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAE0218072A8C00AA8FA7 /* Simon_SaysTests.m */; };
 		C92CAE0E18072AFB00AA8FA7 /* MLColorPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C92CAE0D18072AFB00AA8FA7 /* MLColorPanelView.m */; };
+		C9B25E85180B334600944E7B /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9B25E84180B334600944E7B /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C92CAE0218072A8C00AA8FA7 /* Simon_SaysTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simon_SaysTests.m; sourceTree = "<group>"; };
 		C92CAE0C18072AFB00AA8FA7 /* MLColorPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLColorPanelView.h; sourceTree = "<group>"; };
 		C92CAE0D18072AFB00AA8FA7 /* MLColorPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLColorPanelView.m; sourceTree = "<group>"; };
+		C9B25E84180B334600944E7B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		C92CADDD18072A8C00AA8FA7 /* Simon Says */ = {
 			isa = PBXGroup;
 			children = (
+				C9B25E84180B334600944E7B /* background.jpg */,
 				C92CADE618072A8C00AA8FA7 /* MLAppDelegate.h */,
 				C92CADE718072A8C00AA8FA7 /* MLAppDelegate.m */,
 				C92CADE918072A8C00AA8FA7 /* Main.storyboard */,
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C92CADF018072A8C00AA8FA7 /* Images.xcassets in Resources */,
+				C9B25E85180B334600944E7B /* background.jpg in Resources */,
 				C92CADE218072A8C00AA8FA7 /* InfoPlist.strings in Resources */,
 				C92CADEB18072A8C00AA8FA7 /* Main.storyboard in Resources */,
 			);
@@ -467,6 +471,7 @@
 				C92CAE0818072A8C00AA8FA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C92CAE0918072A8C00AA8FA7 /* Build configuration list for PBXNativeTarget "Simon SaysTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +480,7 @@
 				C92CAE0B18072A8C00AA8FA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
