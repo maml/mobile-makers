@@ -30,10 +30,10 @@
 {
     UIColor *prevColor = [self backgroundColor];
     
-    [UIView animateWithDuration:0.2f animations:^{
+    [UIView animateWithDuration:0.15f animations:^{
         [self setBackgroundColor:[UIColor clearColor]];
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.2f animations:^{
+        [UIView animateWithDuration:0.15f animations:^{
             [self setBackgroundColor:prevColor];
         }];
     }];
