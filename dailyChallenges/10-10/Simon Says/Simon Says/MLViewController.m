@@ -22,9 +22,6 @@
     [self storeColorPanelInstancesInDictionary];
     [self setDelegateOnColorPanelInstancesToSelf];
 
-    // move to MLGame
-    _playerTouchCount = 0;
-  
     // Used to animate through the instances of MLColorPanelView as they "appear" in game.cpuSequence
     // _i keeps track of ticks
     _i = 0;
@@ -75,13 +72,13 @@
 # pragma ColorPanelDelegate
 -(void)didTouchColorPanelView: (int)tagNumber
 {
-    (tagNumber == [[game.cpuSequence objectAtIndex:_playerTouchCount] integerValue]) ? [self didTouchCorrectColorPanelView] : [self didTouchIncorrectColorPanelView];
+    (tagNumber == [[game.cpuSequence objectAtIndex:game.playerTouchCount] integerValue]) ? [self didTouchCorrectColorPanelView] : [self didTouchIncorrectColorPanelView];
 }
 
 - (void)didTouchCorrectColorPanelView
 {
     NSLog(@"correct touch");
-    _playerTouchCount++;
+    game.playerTouchCount++;
 }
 
 - (void)didTouchIncorrectColorPanelView

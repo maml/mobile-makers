@@ -10,7 +10,7 @@
 
 @implementation MLGame
 
-@synthesize cpuSequence;
+@synthesize cpuSequence, playerTouchCount;
 
 - (id)initWithCpuSequence
 {
@@ -18,6 +18,7 @@
     
     if (self) {
         [self generateSequence];
+        playerTouchCount = 0;
     }
     
     return self;

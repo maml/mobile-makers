@@ -13,5 +13,6 @@
 - (id)initWithCpuSequence;
 
 @property (strong, nonatomic) NSMutableArray *cpuSequence;
+@property int playerTouchCount;
 
 @end
