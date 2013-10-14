@@ -10,7 +10,7 @@
 
 @implementation MLGame
 
-@synthesize cpuSequence, playerTouchCount, playerTouchCountForRound, level, sequenceLength, numberOfErrors;
+@synthesize cpuSequence, playerTouchCount, playerTouchCountForRound, level, sequenceLength, numberOfErrors, highScore, score, delegate, lives;
 
 - (id)initWithCpuSequence
 {
@@ -20,7 +20,8 @@
         // we have the game start at level 1 and set the length of cpuSequence to two times the current level
         level = 1;
         [self generateSequenceWithLength: level * 2];
-        playerTouchCount, numberOfErrors = 0;
+        playerTouchCount, numberOfErrors, highScore, score = 0;
+        lives = 3;
     }
     
     return self;
@@ -44,6 +45,7 @@
 {
     playerTouchCount++;
     playerTouchCountForRound++;
+    [self updateScore];
     
     // need to determine if the round has been won
     // we know it will have been won if the playerTouchCountForRound % sequenceLength is 0 since we only increment playerTouchCountForRound
@@ -73,6 +75,8 @@
 - (void)handleRoundWin
 {
     NSLog(@"Round has been won");
+    level++;
+    [delegate levelDidChange:level];
 }
 
 - (void)handleGameOver
@@ -83,7 +87,14 @@
 
 - (void)restartRoundToCurrentLevel
 {
+    [delegate numberOfLivesDidChange:(lives - numberOfErrors)];
     NSLog(@"Game has not been lost yet. Need to restart the round at the current level.");
+}
+
+- (void)updateScore
+{
+    score = round(playerTouchCount * sqrtf(playerTouchCount));
+    [delegate scoreDidChange:score];
 }
 
 @end

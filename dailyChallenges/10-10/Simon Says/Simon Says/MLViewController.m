@@ -11,7 +11,7 @@
 
 @implementation MLViewController
 
-@synthesize game, colorPanelViews;
+@synthesize game, colorPanelViews, currentScore, lives, level;
 
 - (void)viewDidLoad
 {
@@ -21,6 +21,7 @@
     [self setDelegateOnColorPanelInstancesToSelf];
 
     self.game = [[MLGame alloc] initWithCpuSequence];
+    game.delegate = self;
     
     // Used to animate through the instances of MLColorPanelView as they "appear" in game.cpuSequence
     // _i keeps track of ticks
@@ -67,6 +68,24 @@
     } else {
         [_timer invalidate];
     }
+    }
+
+# pragma GameEventsDelegate
+- (void)scoreDidChange:(int)score
+{
+    NSLog(@"scoreDidUpdate has fired in view controller with score of: %i", score);
+    currentScore.text = [NSString stringWithFormat:@"%i", score];
+}
+
+- (void)numberOfLivesDidChange:(int)_lives
+{
+    lives.text = [NSString stringWithFormat:@"%i", _lives];
+}
+
+- (void)levelDidChange:(int)_level
+{
+    NSLog(@"levelDidChange has fired");
+    level.text = [NSString stringWithFormat:@"%i", _level];
 }
 
 # pragma ColorPanelDelegate
