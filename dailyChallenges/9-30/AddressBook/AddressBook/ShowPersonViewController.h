@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailAddressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
-@property  (weak, nonatomic) Person *selectedPerson;
+@property  (weak, nonatomic) NSMutableDictionary *selectedPerson;
 
 - (IBAction)navigateToEditPerson:(id)sender;
 

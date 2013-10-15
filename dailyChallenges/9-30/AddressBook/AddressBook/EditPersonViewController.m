@@ -30,19 +30,19 @@
 {
     [super viewDidLoad];
     
-    _firstNameTextField.text = editablePerson.firstName;
-    _lastNameTextField.text = editablePerson.lastName;
-    _emailAddressTextField.text = editablePerson.emailAddress;
-    _phoneNumberTextField.text = editablePerson.phoneNumber;
+    _firstNameTextField.text = editablePerson[@"firstName"];
+    _lastNameTextField.text = editablePerson[@"lastName"];
+    _emailAddressTextField.text = editablePerson[@"emailAddress"];
+    _phoneNumberTextField.text = editablePerson[@"phoneNumber"];
 }
 
 - (IBAction)updatePerson:(id)sender {
 
     ShowPersonViewController *spvc = [self.navigationController.viewControllers objectAtIndex:(self.navigationController.viewControllers.count -2)];
-    spvc.selectedPerson.firstName  = _firstNameTextField.text;
-    spvc.selectedPerson.lastName        = _lastNameTextField.text;
-    spvc.selectedPerson.emailAddress    = _emailAddressTextField.text;
-    spvc.selectedPerson.phoneNumber     = _phoneNumberTextField.text;
+    spvc.selectedPerson[@"firstName"]       = _firstNameTextField.text;
+    spvc.selectedPerson[@"lastName"]        = _lastNameTextField.text;
+    spvc.selectedPerson[@"emailAddress"]    = _emailAddressTextField.text;
+    spvc.selectedPerson[@"phoneNumber"]     = _phoneNumberTextField.text;
 
     [self.navigationController popViewControllerAnimated:YES];
 }

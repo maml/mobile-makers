@@ -11,7 +11,7 @@
 
 @interface EditPersonViewController : UIViewController
 
-@property (weak, nonatomic) Person *editablePerson;
+@property (weak, nonatomic) NSDictionary *editablePerson;
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;

@@ -13,5 +13,7 @@
 @property (strong,nonatomic) NSMutableArray *people;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property int indexOfSelectedPerson;
+@property (strong, nonatomic) NSFileManager *fileManager;
+@property (strong, nonatomic) NSURL *documentDirectory;
 
 @end

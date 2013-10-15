@@ -39,10 +39,10 @@
 
 - (void)setSelectedPersonAttributesToLabels
 {
-    _firstNameLabel.text = selectedPerson.firstName;
-    _lastNameLabel.text= selectedPerson.lastName;
-    _emailAddressLabel.text = selectedPerson.emailAddress;
-    _phoneNumberLabel.text = selectedPerson.phoneNumber;
+    _firstNameLabel.text = selectedPerson[@"firstName"];
+    _lastNameLabel.text= selectedPerson[@"lastName"];
+    _emailAddressLabel.text = selectedPerson[@"emailAddress"];
+    _phoneNumberLabel.text = selectedPerson[@"phoneNumber"];
 }
 
 - (IBAction)navigateToEditPerson:(id)sender

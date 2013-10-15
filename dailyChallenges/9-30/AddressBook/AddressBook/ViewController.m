@@ -12,11 +12,11 @@
 
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
-@synthesize people;
+
+@synthesize people, fileManager, documentDirectory;
 
 - (void)viewDidLoad
 {
@@ -34,50 +34,24 @@
     self = [super initWithCoder:aCoder];
     
     if (self) {
+       
+        // used when both storing to and retrieving from the plist
+        fileManager = [NSFileManager defaultManager];
+        documentDirectory = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"Has Data"]) {
+            
+            [self createPeopleAndStoreInPlist];
+            
+        } else {
+            
+            [self loadTableDataSourceFromPlist];
+        
+        }
 
-        people =[[NSMutableArray alloc]init];
-        
-        Person *p1 = [[Person alloc]init];
-        p1.firstName =@"Jane";
-        p1.lastName =@"Smith";
-        p1.emailAddress = @"jane.smith@company.com";
-        p1.phoneNumber=@"312-765-0987";
-        
-        
-        Person *p2 = [[Person alloc]init];
-        p2.firstName =@"Julio";
-        p2.lastName =@"Juarez";
-        p2.emailAddress = @"J.juarez@company.com";
-        p2.phoneNumber=@"312-765-0988";
-        
-        
-        Person *p3 = [[Person alloc]init];
-        p3.firstName =@"Bill";
-        p3.lastName =@"Frederickson";
-        p3.emailAddress = @"b.frederickson@company.com";
-        p3.phoneNumber=@"312-765-0989";
-        
-        Person *p4 = [[Person alloc]init];
-        p4.firstName =@"Charles";
-        p4.lastName =@"Xavier";
-        p4.emailAddress = @"Charles.Xavier@company.com";
-        p4.phoneNumber=@"312-765-0990";
-        
-        Person *p5 = [[Person alloc]init];
-        p5.firstName =@"Timmy";
-        p5.lastName =@"Jones";
-        p5.emailAddress = @"t.jones@company.com";
-        p5.phoneNumber=@"312-765-0991";
-        
-        [people addObject:p1];
-        [people addObject:p2];
-        [people addObject:p3];
-        [people addObject:p4];
-        [people addObject:p5];
     }
 
     return self;
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -95,9 +69,9 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    Person *personTemp =self.people[indexPath.row];
+    NSDictionary *person = [self.people objectAtIndex:indexPath.row];
     
-    cell.textLabel.text =  [NSString stringWithFormat:@" %@  %@", personTemp.firstName,personTemp.lastName ];
+    cell.textLabel.text = [NSString stringWithFormat:@" %@  %@", person[@"firstName"], person[@"lastName"]];
     
     return cell;
 }
@@ -111,8 +85,41 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     ShowPersonViewController *showPersonViewController = segue.destinationViewController;
-    Person *selectedPerson = people[_indexOfSelectedPerson];
+    NSMutableDictionary *selectedPerson = people[_indexOfSelectedPerson];
     showPersonViewController.selectedPerson = selectedPerson;
+}
+
+- (void)createPeopleAndStoreInPlist
+{
+    // Create the peoples
+    Person *p1 = [[Person alloc] initWithDictionary:@{@"firstName": @"Mary", @"lastName": @"Smith", @"emailAddress": @"jane.smith@company.com", @"phoneNumber": @"312-765-0987"}];
+    
+    Person *p2 = [[Person alloc] initWithDictionary:@{@"firstName": @"Julio", @"lastName": @"Juarez", @"emailAddress": @"J.juarez@company.com", @"phoneNumber": @"312-765-0988"}];
+    
+    Person *p3 = [[Person alloc] initWithDictionary:@{@"firstName": @"Sherri", @"lastName": @"Cortalinia", @"emailAddress": @"scortalinia@example.com", @"phoneNumber": @"312-765-0988"}];
+    
+    Person *p4 = [[Person alloc] initWithDictionary:@{@"firstName": @"Bill", @"lastName": @"Bigzby", @"emailAddress": @"biggyB@example.com", @"phoneNumber": @"312-765-0988"}];
+    
+    Person *p5 = [[Person alloc] initWithDictionary:@{@"firstName": @"Tanya", @"lastName": @"Pareaux", @"emailAddress": @"peereaux@example.com", @"phoneNumber": @"312-765-0988"}];
+  
+    // Store the peoples in array designate for the table's data source
+    people =[[NSMutableArray alloc]init];
+    [people addObject:[p1 dictionary]];
+    [people addObject:[p2 dictionary]];
+    [people addObject:[p3 dictionary]];
+    [people addObject:[p4 dictionary]];
+    [people addObject:[p5 dictionary]];
+
+    // Store the peoples in user defaults
+    [people writeToURL:[documentDirectory URLByAppendingPathComponent:@"people.plist"] atomically:YES];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Has Data"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)loadTableDataSourceFromPlist
+{
+    people = [NSArray arrayWithContentsOfURL:[documentDirectory URLByAppendingPathComponent:@"people.plist"]];
 }
 
 @end
