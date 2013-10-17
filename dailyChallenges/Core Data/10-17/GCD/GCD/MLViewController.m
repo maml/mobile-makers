@@ -7,6 +7,7 @@
 //
 
 #import "MLViewController.h"
+#import "MySingleton.h"
 
 @interface MLViewController ()
 
@@ -25,14 +26,16 @@
     dispatch_async(queue, ^{
         [array1 enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSLog(@"element in array1 is: %@", obj);
-            sleep(arc4random() % 5);
+            MySingleton *s = [MySingleton sharedInstance];
+            NSLog(@"s is %@", s);
         }];
     });
 
     dispatch_async(queue, ^{
     [array2 enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSLog(@"element in array2 is: %@", obj);
-        sleep(arc4random() % 5);
+        MySingleton *s = [MySingleton sharedInstance];
+        NSLog(@"s is %@", s);
     }];
    });
 }

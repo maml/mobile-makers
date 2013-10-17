@@ -21,6 +21,7 @@
 		C936822E1810477A008C36A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93682101810477A008C36A6 /* UIKit.framework */; };
 		C93682361810477A008C36A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C93682341810477A008C36A6 /* InfoPlist.strings */; };
 		C93682381810477A008C36A6 /* GCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93682371810477A008C36A6 /* GCDTests.m */; };
+		C936824318104D08008C36A6 /* MySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = C936824218104D08008C36A6 /* MySingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C93682331810477A008C36A6 /* GCDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GCDTests-Info.plist"; sourceTree = "<group>"; };
 		C93682351810477A008C36A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C93682371810477A008C36A6 /* GCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTests.m; sourceTree = "<group>"; };
+		C936824118104D08008C36A6 /* MySingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingleton.h; sourceTree = "<group>"; };
+		C936824218104D08008C36A6 /* MySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				C936821E1810477A008C36A6 /* Main.storyboard */,
 				C93682211810477A008C36A6 /* MLViewController.h */,
 				C93682221810477A008C36A6 /* MLViewController.m */,
+				C936824118104D08008C36A6 /* MySingleton.h */,
+				C936824218104D08008C36A6 /* MySingleton.m */,
 				C93682241810477A008C36A6 /* Images.xcassets */,
 				C93682131810477A008C36A6 /* Supporting Files */,
 			);
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93682191810477A008C36A6 /* main.m in Sources */,
+				C936824318104D08008C36A6 /* MySingleton.m in Sources */,
 				C93682231810477A008C36A6 /* MLViewController.m in Sources */,
 				C936821D1810477A008C36A6 /* MLAppDelegate.m in Sources */,
 			);
