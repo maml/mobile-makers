@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Address" syncable="YES">
-        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="street1" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="street2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Address" representedClassName="Address" syncable="YES">
+        <attribute name="freeform" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="addreses" inverseEntity="Contact" syncable="YES"/>
     </entity>
     <entity name="Contact" representedClassName="Contact" syncable="YES">
@@ -15,6 +11,6 @@
     </entity>
     <elements>
         <element name="Contact" positionX="0" positionY="0" width="128" height="88"/>
-        <element name="Address" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Address" positionX="160" positionY="192" width="128" height="133"/>
     </elements>
 </model>

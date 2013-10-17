@@ -27,6 +27,7 @@
 		C93681F6180F22EE008C36A6 /* MLAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681F5180F22EE008C36A6 /* MLAddContactViewController.m */; };
 		C93681F9180F3CEB008C36A6 /* MLShowContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681F8180F3CEB008C36A6 /* MLShowContactViewController.m */; };
 		C93681FC180F6E14008C36A6 /* MLEditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681FB180F6E14008C36A6 /* MLEditContactViewController.m */; };
+		C93681FF180F8DC1008C36A6 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681FE180F8DC1008C36A6 /* Address.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		C93681F8180F3CEB008C36A6 /* MLShowContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShowContactViewController.m; sourceTree = "<group>"; };
 		C93681FA180F6E14008C36A6 /* MLEditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEditContactViewController.h; sourceTree = "<group>"; };
 		C93681FB180F6E14008C36A6 /* MLEditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEditContactViewController.m; sourceTree = "<group>"; };
+		C93681FD180F8DC1008C36A6 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		C93681FE180F8DC1008C36A6 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				C93681C6180F171D008C36A6 /* MLAppDelegate.h */,
 				C93681C7180F171D008C36A6 /* MLAppDelegate.m */,
 				C93681EE180F1AF7008C36A6 /* Model.xcdatamodeld */,
+				C93681FD180F8DC1008C36A6 /* Address.h */,
+				C93681FE180F8DC1008C36A6 /* Address.m */,
 				C93681F1180F1B7D008C36A6 /* Contact.h */,
 				C93681F2180F1B7D008C36A6 /* Contact.m */,
 				C93681C9180F171D008C36A6 /* Main.storyboard */,
@@ -277,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93681FF180F8DC1008C36A6 /* Address.m in Sources */,
 				C93681F6180F22EE008C36A6 /* MLAddContactViewController.m in Sources */,
 				C93681C4180F171D008C36A6 /* main.m in Sources */,
 				C93681FC180F6E14008C36A6 /* MLEditContactViewController.m in Sources */,
