@@ -24,6 +24,7 @@
 		7774D0E517F9FEAC003C0B1B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774D0E417F9FEAC003C0B1B /* Person.m */; };
 		7774D0E817FA0F57003C0B1B /* ShowPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774D0E717FA0F57003C0B1B /* ShowPersonViewController.m */; };
 		7774D0EB17FA24C9003C0B1B /* EditPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774D0EA17FA24C9003C0B1B /* EditPersonViewController.m */; };
+		C9CB4BF4180D8D9E00B5D958 /* notes in Resources */ = {isa = PBXBuildFile; fileRef = C9CB4BF3180D8D9E00B5D958 /* notes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		7774D0E717FA0F57003C0B1B /* ShowPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPersonViewController.m; sourceTree = "<group>"; };
 		7774D0E917FA24C9003C0B1B /* EditPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPersonViewController.h; sourceTree = "<group>"; };
 		7774D0EA17FA24C9003C0B1B /* EditPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPersonViewController.m; sourceTree = "<group>"; };
+		C9CB4BF3180D8D9E00B5D958 /* notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				7774D0E717FA0F57003C0B1B /* ShowPersonViewController.m */,
 				7774D0E317F9FEAC003C0B1B /* Person.h */,
 				7774D0E417F9FEAC003C0B1B /* Person.m */,
+				C9CB4BF3180D8D9E00B5D958 /* notes */,
 				7774D0C317F9FE42003C0B1B /* ViewController.h */,
 				7774D0C417F9FE42003C0B1B /* ViewController.m */,
 				7774D0C617F9FE42003C0B1B /* Images.xcassets */,
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CB4BF4180D8D9E00B5D958 /* notes in Resources */,
 				7774D0C717F9FE42003C0B1B /* Images.xcassets in Resources */,
 				7774D0B917F9FE42003C0B1B /* InfoPlist.strings in Resources */,
 				7774D0C217F9FE42003C0B1B /* Main.storyboard in Resources */,
@@ -478,6 +482,7 @@
 				7774D0DF17F9FE43003C0B1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7774D0E017F9FE43003C0B1B /* Build configuration list for PBXNativeTarget "AddressBookTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +491,7 @@
 				7774D0E217F9FE43003C0B1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

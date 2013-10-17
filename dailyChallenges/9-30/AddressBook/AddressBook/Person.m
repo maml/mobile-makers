@@ -16,23 +16,23 @@
 {
     self = [super init];
     
-    if (self) {
-        self.firstName = dictionary[@"firstName"];
-        self.lastName = dictionary[@"lastName"];
-        self.emailAddress = dictionary[@"emailAddress"];
-        self.phoneNumber = dictionary[@"phoneNumber"];
-    }
-   
+    self.firstName = dictionary[@"firstName"];
+    self.lastName = dictionary[@"lastName"];
+    self.emailAddress = dictionary[@"emailAddress"];
+    self.phoneNumber = dictionary[@"phoneNumber"];
+
     return self;
 }
 
 - (NSDictionary *)dictionary
 {
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    [dictionary setObject:[NSString stringWithFormat:@"%@", self.firstName] forKey:@"firstName"];
-    [dictionary setObject:[NSString stringWithFormat:@"%@", self.lastName] forKey:@"lastName"];
-    [dictionary setObject:[NSString stringWithFormat:@"%@", self.emailAddress] forKey:@"emailAddress"];
-    [dictionary setObject:[NSString stringWithFormat:@"%@", self.phoneNumber] forKey:@"phoneNumber"];
+    
+    [dictionary setObject:firstName forKey:@"firstName"];
+    [dictionary setObject:lastName forKey:@"lastName"];
+    [dictionary setObject:emailAddress forKey:@"emailAddress"];
+    [dictionary setObject:phoneNumber forKey:@"phoneNumber"];
+    
     return dictionary;
 }
 

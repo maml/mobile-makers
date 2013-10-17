@@ -1,0 +1,31 @@
+
+Remember that our classes inherit from NSObject
+[super init] initializes the NSObject, and then we do our thing - custom initialization related to our class and its concerns
+
+
+Max's example for saving an updated Person (from AddressBook)
+
+- (void)save
+{
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+	NSMutableArray *serializePeople = [[NSMutableArray alloc] init];
+
+	for (Person *person in people) {
+		[serializedPeople addObject:person.dictionary];
+	}
+
+	[defaults setObject:serializePeople forKey:@"people"];
+	[defaults synchronize];
+}
+
+- (void)loadPeople
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *serializedPeople = [defaults objectForKey:@"people"];
+    
+    for (NSDictionary *dictionary in serializedPeople) {
+        [people addObject:[Person alloc] initWithDictionary:dictionary];
+        [people addObject:person];
+    }
+}
