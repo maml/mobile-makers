@@ -64,7 +64,8 @@
  we know we're segueing into MLShowContactViewController, otherwise (the only other option)
  is to transition into MLAddContactViewController. In the case of the former we fetch the
  instance of the Contact that was selected from the table and assign it as the contact property
- of the MLShowContactViewController, and for the latter, we . . .
+ of the MLShowContactViewController, and for the latter, we don't need to do anything,
+ just transition to MLAddContactController
  */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -73,8 +74,6 @@
         NSIndexPath *indexPath = [tableView indexPathForCell:sender];
         int row = indexPath.row;
         showContactViewController.contact = [fetcher.fetchedObjects objectAtIndex:row];
-    } else {
-        NSLog(@"segueing into MLAddContactViewController");
     }
 }
 
