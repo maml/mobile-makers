@@ -9,6 +9,7 @@
 #import "MLAppDelegate.h"
 #import "MLAddContactViewController.h"
 #import "Contact.h"
+#import "Address.h"
 
 @interface MLAddContactViewController ()
 
@@ -55,7 +56,12 @@
     Contact *newContact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:moc];
     newContact.name = nameTextField.text;
     newContact.number = numberTextField.text;
+    
     [moc save:nil];
+   
+    //Address *address = [NSEntityDescription insertNewObjectForEntityForName:@"Address" inManagedObjectContext:moc];
+    //newContact
+    
     [self resignFirstResponder];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

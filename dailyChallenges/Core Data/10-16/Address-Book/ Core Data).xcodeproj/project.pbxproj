@@ -23,11 +23,9 @@
 		C93681E3180F171D008C36A6 /* _Core_Data_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681E2180F171D008C36A6 /* _Core_Data_Tests.m */; };
 		C93681ED180F1749008C36A6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93681EC180F1749008C36A6 /* CoreData.framework */; };
 		C93681F0180F1AF7008C36A6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C93681EE180F1AF7008C36A6 /* Model.xcdatamodeld */; };
-		C93681F3180F1B7D008C36A6 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681F2180F1B7D008C36A6 /* Contact.m */; };
 		C93681F6180F22EE008C36A6 /* MLAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681F5180F22EE008C36A6 /* MLAddContactViewController.m */; };
 		C93681F9180F3CEB008C36A6 /* MLShowContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681F8180F3CEB008C36A6 /* MLShowContactViewController.m */; };
 		C93681FC180F6E14008C36A6 /* MLEditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681FB180F6E14008C36A6 /* MLEditContactViewController.m */; };
-		C93681FF180F8DC1008C36A6 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = C93681FE180F8DC1008C36A6 /* Address.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,16 +60,12 @@
 		C93681E2180F171D008C36A6 /* _Core_Data_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _Core_Data_Tests.m; sourceTree = "<group>"; };
 		C93681EC180F1749008C36A6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C93681EF180F1AF7008C36A6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		C93681F1180F1B7D008C36A6 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
-		C93681F2180F1B7D008C36A6 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		C93681F4180F22EE008C36A6 /* MLAddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAddContactViewController.h; sourceTree = "<group>"; };
 		C93681F5180F22EE008C36A6 /* MLAddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAddContactViewController.m; sourceTree = "<group>"; };
 		C93681F7180F3CEB008C36A6 /* MLShowContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShowContactViewController.h; sourceTree = "<group>"; };
 		C93681F8180F3CEB008C36A6 /* MLShowContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShowContactViewController.m; sourceTree = "<group>"; };
 		C93681FA180F6E14008C36A6 /* MLEditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEditContactViewController.h; sourceTree = "<group>"; };
 		C93681FB180F6E14008C36A6 /* MLEditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEditContactViewController.m; sourceTree = "<group>"; };
-		C93681FD180F8DC1008C36A6 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
-		C93681FE180F8DC1008C36A6 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,10 +130,6 @@
 				C93681C6180F171D008C36A6 /* MLAppDelegate.h */,
 				C93681C7180F171D008C36A6 /* MLAppDelegate.m */,
 				C93681EE180F1AF7008C36A6 /* Model.xcdatamodeld */,
-				C93681FD180F8DC1008C36A6 /* Address.h */,
-				C93681FE180F8DC1008C36A6 /* Address.m */,
-				C93681F1180F1B7D008C36A6 /* Contact.h */,
-				C93681F2180F1B7D008C36A6 /* Contact.m */,
 				C93681C9180F171D008C36A6 /* Main.storyboard */,
 				C93681FA180F6E14008C36A6 /* MLEditContactViewController.h */,
 				C93681FB180F6E14008C36A6 /* MLEditContactViewController.m */,
@@ -282,13 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C93681FF180F8DC1008C36A6 /* Address.m in Sources */,
 				C93681F6180F22EE008C36A6 /* MLAddContactViewController.m in Sources */,
 				C93681C4180F171D008C36A6 /* main.m in Sources */,
 				C93681FC180F6E14008C36A6 /* MLEditContactViewController.m in Sources */,
 				C93681CE180F171D008C36A6 /* MLViewController.m in Sources */,
 				C93681F9180F3CEB008C36A6 /* MLShowContactViewController.m in Sources */,
-				C93681F3180F1B7D008C36A6 /* Contact.m in Sources */,
 				C93681C8180F171D008C36A6 /* MLAppDelegate.m in Sources */,
 				C93681F0180F1AF7008C36A6 /* Model.xcdatamodeld in Sources */,
 			);
@@ -499,6 +487,7 @@
 				C93681E8180F171D008C36A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C93681E9180F171D008C36A6 /* Build configuration list for PBXNativeTarget " Core Data)Tests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +496,7 @@
 				C93681EB180F171D008C36A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
